@@ -13,11 +13,12 @@
 		margin-bottom: 5px;
 		border-radius: 5px; 
 		box-shadow: 1px 1px 6px #888888;
-		background-color: #abbf78;
+		background-color: #ff7f50;
 		border: 1px solid #aab; 
 	}
 
 	#login .inner {
+		height: 110px;	
 		-moz-box-shadow: 0px 0px 0px #eee;
 		-webkit-box-shadow: 0px 0px 0px #eee;
 		-khtml-box-shadow: 0px 0px 0px #eee;
@@ -46,7 +47,6 @@
 	
 	#login .inner .cssform input[type='submit'] {
 		border-bottom-style: outset;
-		height: 25px;		
 	}	
 
 	#login .inner .cssform label {
@@ -84,7 +84,6 @@
 <body>
 <div id='login'>
 	<div class='inner'>
-
 		<g:if test='${flash.message}'>
 			<div class='login_message'>${flash.message}</div>
 		</g:if>

@@ -5,6 +5,8 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
+	
+		<blueprint:resources/>	
 		<nav:resources/>	
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,24 +24,29 @@
         <r:layoutResources />
 	</head>
 	<body>
+		
+		<div id="grailsHeader" role="banner">
+			<div id="grailsLogo" role="banner">
+				<img src="${resource(dir: 'images', file: 'bq.gif')}" alt="Grails"/>
+			</div>
+			<div  id="grailsMenu" role="banner">		
+				<sec:ifAllGranted roles="ROLE_ADMIN">
+					<nav:render group="admon"/>
+				</sec:ifAllGranted>
 	
-		<div id="grailsLogo" role="banner">
-					<img src="${resource(dir: 'images', file: 'bq.gif')}" alt="Grails"/>
-					<input type="text" name="usuario" width="70%" value="" id="usuario" placeholder="Busca necesidad">
-					<input type="submit" name="buscar" maxlength="15" value="Buscar" id="usuario">
-
-					<sec:ifAllGranted roles="ROLE_ADMIN">
-						<nav:render group="admon"/>
-					</sec:ifAllGranted>
-
-					<sec:ifNotGranted roles="ROLE_ADMIN">
-						<nav:render group="tabs"/>
-					</sec:ifNotGranted>
-					
-					<sec:ifLoggedIn>
-						<g:link controller="logout" id="linkLogout">Salir</g:link>
-						<h3>Bienvenido: <sec:username/></h3>						
-					</sec:ifLoggedIn>
+				<sec:ifNotGranted roles="ROLE_ADMIN">
+					<nav:render group="tabs"/>
+				</sec:ifNotGranted>
+				
+				<sec:ifLoggedIn>
+					<g:link controller="logout" id="linkLogout">Salir</g:link>
+					<h3>Bienvenido: <sec:username/></h3>						
+				</sec:ifLoggedIn>
+			</div>			
+			<div  id="grailsOptions" role="banner">		
+				<input type="text" name="usuario" value="" id="txtUser" placeholder="Buscar necesidad">
+				<input type="submit" name="buscar" maxlength="15" value="Buscar" id="btnBuscar">
+			</div>
 		</div>
 		
 		<div id="layoutBody" role="layoutBody">		
