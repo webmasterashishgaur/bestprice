@@ -78,17 +78,12 @@
 	<body>
 		<a href="#page-body" class="skip">
 		<g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<table border="1">
-			<tr>
-				<td>
-					<g:include controller="login" action="auth" />					
-				</td>
-				<td>
-					<div id="page-body" role="main">
-						<g:include controller="necesidadEnc" action="list" />				
-					</div>
-				</td>				
-			</tr>		
-		</table>		
+			<div id="lytColLoguin">
+				<g:include controller="login" action="auth" />						
+			</div>		
+		
+			<div id="page-body">
+				<g:include controller="necesidadEnc" action="list" />				
+			</div>
 	</body>
 </html>

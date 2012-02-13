@@ -43,43 +43,87 @@ body {
 	        box-shadow: 0 0 0.3em #255b17;
 }
 
-#grailsLogo {
-	background-color: #abbf78;
-	float: inherit;
+#grailsHeader{
+	float:inherit;
+	height: 80px;
 }
 
-#grailsLogo .navigation {
+#grailsLogo {
+	float: left;
+	width: 10px;	
+}
+
+#grailsOptions {
+	background-color: #ff7f50;
+	float: right;
+	width: 1400px;
+	border-radius: 5px;
+	margin-top: 0px; 	
+	margin-right: 2px;	
+}
+
+#grailsOptions #txtUser {
+	width: 400px;
+	height: 20px;
+	margin-left: 50px;
+	margin-top: 5px;
+	border-radius: 5px; 
+	box-shadow: 1px 1px 6px #888888;
+	text-align: center;	
+}
+
+#grailsOptions #btnBuscar {
+	width: 75px;
+	height: 25px;
+	margin-left: 0px;
+	margin-top: 5px;
+	border-radius: 5px; 
+	box-shadow: 1px 1px 6px #888888;	
+}
+
+#grailsMenu {
+	height: 42px;
+	float: right;
+	width: 1400px;
+	border-radius: 5px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+	margin-right: 2px; 
+}
+
+#grailsMenu .navigation {
 	-moz-box-shadow: 0px 0px 0px #eee;
 	-webkit-box-shadow: 0px 0px 0px #eee;
 	-khtml-box-shadow: 0px 0px 0px #eee;
 	float: right;	
 }
 
-#grailsLogo a{
+#grailsMenu a{
 	padding-right: 10px;
 	float: right;	
 }
 
-#grailsLogo input[type='text'] {
-	width: 400px;
-	padding: 5px;
-	margin-left: 0px;
-	margin-bottom: 5px;
-	border-radius: 5px; 
-	box-shadow: 1px 1px 6px #888888;
-}
-
-#grailsLogo input[type='submit'] {
-	width: 75px;
-	padding: 5px;
-	margin-left: 420px;
-	margin-bottom: 5px;
-	border-radius: 5px; 
-	box-shadow: 1px 1px 6px #888888;
-}
-
 #layoutBody{
-	height: 800px;
+	height: 600px;
+	width: 100%;
+	margin-top: 1px;
+	border-radius: 5px;
+}
+
+#lytColLoguin {
+	float: left;
+	border-radius: 5px;
+	margin-top: 2px;
+	margin-left: 2px;	
+}
+
+#page-body {
+	float: right;
+	width: 1200px;
+	border-radius: 5px;
+	margin-top: 2px;
+	margin-left: 5px;	
+	margin-right: 5px;	
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
