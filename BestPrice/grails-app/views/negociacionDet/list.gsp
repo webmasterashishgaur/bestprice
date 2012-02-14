@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="comentarioVendedor" title="${message(code: 'negociacionDet.comentarioVendedor.label', default: 'Comentario Vendedor')}" />
 					
-						<g:sortableColumn property="fecha" title="${message(code: 'negociacionDet.fecha.label', default: 'Fecha')}" />
+						<g:sortableColumn property="dateCreated" title="${message(code: 'negociacionDet.dateCreated.label', default: 'Date Created')}" />
 					
 					</tr>
 				</thead>
@@ -40,7 +40,7 @@
 					
 						<td>${fieldValue(bean: negociacionDetInstance, field: "comentarioVendedor")}</td>
 					
-						<td><g:formatDate date="${negociacionDetInstance.fecha}" /></td>
+						<td><g:formatDate date="${negociacionDetInstance.dateCreated}" /></td>
 					
 					</tr>
 				</g:each>

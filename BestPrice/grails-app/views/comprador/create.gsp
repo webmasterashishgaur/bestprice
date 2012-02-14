@@ -26,7 +26,6 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			
 			<g:form action="save" >
 				<fieldset class="form">
 					<g:render template="form"/>

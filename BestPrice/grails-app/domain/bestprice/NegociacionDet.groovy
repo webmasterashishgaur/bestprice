@@ -1,18 +1,16 @@
 package bestprice
 
+import java.util.Date;
+
 class NegociacionDet {
 	
 	static belongsTo = NegociacionEnc
 	
 	String comentarioVendedor
 	String comentarioComprador
-	Date fecha
+	Date dateCreated
 	
     static constraints = {
     }
-	
-	def beforeInsert = {
-		fecha = new Date()
-	}
 	
 }

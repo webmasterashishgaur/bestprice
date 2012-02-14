@@ -18,12 +18,12 @@
 	<g:textField name="nombreCorto" maxlength="20" value="${estadoInstance?.nombreCorto}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: estadoInstance, field: 'estatus', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: estadoInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="estado.estatus.label" default="Estatus" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:checkBox name="estatus" value="${estadoInstance?.estatus}" />
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${estadoInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: estadoInstance, field: 'pais', 'error')} required">

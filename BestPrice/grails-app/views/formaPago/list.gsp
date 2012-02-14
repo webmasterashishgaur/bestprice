@@ -28,7 +28,11 @@
 					
 						<g:sortableColumn property="valorPago" title="${message(code: 'formaPago.valorPago.label', default: 'Valor Pago')}" />
 					
-						<g:sortableColumn property="estatus" title="${message(code: 'formaPago.estatus.label', default: 'Estatus')}" />
+						<g:sortableColumn property="dateCreated" title="${message(code: 'formaPago.dateCreated.label', default: 'Date Created')}" />
+					
+						<th><g:message code="formaPago.estatus.label" default="Estatus" /></th>
+					
+						<g:sortableColumn property="lastUpdated" title="${message(code: 'formaPago.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
 				</thead>
@@ -40,7 +44,11 @@
 					
 						<td>${fieldValue(bean: formaPagoInstance, field: "valorPago")}</td>
 					
-						<td><g:formatBoolean boolean="${formaPagoInstance.estatus}" /></td>
+						<td><g:formatDate date="${formaPagoInstance.dateCreated}" /></td>
+					
+						<td>${fieldValue(bean: formaPagoInstance, field: "estatus")}</td>
+					
+						<td><g:formatDate date="${formaPagoInstance.lastUpdated}" /></td>
 					
 					</tr>
 				</g:each>

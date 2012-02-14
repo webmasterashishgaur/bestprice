@@ -41,11 +41,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${formaPagoInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="formaPago.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${formaPagoInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${formaPagoInstance?.estatus}">
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="formaPago.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:formatBoolean boolean="${formaPagoInstance?.estatus}" /></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${formaPagoInstance?.estatus?.id}">${formaPagoInstance?.estatus?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${formaPagoInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="formaPago.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${formaPagoInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

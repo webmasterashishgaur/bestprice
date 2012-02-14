@@ -23,20 +23,29 @@
 			</g:if>
 			<ol class="property-list bitacoraPrecio">
 			
-				<g:if test="${bitacoraPrecioInstance?.fechaCreacion}">
-				<li class="fieldcontain">
-					<span id="fechaCreacion-label" class="property-label"><g:message code="bitacoraPrecio.fechaCreacion.label" default="Fecha Creacion" /></span>
-					
-						<span class="property-value" aria-labelledby="fechaCreacion-label"><g:formatDate date="${bitacoraPrecioInstance?.fechaCreacion}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${bitacoraPrecioInstance?.precio}">
 				<li class="fieldcontain">
 					<span id="precio-label" class="property-label"><g:message code="bitacoraPrecio.precio.label" default="Precio" /></span>
 					
 						<span class="property-value" aria-labelledby="precio-label"><g:fieldValue bean="${bitacoraPrecioInstance}" field="precio"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bitacoraPrecioInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="bitacoraPrecio.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${bitacoraPrecioInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bitacoraPrecioInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="bitacoraPrecio.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${bitacoraPrecioInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

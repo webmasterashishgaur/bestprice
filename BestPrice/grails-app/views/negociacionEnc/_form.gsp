@@ -7,7 +7,7 @@
 		<g:message code="negociacionEnc.estatus.label" default="Estatus" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="number" name="estatus" required="" value="${fieldValue(bean: negociacionEncInstance, field: 'estatus')}"/>
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${negociacionEncInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen2', 'error')} ">
@@ -47,7 +47,7 @@
 		<g:message code="negociacionEnc.necesidadEnc.label" default="Necesidad Enc" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="necesidadEnc" name="necesidadEnc.id" from="${bestprice.NecesidadEnc.list()}" optionKey="id" required="" value="${necesidadEnc}" class="many-to-one"/>
+	<g:select id="necesidadEnc" name="necesidadEnc.id" from="${bestprice.NecesidadEnc.list()}" optionKey="id" required="" value="${negociacionEncInstance?.necesidadEnc?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'precio', 'error')} required">

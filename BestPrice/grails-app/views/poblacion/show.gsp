@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${poblacionInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="poblacion.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${poblacionInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${poblacionInstance?.estado}">
 				<li class="fieldcontain">
 					<span id="estado-label" class="property-label"><g:message code="poblacion.estado.label" default="Estado" /></span>
@@ -54,7 +63,16 @@
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="poblacion.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:formatBoolean boolean="${poblacionInstance?.estatus}" /></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${poblacionInstance?.estatus?.id}">${poblacionInstance?.estatus?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${poblacionInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="poblacion.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${poblacionInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

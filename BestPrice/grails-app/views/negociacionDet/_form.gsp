@@ -18,11 +18,3 @@
 	<g:textField name="comentarioVendedor" value="${negociacionDetInstance?.comentarioVendedor}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: negociacionDetInstance, field: 'fecha', 'error')} required">
-	<label for="fecha">
-		<g:message code="negociacionDet.fecha.label" default="Fecha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="fecha" precision="day"  value="${negociacionDetInstance?.fecha}"  />
-</div>
-

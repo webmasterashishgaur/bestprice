@@ -18,11 +18,11 @@
 	<g:textField name="valorPago" maxlength="40" value="${formaPagoInstance?.valorPago}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: formaPagoInstance, field: 'estatus', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: formaPagoInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="formaPago.estatus.label" default="Estatus" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:checkBox name="estatus" value="${formaPagoInstance?.estatus}" />
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${formaPagoInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
