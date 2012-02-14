@@ -41,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${negociacionDetInstance?.fecha}">
+				<g:if test="${negociacionDetInstance?.dateCreated}">
 				<li class="fieldcontain">
-					<span id="fecha-label" class="property-label"><g:message code="negociacionDet.fecha.label" default="Fecha" /></span>
+					<span id="dateCreated-label" class="property-label"><g:message code="negociacionDet.dateCreated.label" default="Date Created" /></span>
 					
-						<span class="property-value" aria-labelledby="fecha-label"><g:formatDate date="${negociacionDetInstance?.fecha}" /></span>
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${negociacionDetInstance?.dateCreated}" /></span>
 					
 				</li>
 				</g:if>

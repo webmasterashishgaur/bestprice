@@ -113,6 +113,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${compradorInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="comprador.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${compradorInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${compradorInstance?.estado}">
 				<li class="fieldcontain">
 					<span id="estado-label" class="property-label"><g:message code="comprador.estado.label" default="Estado" /></span>
@@ -126,16 +135,7 @@
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="comprador.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:formatBoolean boolean="${compradorInstance?.estatus}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.fechaCreacion}">
-				<li class="fieldcontain">
-					<span id="fechaCreacion-label" class="property-label"><g:message code="comprador.fechaCreacion.label" default="Fecha Creacion" /></span>
-					
-						<span class="property-value" aria-labelledby="fechaCreacion-label"><g:formatDate date="${compradorInstance?.fechaCreacion}" /></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${compradorInstance?.estatus?.id}">${compradorInstance?.estatus?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -145,6 +145,15 @@
 					<span id="fechaNacimiento-label" class="property-label"><g:message code="comprador.fechaNacimiento.label" default="Fecha Nacimiento" /></span>
 					
 						<span class="property-value" aria-labelledby="fechaNacimiento-label"><g:formatDate date="${compradorInstance?.fechaNacimiento}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${compradorInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="comprador.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${compradorInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

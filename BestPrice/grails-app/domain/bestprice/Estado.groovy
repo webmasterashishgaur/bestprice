@@ -1,11 +1,16 @@
 package bestprice
 
+import java.util.Date;
+
 class Estado {
 	Pais pais
 	
 	String nombre
 	String nombreCorto
-	Boolean estatus
+	
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 	
 	static constraints = {
 		nombre(size:4..40, unique:true)
@@ -13,11 +18,7 @@ class Estado {
 	}
 	
 	def beforeInsert = {
-		estatus = true
-	}
-	
-	def beforeUpdate = {
-		estatus = false
+		estatus.id = 1
 	}
 	
 }

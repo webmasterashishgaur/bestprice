@@ -1,10 +1,15 @@
 package bestprice
 
+import java.util.Date;
+
 class Marca {
 
 	String nombre
 	String nombreCorto
-	int estatus
+
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 	
 	static constraints = {
 		nombre(size:4..40)
@@ -12,11 +17,7 @@ class Marca {
 	}
 	
 	def beforeInsert = {
-		estatus = 1
-	}
-	
-	def beforeUpdate = {
-		estatus = 0
+		estatus.id = 1
 	}
 	
 }

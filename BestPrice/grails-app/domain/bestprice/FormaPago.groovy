@@ -1,10 +1,15 @@
 package bestprice
 
+import java.util.Date;
+
 class FormaPago {
 
 	String nombre
 	String valorPago
-	Boolean estatus
+
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 
     static constraints = {
 		nombre(size:4..40)
@@ -12,11 +17,7 @@ class FormaPago {
     }
 	
 	def beforeInsert = {
-		estatus = true
-	}
-	
-	def beforeUpdate = {
-		estatus = false
+		estatus.id = 1
 	}
 	
 }

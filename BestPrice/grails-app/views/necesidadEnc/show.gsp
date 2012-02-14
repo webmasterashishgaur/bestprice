@@ -5,19 +5,19 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'necesidadEnc.label', default: 'NecesidadEnc')}" />
-		<title><g:message code="default.show.label" args="['']" /></title>
+		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<a href="#show-necesidadEnc" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="['']" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="['']" /></g:link></li>
+				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-necesidadEnc" class="content scaffold-show" role="main">
-			<!--  <h1><g:message code="default.show.label" args="[entityName]" /></h1>-->
+			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -35,9 +35,8 @@
 				<g:if test="${necesidadEncInstance?.descripcion}">
 				<li class="fieldcontain">
 					<span id="descripcion-label" class="property-label"><g:message code="necesidadEnc.descripcion.label" default="Descripcion" /></span>
-						<span class="property-value" aria-labelledby="descripcion-label">
-							<g:fieldValue bean="${necesidadEncInstance}" field="descripcion"/>
-						</span>
+					
+						<span class="property-value" aria-labelledby="descripcion-label"><g:fieldValue bean="${necesidadEncInstance}" field="descripcion"/></span>
 					
 				</li>
 				</g:if>
@@ -46,126 +45,91 @@
 				<li class="fieldcontain">
 					<span id="comprador-label" class="property-label"><g:message code="necesidadEnc.comprador.label" default="Comprador" /></span>
 					
-						<span class="property-value" aria-labelledby="comprador-label">
-							<g:fieldValue bean="${necesidadEncInstance}" field="comprador.usuario"/>						
-						</span>
+						<span class="property-value" aria-labelledby="comprador-label"><g:link controller="comprador" action="show" id="${necesidadEncInstance?.comprador?.id}">${necesidadEncInstance?.comprador?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${necesidadEncInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="necesidadEnc.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${necesidadEncInstance?.dateCreated}" /></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${necesidadEncInstance?.estatus}">
 				<li class="fieldcontain">
-					<span id="estatus-label" class="property-label">
-						<g:message code="necesidadEnc.estatus.label" default="Estatus" />
-					</span>
-					<span class="property-value" aria-labelledby="estatus-label">
-						<g:if test="${necesidadEncInstance?.estatus == 1}">					
-							ACTIVO
-						</g:if>
-						<g:if test="${necesidadEncInstance?.estatus == 0}">					
-							CANCELADO
-						</g:if>		
-					</span>
+					<span id="estatus-label" class="property-label"><g:message code="necesidadEnc.estatus.label" default="Estatus" /></span>
+					
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${necesidadEncInstance?.estatus?.id}">${necesidadEncInstance?.estatus?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${necesidadEncInstance?.fechaCreacion}">
+				<g:if test="${necesidadEncInstance?.imagen1}">
 				<li class="fieldcontain">
-					<span id="fechaCreacion-label" class="property-label">
-						<g:message code="necesidadEnc.fechaCreacion.label" default="Fecha Creacion" /></span>
-						<span class="property-value" aria-labelledby="fechaCreacion-label">
-							<g:formatDate date="${necesidadEncInstance?.fechaCreacion}" format="yyyy/MM/dd"/>
-						</span>
+					<span id="imagen1-label" class="property-label"><g:message code="necesidadEnc.imagen1.label" default="Imagen1" /></span>
+					
+						<span class="property-value" aria-labelledby="imagen1-label"><g:fieldValue bean="${necesidadEncInstance}" field="imagen1"/></span>
 					
 				</li>
 				</g:if>
 			
-				<table>
-					<tr>
-				
-						<g:if test="${necesidadEncInstance?.imagen1}">
-						<td>
-							<li class="fieldcontain">
-								<span class="property-value" aria-labelledby="imagen1-label">
-									<img src="${createLinkTo(dir:'images/compras/evillegas',file:''+necesidadEncInstance?.imagen1)}"
-			           					 alt="${necesidadEncInstance?.imagen1}"
-			           					 title="${necesidadEncInstance?.imagen1}" 
-			           					 width="90" height="90"/>						
-								</span>
-							</li>
-						</td>						
-						</g:if>
+				<g:if test="${necesidadEncInstance?.imagen2}">
+				<li class="fieldcontain">
+					<span id="imagen2-label" class="property-label"><g:message code="necesidadEnc.imagen2.label" default="Imagen2" /></span>
 					
-						<g:if test="${necesidadEncInstance?.imagen2}">
-						<td>						
-							<li class="fieldcontain">
-									<span class="property-value" aria-labelledby="imagen2-label">
-									<img src="${createLinkTo(dir:'images/compras/evillegas',file:''+necesidadEncInstance?.imagen2)}"
-			           					 alt="${necesidadEncInstance?.imagen2}"
-			           					 title="${necesidadEncInstance?.imagen2}" 
-			           					 width="90" height="90"/>
-									</span>
-								
-							</li>
-						</td>						
-						</g:if>
+						<span class="property-value" aria-labelledby="imagen2-label"><g:fieldValue bean="${necesidadEncInstance}" field="imagen2"/></span>
 					
-						<g:if test="${necesidadEncInstance?.imagen3}">
-						<td>						
-							<li class="fieldcontain">
-									<span class="property-value" aria-labelledby="imagen3-label">
-									<img src="${createLinkTo(dir:'images/compras/evillegas',file:''+necesidadEncInstance?.imagen3)}"
-			           					 alt="${necesidadEncInstance?.imagen3}"
-			           					 title="${necesidadEncInstance?.imagen3}" 
-			           					 width="90" height="90"/>
-									</span>
-								
-							</li>
-						</td>						
-						</g:if>
+				</li>
+				</g:if>
+			
+				<g:if test="${necesidadEncInstance?.imagen3}">
+				<li class="fieldcontain">
+					<span id="imagen3-label" class="property-label"><g:message code="necesidadEnc.imagen3.label" default="Imagen3" /></span>
 					
-						<g:if test="${necesidadEncInstance?.imagen4}">
-						<td>						
-							<li class="fieldcontain">
-									<span class="property-value" aria-labelledby="imagen4-label">
-									<img src="${createLinkTo(dir:'images/compras/evillegas',file:''+necesidadEncInstance?.imagen4)}"
-			           					 alt="${necesidadEncInstance?.imagen4}"
-			           					 title="${necesidadEncInstance?.imagen4}" 
-			           					 width="90" height="90"/>
-									</span>
-								
-							</li>
-						</td>						
-						</g:if>
+						<span class="property-value" aria-labelledby="imagen3-label"><g:fieldValue bean="${necesidadEncInstance}" field="imagen3"/></span>
 					
-						<g:if test="${necesidadEncInstance?.imagen5}">
-						<td>						
-							<li class="fieldcontain">
-									<span class="property-value" aria-labelledby="imagen5-label">
-									<img src="${createLinkTo(dir:'images/compras/evillegas',file:''+necesidadEncInstance?.imagen5)}"
-			           					 alt="${necesidadEncInstance?.imagen5}"
-			           					 title="${necesidadEncInstance?.imagen5}" 
-			           					 width="90" height="90"/>
-									</span>
-								
-							</li>
-						<td>						
-						</g:if>
-					<tr>				
-				</table>	
+				</li>
+				</g:if>
+			
+				<g:if test="${necesidadEncInstance?.imagen4}">
+				<li class="fieldcontain">
+					<span id="imagen4-label" class="property-label"><g:message code="necesidadEnc.imagen4.label" default="Imagen4" /></span>
+					
+						<span class="property-value" aria-labelledby="imagen4-label"><g:fieldValue bean="${necesidadEncInstance}" field="imagen4"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${necesidadEncInstance?.imagen5}">
+				<li class="fieldcontain">
+					<span id="imagen5-label" class="property-label"><g:message code="necesidadEnc.imagen5.label" default="Imagen5" /></span>
+					
+						<span class="property-value" aria-labelledby="imagen5-label"><g:fieldValue bean="${necesidadEncInstance}" field="imagen5"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${necesidadEncInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="necesidadEnc.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${necesidadEncInstance?.lastUpdated}" /></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
-			<g:include controller="negociacionEnc" action="list"
-			 params="[necesidadEnc: necesidadEncInstance]"/>			
+			<g:form>
+				<fieldset class="buttons">
+					<g:hiddenField name="id" value="${necesidadEncInstance?.id}" />
+					<g:link class="edit" action="edit" id="${necesidadEncInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+				</fieldset>
+			</g:form>
 		</div>
-		<div class="nav" role="navigation">
-			<ul>
-				<li>
-					<g:link class="create" controller="negociacionEnc" action="create" params="[necesidadEnc: necesidadEncInstance.id]">
-             			<g:message code="default.new.label" args="['']" />
-             		</g:link>
-             	</li>
-			</ul>
-		</div>		
 	</body>
 </html>

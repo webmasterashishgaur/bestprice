@@ -28,7 +28,11 @@
 					
 						<g:sortableColumn property="nombreCorto" title="${message(code: 'estado.nombreCorto.label', default: 'Nombre Corto')}" />
 					
-						<g:sortableColumn property="estatus" title="${message(code: 'estado.estatus.label', default: 'Estatus')}" />
+						<g:sortableColumn property="dateCreated" title="${message(code: 'estado.dateCreated.label', default: 'Date Created')}" />
+					
+						<th><g:message code="estado.estatus.label" default="Estatus" /></th>
+					
+						<g:sortableColumn property="lastUpdated" title="${message(code: 'estado.lastUpdated.label', default: 'Last Updated')}" />
 					
 						<th><g:message code="estado.pais.label" default="Pais" /></th>
 					
@@ -42,7 +46,11 @@
 					
 						<td>${fieldValue(bean: estadoInstance, field: "nombreCorto")}</td>
 					
-						<td><g:formatBoolean boolean="${estadoInstance.estatus}" /></td>
+						<td><g:formatDate date="${estadoInstance.dateCreated}" /></td>
+					
+						<td>${fieldValue(bean: estadoInstance, field: "estatus")}</td>
+					
+						<td><g:formatDate date="${estadoInstance.lastUpdated}" /></td>
 					
 						<td>${fieldValue(bean: estadoInstance, field: "pais")}</td>
 					

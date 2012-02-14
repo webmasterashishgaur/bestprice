@@ -41,11 +41,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${paisInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="pais.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${paisInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${paisInstance?.estatus}">
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="pais.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:formatBoolean boolean="${paisInstance?.estatus}" /></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${paisInstance?.estatus?.id}">${paisInstance?.estatus?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${paisInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="pais.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${paisInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

@@ -90,47 +90,20 @@
 	<g:checkBox name="admiteDevolucion" value="${vendedorInstance?.admiteDevolucion}" />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'pais', 'error')} required">
-	<label for="pais">
-		<g:message code="vendedor.pais.label" default="Pais" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="pais" name="pais.id" from="${bestprice.Pais.list()}" optionKey="id" required="" value="${vendedorInstance?.pais?.id}" class="many-to-one" optionValue="nombreCorto"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'estado', 'error')} required">
 	<label for="estado">
 		<g:message code="vendedor.estado.label" default="Estado" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="estado" name="estado.id" from="${bestprice.Estado.list()}" optionKey="id" required="" value="${vendedorInstance?.estado?.id}" class="many-to-one" optionValue="nombreCorto"/>
+	<g:select id="estado" name="estado.id" from="${bestprice.Estado.list()}" optionKey="id" required="" value="${vendedorInstance?.estado?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'poblacion', 'error')} required">
-	<label for="poblacion">
-		<g:message code="vendedor.poblacion.label" default="Poblacion" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="poblacion" name="poblacion.id" from="${bestprice.Poblacion.list()}" optionKey="id" required="" value="${vendedorInstance?.poblacion?.id}" class="many-to-one" optionValue="nombreCorto"/>
-</div>
-
-
-
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'estatus', 'error')} ">
-	<!-- 
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="vendedor.estatus.label" default="Estatus" />
-	</label>
- 	-->	
-	<g:hiddenField name="estatus" value="1" />
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'fechaCreacion', 'error')} required">
-	<label for="fechaCreacion">
-		<g:message code="vendedor.fechaCreacion.label" default="Fecha Creacion" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="fechaCreacion" precision="day"  value="${vendedorInstance?.fechaCreacion}"  />
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${vendedorInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'fechaNacimiento', 'error')} required">
@@ -146,7 +119,23 @@
 		<g:message code="vendedor.formaPago.label" default="Forma Pago" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="formaPago" name="formaPago.id" from="${bestprice.FormaPago.list()}" optionKey="id" required="" value="${vendedorInstance?.formaPago?.id}" class="many-to-one" optionValue="nombre"/>
+	<g:select id="formaPago" name="formaPago.id" from="${bestprice.FormaPago.list()}" optionKey="id" required="" value="${vendedorInstance?.formaPago?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'pais', 'error')} required">
+	<label for="pais">
+		<g:message code="vendedor.pais.label" default="Pais" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="pais" name="pais.id" from="${bestprice.Pais.list()}" optionKey="id" required="" value="${vendedorInstance?.pais?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'poblacion', 'error')} required">
+	<label for="poblacion">
+		<g:message code="vendedor.poblacion.label" default="Poblacion" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="poblacion" name="poblacion.id" from="${bestprice.Poblacion.list()}" optionKey="id" required="" value="${vendedorInstance?.poblacion?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'url', 'error')} ">

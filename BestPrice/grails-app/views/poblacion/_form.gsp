@@ -26,11 +26,11 @@
 	<g:select id="estado" name="estado.id" from="${bestprice.Estado.list()}" optionKey="id" required="" value="${poblacionInstance?.estado?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: poblacionInstance, field: 'estatus', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: poblacionInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="poblacion.estatus.label" default="Estatus" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:checkBox name="estatus" value="${poblacionInstance?.estatus}" />
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${poblacionInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 

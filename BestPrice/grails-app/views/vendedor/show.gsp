@@ -122,6 +122,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${vendedorInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="vendedor.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${vendedorInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${vendedorInstance?.estado}">
 				<li class="fieldcontain">
 					<span id="estado-label" class="property-label"><g:message code="vendedor.estado.label" default="Estado" /></span>
@@ -135,16 +144,7 @@
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="vendedor.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:formatBoolean boolean="${vendedorInstance?.estatus}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${vendedorInstance?.fechaCreacion}">
-				<li class="fieldcontain">
-					<span id="fechaCreacion-label" class="property-label"><g:message code="vendedor.fechaCreacion.label" default="Fecha Creacion" /></span>
-					
-						<span class="property-value" aria-labelledby="fechaCreacion-label"><g:formatDate date="${vendedorInstance?.fechaCreacion}" /></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${vendedorInstance?.estatus?.id}">${vendedorInstance?.estatus?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -163,6 +163,15 @@
 					<span id="formaPago-label" class="property-label"><g:message code="vendedor.formaPago.label" default="Forma Pago" /></span>
 					
 						<span class="property-value" aria-labelledby="formaPago-label"><g:link controller="formaPago" action="show" id="${vendedorInstance?.formaPago?.id}">${vendedorInstance?.formaPago?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${vendedorInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="vendedor.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${vendedorInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

@@ -1,5 +1,7 @@
 package bestprice
 
+import java.util.Date;
+
 class Comprador {
 	Poblacion poblacion
 	Estado estado
@@ -16,8 +18,10 @@ class Comprador {
 	String telefono
 	String comentarios
 	Date fechaNacimiento
-	Boolean estatus
-	Date fechaCreacion
+	
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 	
 	static constraints = {
 		usuario(size:6..15, unique:true)
@@ -33,12 +37,7 @@ class Comprador {
 	}
 	
 	def beforeInsert = {
-		estatus = true
-		fechaCreacion = new Date()
-	}
-	
-	def beforeUpdate = {
-		estatus = false
+		estatus.id = 1 
 	}
 	
 }

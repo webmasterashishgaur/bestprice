@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list negociacionEnc">
 			
-				<g:if test="${negociacionEncInstance?.estatus}">
-				<li class="fieldcontain">
-					<span id="estatus-label" class="property-label"><g:message code="negociacionEnc.estatus.label" default="Estatus" /></span>
-					
-						<span class="property-value" aria-labelledby="estatus-label"><g:fieldValue bean="${negociacionEncInstance}" field="estatus"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${negociacionEncInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="negociacionEnc.dateCreated.label" default="Date Created" /></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${negociacionEncInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${negociacionEncInstance?.estatus}">
+				<li class="fieldcontain">
+					<span id="estatus-label" class="property-label"><g:message code="negociacionEnc.estatus.label" default="Estatus" /></span>
+					
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${negociacionEncInstance?.estatus?.id}">${negociacionEncInstance?.estatus?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

@@ -5,12 +5,12 @@ import java.util.Date;
 class BitacoraPrecio {
 
 	static belongsTo = NegociacionEnc
-	Date fechaCreacion
 	Double precio
+	Date dateCreated
+	Date lastUpdated
 	
-	def beforeInsert = {
-		fechaCreacion = new Date()
+	static constraints = {
+		precio(min:0d, scale:2)
 	}
-	
 	
 }

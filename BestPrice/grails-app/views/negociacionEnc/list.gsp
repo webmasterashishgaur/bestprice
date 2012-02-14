@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="estatus" title="${message(code: 'negociacionEnc.estatus.label', default: 'Estatus')}" />
-					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'negociacionEnc.dateCreated.label', default: 'Date Created')}" />
+					
+						<th><g:message code="negociacionEnc.estatus.label" default="Estatus" /></th>
 					
 						<g:sortableColumn property="imagen2" title="${message(code: 'negociacionEnc.imagen2.label', default: 'Imagen2')}" />
 					
@@ -42,9 +42,9 @@
 				<g:each in="${negociacionEncInstanceList}" status="i" var="negociacionEncInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${negociacionEncInstance.id}">${fieldValue(bean: negociacionEncInstance, field: "estatus")}</g:link></td>
+						<td><g:link action="show" id="${negociacionEncInstance.id}">${fieldValue(bean: negociacionEncInstance, field: "dateCreated")}</g:link></td>
 					
-						<td><g:formatDate date="${negociacionEncInstance.dateCreated}" /></td>
+						<td>${fieldValue(bean: negociacionEncInstance, field: "estatus")}</td>
 					
 						<td>${fieldValue(bean: negociacionEncInstance, field: "imagen2")}</td>
 					

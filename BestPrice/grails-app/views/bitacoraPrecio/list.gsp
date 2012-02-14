@@ -24,9 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="fechaCreacion" title="${message(code: 'bitacoraPrecio.fechaCreacion.label', default: 'Fecha Creacion')}" />
-					
 						<g:sortableColumn property="precio" title="${message(code: 'bitacoraPrecio.precio.label', default: 'Precio')}" />
+					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'bitacoraPrecio.dateCreated.label', default: 'Date Created')}" />
+					
+						<g:sortableColumn property="lastUpdated" title="${message(code: 'bitacoraPrecio.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
 				</thead>
@@ -34,9 +36,11 @@
 				<g:each in="${bitacoraPrecioInstanceList}" status="i" var="bitacoraPrecioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${bitacoraPrecioInstance.id}">${fieldValue(bean: bitacoraPrecioInstance, field: "fechaCreacion")}</g:link></td>
+						<td><g:link action="show" id="${bitacoraPrecioInstance.id}">${fieldValue(bean: bitacoraPrecioInstance, field: "precio")}</g:link></td>
 					
-						<td>${fieldValue(bean: bitacoraPrecioInstance, field: "precio")}</td>
+						<td><g:formatDate date="${bitacoraPrecioInstance.dateCreated}" /></td>
+					
+						<td><g:formatDate date="${bitacoraPrecioInstance.lastUpdated}" /></td>
 					
 					</tr>
 				</g:each>
