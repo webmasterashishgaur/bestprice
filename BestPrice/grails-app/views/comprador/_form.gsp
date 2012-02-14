@@ -1,7 +1,5 @@
 <%@ page import="bestprice.Comprador" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'usuario', 'error')} ">
 	<label for="usuario">
 		<g:message code="comprador.usuario.label" default="Usuario" />
