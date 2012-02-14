@@ -3,7 +3,7 @@ dataSource {
 	dbCreate = "update"
 	driverClassName = "com.mysql.jdbc.Driver"
 	username = "root"
-	password = ""
+	password = "noel"
 }
 
 hibernate {

@@ -7,11 +7,17 @@ import org.springframework.dao.DataIntegrityViolationException
 class CompradorController {
 
 	static navigation = [
-		group:'tabs',
+		[group:'tabs',
 		order:10,
 		title:'Soy Comprador',
-		action:'create'
+		action:'create'],
+	    [group:'admon',
+		order:10,
+		title:'Soy Comprador',
+		action:'create'],
 	]
+	
+	
 	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
