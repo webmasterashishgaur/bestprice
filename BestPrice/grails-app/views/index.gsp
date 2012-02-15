@@ -78,10 +78,11 @@
 	<body>
 		<a href="#page-body" class="skip">
 		<g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+			<sec:ifNotLoggedIn>
 			<div id="lytColLoguin">
 				<g:include controller="login" action="auth" />						
-			</div>		
-		
+			</div>
+			</sec:ifNotLoggedIn>
 			<div id="page-body">
 				<g:include controller="necesidadEnc" action="list" />				
 			</div>
