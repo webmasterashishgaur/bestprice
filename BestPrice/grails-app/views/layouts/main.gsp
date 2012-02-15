@@ -37,15 +37,14 @@
 				<sec:ifNotGranted roles="ROLE_ADMIN">
 					<nav:render group="tabs"/>
 				</sec:ifNotGranted>
-				
-				<sec:ifLoggedIn>
-					<g:link controller="logout" id="linkLogout">Salir</g:link>
-					<h3>Bienvenido: <sec:username/></h3>						
-				</sec:ifLoggedIn>
 			</div>			
 			<div  id="grailsOptions" role="banner">		
 				<input type="text" name="usuario" value="" id="txtUser" placeholder="Buscar necesidad">
 				<input type="submit" name="buscar" maxlength="15" value="Buscar" id="btnBuscar">
+				<sec:ifLoggedIn>
+					<g:link controller="logout" id="linkLogout">(Salir)</g:link>
+					<h3>Bienvenido: <sec:username/></h3>						
+				</sec:ifLoggedIn>				
 			</div>
 		</div>
 		
