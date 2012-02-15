@@ -2,8 +2,8 @@ dataSource {
 	pooled = true
 	dbCreate = "update"
 	driverClassName = "com.mysql.jdbc.Driver"
-	username = "root"
-	password = "noel"
+	username = "pruebas"
+	password = "pruebas"
 }
 
 hibernate {
@@ -15,19 +15,19 @@ hibernate {
 environments {
 	production {
 		dataSource {
-			url = "jdbc:mysql://localhost:3306/bestprice"
+			url = "jdbc:mysql://instance5733.db.xeround.com:4113/bestprice"
 		}
 	}
 
 	test {
 		dataSource {
-			url = "jdbc:mysql://localhost:3306/bestprice"
+			url = "jdbc:mysql://instance5733.db.xeround.com:4113/bestprice"
 		}
 	}
 
 	development {
 		dataSource {
-			url = "jdbc:mysql://localhost:3306/bestprice"
+			url = "jdbc:mysql://instance5733.db.xeround.com:4113/bestprice"
 		}
 	}
 }
