@@ -24,6 +24,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${paisInstance?.estatus?.id}" class="many-to-one"
-	optionValue="${paisInstance?.estatus?.descripcion}" />
+	optionValue="descripcion" />
 </div>
 
