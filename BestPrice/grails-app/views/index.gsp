@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title></title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -77,14 +77,15 @@
 	</head>
 	<body>
 		<a href="#page-body" class="skip">
-		<g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-			<sec:ifNotLoggedIn>
+			<g:message code="default.link.skip.label" default="Skip to content&hellip;"/>
+		</a>
+		<sec:ifNotLoggedIn>
 			<div id="lytColLoguin">
 				<g:include controller="login" action="auth" />						
 			</div>
-			</sec:ifNotLoggedIn>
-			<div id="page-body">
-				<g:include controller="necesidadEnc" action="list" />				
-			</div>
+		</sec:ifNotLoggedIn>
+		<div id="page-body">
+			<g:include controller="necesidadEnc" action="list" />				
+		</div>
 	</body>
 </html>

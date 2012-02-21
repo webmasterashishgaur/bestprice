@@ -149,15 +149,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${vendedorInstance?.fechaNacimiento}">
-				<li class="fieldcontain">
-					<span id="fechaNacimiento-label" class="property-label"><g:message code="vendedor.fechaNacimiento.label" default="Fecha Nacimiento" /></span>
-					
-						<span class="property-value" aria-labelledby="fechaNacimiento-label"><g:formatDate date="${vendedorInstance?.fechaNacimiento}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${vendedorInstance?.formaPago}">
 				<li class="fieldcontain">
 					<span id="formaPago-label" class="property-label"><g:message code="vendedor.formaPago.label" default="Forma Pago" /></span>

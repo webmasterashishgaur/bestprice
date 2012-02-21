@@ -25,13 +25,9 @@
 					<tr>
 					
 						<g:sortableColumn property="nombre" title="${message(code: 'pais.nombre.label', default: 'Nombre')}" />
-					
 						<g:sortableColumn property="nombreCorto" title="${message(code: 'pais.nombreCorto.label', default: 'Nombre Corto')}" />
-					
+						<th><g:message code="pais.estatus.label" default="Estatus" /></th>					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'pais.dateCreated.label', default: 'Date Created')}" />
-					
-						<th><g:message code="pais.estatus.label" default="Estatus" /></th>
-					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'pais.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
@@ -43,12 +39,9 @@
 						<td><g:link action="show" id="${paisInstance.id}">${fieldValue(bean: paisInstance, field: "nombre")}</g:link></td>
 					
 						<td>${fieldValue(bean: paisInstance, field: "nombreCorto")}</td>
-					
-						<td><g:formatDate date="${paisInstance.dateCreated}" /></td>
-					
-						<td>${fieldValue(bean: paisInstance, field: "estatus")}</td>
-					
-						<td><g:formatDate date="${paisInstance.lastUpdated}" /></td>
+						<td>${fieldValue(bean: paisInstance, field: "estatus.descripcion")}</td>					
+						<td><g:formatDate date="${paisInstance.dateCreated}" format="dd/MM/yyyy HH:MM:SS"/></td>
+						<td><g:formatDate date="${paisInstance.lastUpdated}" format="dd/MM/yyyy HH:MM:SS"/></td>
 					
 					</tr>
 				</g:each>

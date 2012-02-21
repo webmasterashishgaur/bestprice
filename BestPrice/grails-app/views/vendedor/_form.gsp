@@ -106,14 +106,6 @@
 	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${vendedorInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'fechaNacimiento', 'error')} required">
-	<label for="fechaNacimiento">
-		<g:message code="vendedor.fechaNacimiento.label" default="Fecha Nacimiento" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="fechaNacimiento" precision="day"  value="${vendedorInstance?.fechaNacimiento}"  />
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'formaPago', 'error')} required">
 	<label for="formaPago">
 		<g:message code="vendedor.formaPago.label" default="Forma Pago" />
