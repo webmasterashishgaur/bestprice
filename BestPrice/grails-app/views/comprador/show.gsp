@@ -140,15 +140,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${compradorInstance?.fechaNacimiento}">
-				<li class="fieldcontain">
-					<span id="fechaNacimiento-label" class="property-label"><g:message code="comprador.fechaNacimiento.label" default="Fecha Nacimiento" /></span>
-					
-						<span class="property-value" aria-labelledby="fechaNacimiento-label"><g:formatDate date="${compradorInstance?.fechaNacimiento}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${compradorInstance?.lastUpdated}">
 				<li class="fieldcontain">
 					<span id="lastUpdated-label" class="property-label"><g:message code="comprador.lastUpdated.label" default="Last Updated" /></span>

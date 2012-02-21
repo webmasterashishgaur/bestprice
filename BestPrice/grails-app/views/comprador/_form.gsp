@@ -55,7 +55,6 @@
 	</label>
 	<g:textField name="direccion" maxlength="100" value="${compradorInstance?.direccion}"/>
 </div>
-
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'cp', 'error')} ">
 	<label for="cp">
 		<g:message code="comprador.cp.label" default="Cp" />
@@ -96,14 +95,6 @@
 	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${compradorInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'fechaNacimiento', 'error')} required">
-	<label for="fechaNacimiento">
-		<g:message code="comprador.fechaNacimiento.label" default="Fecha Nacimiento" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="fechaNacimiento" precision="day"  value="${compradorInstance?.fechaNacimiento}"  />
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'pais', 'error')} required">
 	<label for="pais">
 		<g:message code="comprador.pais.label" default="Pais" />
@@ -119,4 +110,4 @@
 	</label>
 	<g:select id="poblacion" name="poblacion.id" from="${bestprice.Poblacion.list()}" optionKey="id" required="" value="${compradorInstance?.poblacion?.id}" class="many-to-one"/>
 </div>
-
+</div>
