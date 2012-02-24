@@ -13,7 +13,7 @@
 		margin-bottom: 5px;
 		border-radius: 5px; 
 		box-shadow: 1px 1px 6px #888888;
-		background-color: #ff7f50;
+		/*background-color: #ff7f50;*/
 		border: 1px solid #aab; 
 	}
 

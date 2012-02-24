@@ -8,7 +8,7 @@ class CompradorController {
 
 	static navigation = [
 		[group:'tabs',
-		order:10,
+		order:2,
 		title:'Soy Comprador',
 		action:'create'],
 	    [group:'admon',

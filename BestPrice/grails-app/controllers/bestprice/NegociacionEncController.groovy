@@ -12,6 +12,7 @@ class NegociacionEncController {
 
     def list() {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
+		System.out.println(params.necesidadEnc)
         [negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
     }
 
