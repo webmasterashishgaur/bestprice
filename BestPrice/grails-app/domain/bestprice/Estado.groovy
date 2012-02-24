@@ -2,19 +2,14 @@ package bestprice
 
 import java.util.Date;
 
-class Estado {
+class Estado extends Comun{
 	Pais pais
-	
 	String nombre
 	String nombreCorto
 	
-	Estatus estatus
-	Date dateCreated
-	Date lastUpdated
-	
 	static constraints = {
-		nombre(size:4..40, unique:true)
-		nombreCorto(size:4..20)
+		nombre(blank:false, size:4..40, unique:true)
+		nombreCorto(blank:false, size:4..20)
 	}
 	
 	def beforeInsert = {

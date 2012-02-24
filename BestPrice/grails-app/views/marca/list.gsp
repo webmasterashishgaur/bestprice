@@ -28,7 +28,11 @@
 					
 						<g:sortableColumn property="nombreCorto" title="${message(code: 'marca.nombreCorto.label', default: 'Nombre Corto')}" />
 					
-						<g:sortableColumn property="estatus" title="${message(code: 'marca.estatus.label', default: 'Estatus')}" />
+						<g:sortableColumn property="dateCreated" title="${message(code: 'marca.dateCreated.label', default: 'Date Created')}" />
+					
+						<th><g:message code="marca.estatus.label" default="Estatus" /></th>
+					
+						<g:sortableColumn property="lastUpdated" title="${message(code: 'marca.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
 				</thead>
@@ -40,7 +44,11 @@
 					
 						<td>${fieldValue(bean: marcaInstance, field: "nombreCorto")}</td>
 					
+						<td><g:formatDate date="${marcaInstance.dateCreated}" /></td>
+					
 						<td>${fieldValue(bean: marcaInstance, field: "estatus")}</td>
+					
+						<td><g:formatDate date="${marcaInstance.lastUpdated}" /></td>
 					
 					</tr>
 				</g:each>

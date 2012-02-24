@@ -1,20 +1,9 @@
 package bestprice
 
-
-import com.testapp.Role
-import com.testapp.User
-import com.testapp.UserRole
 import org.springframework.dao.DataIntegrityViolationException
 
 class VendedorController {
 
-	static navigation = [
-		group:'tabs',
-		order:10,
-		title:'Soy Vendedor',
-		action:'create'
-	]
-	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -35,12 +24,8 @@ class VendedorController {
         if (!vendedorInstance.save(flush: true)) {
             render(view: "create", model: [vendedorInstance: vendedorInstance])
             return
-        }else{
-			def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
-			def testUser = new User(username: vendedorInstance.usuario, enabled: true, password: vendedorInstance.password)
-			testUser.save(flush: true)
         }
-		
+
 		flash.message = message(code: 'default.created.message', args: [message(code: 'vendedor.label', default: 'Vendedor'), vendedorInstance.id])
         redirect(action: "show", id: vendedorInstance.id)
     }

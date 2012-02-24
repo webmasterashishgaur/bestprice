@@ -5,7 +5,7 @@ import org.springframework.dao.DataIntegrityViolationException
 class PaisController {
 	
 	static navigation =[ 
-		[group:'admon', order:1, title:'Crear Pais', action:'create']
+		[group:'admon', order:1, title:'Paises', action:'list']
 	]
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

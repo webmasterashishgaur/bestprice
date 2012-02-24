@@ -3,11 +3,11 @@ package bestprice
 import org.springframework.dao.DataIntegrityViolationException
 
 class PoblacionController {
-	
-	static navigation =[ 
-		[group:'admon', order:3, title:'Crear Poblacion', action:'create']
-	]
 
+	static navigation =[
+		[group:'admon', order:3, title:'Poblaciones', action:'list']
+	]
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

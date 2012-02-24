@@ -1,27 +1,29 @@
 <%@ page import="bestprice.Comprador" %>
 
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'usuario', 'error')} ">
+
+
+<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">
 		<g:message code="comprador.usuario.label" default="Usuario" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="usuario" maxlength="15" value="${compradorInstance?.usuario}"/>
+	<g:textField name="usuario" maxlength="15" required="" value="${compradorInstance?.usuario}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'password', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'password', 'error')} required">
 	<label for="password">
 		<g:message code="comprador.password.label" default="Password" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="password" name="password" maxlength="20" value="${compradorInstance?.password}"/>
+	<g:field type="password" name="password" maxlength="20" required="" value="${compradorInstance?.password}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'nombre', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="comprador.nombre.label" default="Nombre" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="nombre" maxlength="40" value="${compradorInstance?.nombre}"/>
+	<g:textField name="nombre" maxlength="40" required="" value="${compradorInstance?.nombre}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'appPaterno', 'error')} ">
@@ -40,12 +42,12 @@
 	<g:textField name="appMaterno" maxlength="30" value="${compradorInstance?.appMaterno}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'email', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'email', 'error')} required">
 	<label for="email">
 		<g:message code="comprador.email.label" default="Email" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="email" name="email" value="${compradorInstance?.email}"/>
+	<g:field type="email" name="email" required="" value="${compradorInstance?.email}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'direccion', 'error')} ">
@@ -55,6 +57,7 @@
 	</label>
 	<g:textField name="direccion" maxlength="100" value="${compradorInstance?.direccion}"/>
 </div>
+
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'cp', 'error')} ">
 	<label for="cp">
 		<g:message code="comprador.cp.label" default="Cp" />
@@ -110,4 +113,4 @@
 	</label>
 	<g:select id="poblacion" name="poblacion.id" from="${bestprice.Poblacion.list()}" optionKey="id" required="" value="${compradorInstance?.poblacion?.id}" class="many-to-one"/>
 </div>
-</div>
+

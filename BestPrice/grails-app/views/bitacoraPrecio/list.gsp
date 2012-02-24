@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'bitacoraPrecio.dateCreated.label', default: 'Date Created')}" />
 					
+						<th><g:message code="bitacoraPrecio.estatus.label" default="Estatus" /></th>
+					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'bitacoraPrecio.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
@@ -39,6 +41,8 @@
 						<td><g:link action="show" id="${bitacoraPrecioInstance.id}">${fieldValue(bean: bitacoraPrecioInstance, field: "precio")}</g:link></td>
 					
 						<td><g:formatDate date="${bitacoraPrecioInstance.dateCreated}" /></td>
+					
+						<td>${fieldValue(bean: bitacoraPrecioInstance, field: "estatus")}</td>
 					
 						<td><g:formatDate date="${bitacoraPrecioInstance.lastUpdated}" /></td>
 					

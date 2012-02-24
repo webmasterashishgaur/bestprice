@@ -46,7 +46,7 @@
 					
 						<td><g:formatDate date="${formaPagoInstance.dateCreated}" /></td>
 					
-						<td>${fieldValue(bean: formaPagoInstance, field: "estatus")}</td>
+						<td>${fieldValue(bean: formaPagoInstance, field: "estatus.descripcion")}</td>
 					
 						<td><g:formatDate date="${formaPagoInstance.lastUpdated}" /></td>
 					

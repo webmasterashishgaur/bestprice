@@ -1,5 +1,10 @@
 package bestprice
 
+
+
+import org.junit.*
+import grails.test.mixin.*
+
 @TestFor(PoblacionController)
 @Mock(Poblacion)
 class PoblacionControllerTests {
