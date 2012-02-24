@@ -54,7 +54,9 @@
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="estado.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${estadoInstance?.estatus?.id}">${estadoInstance?.estatus?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="estatus-label">
+							<g:fieldValue bean="${estadoInstance}" field="estatus.descripcion"/>
+						</span>
 					
 				</li>
 				</g:if>
@@ -72,7 +74,9 @@
 				<li class="fieldcontain">
 					<span id="pais-label" class="property-label"><g:message code="estado.pais.label" default="Pais" /></span>
 					
-						<span class="property-value" aria-labelledby="pais-label"><g:link controller="pais" action="show" id="${estadoInstance?.pais?.id}">${estadoInstance?.pais?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="pais-label">
+							<g:fieldValue bean="${estadoInstance}" field="pais.nombreCorto"/>
+						</span>
 					
 				</li>
 				</g:if>
