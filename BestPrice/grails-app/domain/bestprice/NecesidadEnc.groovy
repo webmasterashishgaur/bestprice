@@ -2,7 +2,7 @@ package bestprice
 
 import java.util.Date;
 
-class NecesidadEnc {
+class NecesidadEnc extends Comun{
  
 	Comprador comprador
 	
@@ -14,13 +14,9 @@ class NecesidadEnc {
 	String imagen4
 	String imagen5
 	
-	Estatus estatus
-	Date dateCreated
-	Date lastUpdated
-	
     static constraints = {
-		titulo(size:10..100)
-		descripcion(size:10..300)
+		titulo(blank:false, size:10..100)
+		descripcion(blank:false, size:10..300)
     }
 	
 	def beforeInsert = {

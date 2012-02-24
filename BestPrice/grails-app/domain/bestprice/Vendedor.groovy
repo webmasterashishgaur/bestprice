@@ -2,7 +2,7 @@ package bestprice
 
 import java.util.Date;
 
-class Vendedor {
+class Vendedor extends Comun{
 	Poblacion poblacion 
 	Estado estado 
 	Pais pais
@@ -19,20 +19,15 @@ class Vendedor {
 	String cp
 	String telefono
 	String comentarios
-	Date fechaNacimiento
 	boolean admiteDevolucion
 	
-	Estatus estatus
-	Date dateCreated
-	Date lastUpdated
-	
 	static constraints = {
-		usuario(size:6..15, unique:true)
-		password(size:6..20, password:true)
-		nombre(size:4..40)
+		usuario(blank:false, size:6..15, unique:true)
+		password(blank:false,size:6..20, password:true)
+		nombre(blank:false,size:4..40)
 		appPaterno(size:4..30)
 		appMaterno(size:4..30)
-		email(email:true)
+		email(blank:false,email:true)
 		direccion(size:4..100)
 		cp(size:4..10)
 		telefono(size:4..15)

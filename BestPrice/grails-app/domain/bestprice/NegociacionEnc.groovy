@@ -1,6 +1,6 @@
 package bestprice
 
-class NegociacionEnc {
+class NegociacionEnc extends Comun{
 
 	static belongsTo = [necesidadEnc: NecesidadEnc]
 	Vendedor vendedor
@@ -10,10 +10,6 @@ class NegociacionEnc {
 	String imagen4
 	String imagen5
 
-	Estatus estatus
-	Date dateCreated
-	Date lastUpdated
-	
     static constraints = {
     }
 	

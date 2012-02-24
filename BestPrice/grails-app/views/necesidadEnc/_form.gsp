@@ -2,20 +2,20 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'titulo', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'titulo', 'error')} required">
 	<label for="titulo">
 		<g:message code="necesidadEnc.titulo.label" default="Titulo" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="titulo" maxlength="100" value="${necesidadEncInstance?.titulo}"/>
+	<g:textField name="titulo" maxlength="100" required="" value="${necesidadEncInstance?.titulo}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'descripcion', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'descripcion', 'error')} required">
 	<label for="descripcion">
 		<g:message code="necesidadEnc.descripcion.label" default="Descripcion" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textArea name="descripcion" cols="40" rows="5" maxlength="300" value="${necesidadEncInstance?.descripcion}"/>
+	<g:textArea name="descripcion" cols="40" rows="5" maxlength="300" required="" value="${necesidadEncInstance?.descripcion}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'comprador', 'error')} required">

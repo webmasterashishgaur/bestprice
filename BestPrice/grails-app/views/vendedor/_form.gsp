@@ -2,28 +2,28 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'usuario', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">
 		<g:message code="vendedor.usuario.label" default="Usuario" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="usuario" maxlength="15" value="${vendedorInstance?.usuario}"/>
+	<g:textField name="usuario" maxlength="15" required="" value="${vendedorInstance?.usuario}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'password', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'password', 'error')} required">
 	<label for="password">
 		<g:message code="vendedor.password.label" default="Password" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="password" name="password" maxlength="20" value="${vendedorInstance?.password}"/>
+	<g:field type="password" name="password" maxlength="20" required="" value="${vendedorInstance?.password}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'nombre', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="vendedor.nombre.label" default="Nombre" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="nombre" maxlength="40" value="${vendedorInstance?.nombre}"/>
+	<g:textField name="nombre" maxlength="40" required="" value="${vendedorInstance?.nombre}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'appPaterno', 'error')} ">
@@ -42,12 +42,12 @@
 	<g:textField name="appMaterno" maxlength="30" value="${vendedorInstance?.appMaterno}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'email', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'email', 'error')} required">
 	<label for="email">
 		<g:message code="vendedor.email.label" default="Email" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="email" name="email" value="${vendedorInstance?.email}"/>
+	<g:field type="email" name="email" required="" value="${vendedorInstance?.email}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'direccion', 'error')} ">

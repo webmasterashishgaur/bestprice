@@ -41,11 +41,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${marcaInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="marca.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${marcaInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${marcaInstance?.estatus}">
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="marca.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:fieldValue bean="${marcaInstance}" field="estatus"/></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${marcaInstance?.estatus?.id}">${marcaInstance?.estatus?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${marcaInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="marca.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${marcaInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

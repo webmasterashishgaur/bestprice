@@ -3,11 +3,11 @@ package bestprice
 import org.springframework.dao.DataIntegrityViolationException
 
 class EstadoController {
-	
-	static navigation =[ 
-		[group:'admon', order:2, title:'Crear Estado', action:'create']
-	]
 
+	static navigation =[
+		[group:'admon', order:2, title:'Estados', action:'list']
+	]
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="formaPago.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${formaPagoInstance?.estatus?.id}">${formaPagoInstance?.estatus?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:fieldValue bean="${formaPagoInstance}" field="estatus.descripcion"/></span>
 					
 				</li>
 				</g:if>

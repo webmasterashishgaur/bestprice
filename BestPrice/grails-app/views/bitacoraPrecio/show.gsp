@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${bitacoraPrecioInstance?.estatus}">
+				<li class="fieldcontain">
+					<span id="estatus-label" class="property-label"><g:message code="bitacoraPrecio.estatus.label" default="Estatus" /></span>
+					
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${bitacoraPrecioInstance?.estatus?.id}">${bitacoraPrecioInstance?.estatus?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${bitacoraPrecioInstance?.lastUpdated}">
 				<li class="fieldcontain">
 					<span id="lastUpdated-label" class="property-label"><g:message code="bitacoraPrecio.lastUpdated.label" default="Last Updated" /></span>
