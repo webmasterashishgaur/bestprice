@@ -48,9 +48,9 @@
 					
 						<td><g:formatDate date="${poblacionInstance.dateCreated}" /></td>
 					
-						<td>${fieldValue(bean: poblacionInstance, field: "estado")}</td>
+						<td>${fieldValue(bean: poblacionInstance, field: "estado.nombreCorto")}</td>
 					
-						<td>${fieldValue(bean: poblacionInstance, field: "estatus")}</td>
+						<td>${fieldValue(bean: poblacionInstance, field: "estatus.descripcion")}</td>
 					
 						<td><g:formatDate date="${poblacionInstance.lastUpdated}" /></td>
 					
