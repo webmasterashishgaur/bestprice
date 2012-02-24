@@ -1,3 +1,4 @@
+
 <%@ page import="bestprice.Pais" %>
 <!doctype html>
 <html>
@@ -23,44 +24,48 @@
 			<ol class="property-list pais">
 			
 				<g:if test="${paisInstance?.nombre}">
-					<li class="fieldcontain">
-						<span id="nombre-label" class="property-label"><g:message code="pais.nombre.label" default="Nombre" /></span>
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="pais.nombre.label" default="Nombre" /></span>
+					
 						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${paisInstance}" field="nombre"/></span>
-					</li>
+					
+				</li>
 				</g:if>
 			
 				<g:if test="${paisInstance?.nombreCorto}">
-					<li class="fieldcontain">
-						<span id="nombreCorto-label" class="property-label"><g:message code="pais.nombreCorto.label" default="Nombre Corto" /></span>
+				<li class="fieldcontain">
+					<span id="nombreCorto-label" class="property-label"><g:message code="pais.nombreCorto.label" default="Nombre Corto" /></span>
+					
 						<span class="property-value" aria-labelledby="nombreCorto-label"><g:fieldValue bean="${paisInstance}" field="nombreCorto"/></span>
-					</li>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${paisInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="pais.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${paisInstance?.dateCreated}" /></span>
+					
+				</li>
 				</g:if>
 			
 				<g:if test="${paisInstance?.estatus}">
 				<li class="fieldcontain">
-					<span id="estatus-label" class="property-label">
-						<g:message code="pais.estatus.label" default="Estatus" />
-					</span>
-					<span class="property-value" aria-labelledby="estatus-label">
-						<g:fieldValue bean="${paisInstance}" field="estatus.descripcion"/>					
-					</span>
+					<span id="estatus-label" class="property-label"><g:message code="pais.estatus.label" default="Estatus" /></span>
+					
+						<span class="property-value" aria-labelledby="estatus-label">
+							<g:fieldValue bean="${paisInstance}" field="estatus.descripcion"/>						
+						</span>
 					
 				</li>
-				</g:if>
-
-				<g:if test="${paisInstance?.dateCreated}">
-					<li class="fieldcontain">
-						<span id="dateCreated-label" class="property-label"><g:message code="pais.dateCreated.label" default="Date Created" /></span>
-						<span class="property-value" aria-labelledby="dateCreated-label">
-						<g:formatDate date="${paisInstance?.dateCreated}" format="dd/MM/yyyy HH:MM:SS"/></span>
-					</li>
 				</g:if>
 			
 				<g:if test="${paisInstance?.lastUpdated}">
 				<li class="fieldcontain">
 					<span id="lastUpdated-label" class="property-label"><g:message code="pais.lastUpdated.label" default="Last Updated" /></span>
 					
-						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${paisInstance?.lastUpdated}" format="dd/MM/yyyy HH:MM:SS"/></span>
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${paisInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>
