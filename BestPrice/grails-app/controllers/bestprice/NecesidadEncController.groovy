@@ -8,7 +8,7 @@ class NecesidadEncController {
 	
 	static navigation = [
 		group:'tabs',
-		order:10,
+		order:1,
 		title:'Publicar Compra',
 		action:'create'
 	]
@@ -46,12 +46,12 @@ class NecesidadEncController {
 		def user = springSecurityService.currentUser
 		def p = Comprador.findByUsuario(user.username)
 		necesidadEncInstance.comprador = p 
-		
+		def ruta =  "/images/compras/"+user.username
 		
 		def uploadedFile1 = request.getFile('imagen1')
 		if(!uploadedFile1.empty){
 		  def webRootDir = servletContext.getRealPath("/")
-		  def userDir = new File(webRootDir, "/images/compras/evillegas")
+		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile1.transferTo( new File( userDir, uploadedFile1.originalFilename))
 		  necesidadEncInstance.imagen1 = uploadedFile1.originalFilename;
@@ -60,7 +60,7 @@ class NecesidadEncController {
 		def uploadedFile2 = request.getFile('imagen2')
 		if(!uploadedFile2.empty){
 		  def webRootDir = servletContext.getRealPath("/")
-		  def userDir = new File(webRootDir, "/images/compras/evillegas")
+		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile2.transferTo( new File( userDir, uploadedFile2.originalFilename))
 		  necesidadEncInstance.imagen2 = uploadedFile2.originalFilename;
@@ -69,7 +69,7 @@ class NecesidadEncController {
 		def uploadedFile3 = request.getFile('imagen3')
 		if(!uploadedFile3.empty){
 		  def webRootDir = servletContext.getRealPath("/")
-		  def userDir = new File(webRootDir, "/images/compras/evillegas")
+		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile3.transferTo( new File( userDir, uploadedFile3.originalFilename))
 		  necesidadEncInstance.imagen3 = uploadedFile3.originalFilename;
@@ -78,7 +78,7 @@ class NecesidadEncController {
 		def uploadedFile4 = request.getFile('imagen4')
 		if(!uploadedFile4.empty){
 		  def webRootDir = servletContext.getRealPath("/")
-		  def userDir = new File(webRootDir, "/images/compras/evillegas")
+		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile4.transferTo( new File( userDir, uploadedFile4.originalFilename))
 		  necesidadEncInstance.imagen4 = uploadedFile4.originalFilename;
@@ -87,7 +87,7 @@ class NecesidadEncController {
 		def uploadedFile5 = request.getFile('imagen5')
 		if(!uploadedFile5.empty){
 		  def webRootDir = servletContext.getRealPath("/")
-		  def userDir = new File(webRootDir, "/images/compras/evillegas")
+		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile5.transferTo( new File( userDir, uploadedFile5.originalFilename))
 		  necesidadEncInstance.imagen5 = uploadedFile5.originalFilename;

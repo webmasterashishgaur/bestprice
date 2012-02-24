@@ -34,8 +34,6 @@
 					
 						<th><g:message code="necesidadEnc.estatus.label" default="Estatus" /></th>
 					
-						<g:sortableColumn property="imagen1" title="${message(code: 'necesidadEnc.imagen1.label', default: 'Imagen1')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -46,13 +44,11 @@
 					
 						<td>${fieldValue(bean: necesidadEncInstance, field: "descripcion")}</td>
 					
-						<td>${fieldValue(bean: necesidadEncInstance, field: "comprador")}</td>
+						<td>${fieldValue(bean: necesidadEncInstance, field: "comprador.usuario")}</td>
 					
-						<td><g:formatDate date="${necesidadEncInstance.dateCreated}" /></td>
+						<td><g:formatDate date="${necesidadEncInstance.dateCreated}" format="dd/MM/yyyy" /></td>
 					
-						<td>${fieldValue(bean: necesidadEncInstance, field: "estatus")}</td>
-					
-						<td>${fieldValue(bean: necesidadEncInstance, field: "imagen1")}</td>
+						<td>${fieldValue(bean: necesidadEncInstance, field: "estatus.descripcion")}</td>
 					
 					</tr>
 				</g:each>

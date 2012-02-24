@@ -82,20 +82,12 @@
 	<g:textField name="comentarios" maxlength="100" value="${compradorInstance?.comentarios}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'estado', 'error')} required">
-	<label for="estado">
-		<g:message code="comprador.estado.label" default="Estado" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="estado" name="estado.id" from="${bestprice.Estado.list()}" optionKey="id" required="" value="${compradorInstance?.estado?.id}" class="many-to-one"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="comprador.estatus.label" default="Estatus" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${compradorInstance?.estatus?.id}" class="many-to-one"/>
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${compradorInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'pais', 'error')} required">
@@ -103,7 +95,15 @@
 		<g:message code="comprador.pais.label" default="Pais" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="pais" name="pais.id" from="${bestprice.Pais.list()}" optionKey="id" required="" value="${compradorInstance?.pais?.id}" class="many-to-one"/>
+	<g:select id="pais" name="pais.id" from="${bestprice.Pais.list()}" optionKey="id" required="" value="${compradorInstance?.pais?.id}" class="many-to-one" optionValue="nombreCorto"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'estado', 'error')} required">
+	<label for="estado">
+		<g:message code="comprador.estado.label" default="Estado" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="estado" name="estado.id" from="${bestprice.Estado.list()}" optionKey="id" required="" value="${compradorInstance?.estado?.id}" class="many-to-one" optionValue="nombreCorto"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'poblacion', 'error')} required">
@@ -111,6 +111,6 @@
 		<g:message code="comprador.poblacion.label" default="Poblacion" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="poblacion" name="poblacion.id" from="${bestprice.Poblacion.list()}" optionKey="id" required="" value="${compradorInstance?.poblacion?.id}" class="many-to-one"/>
+	<g:select id="poblacion" name="poblacion.id" from="${bestprice.Poblacion.list()}" optionKey="id" required="" value="${compradorInstance?.poblacion?.id}" class="many-to-one" optionValue="nombreCorto"/>
 </div>
 

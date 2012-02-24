@@ -4,6 +4,18 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class VendedorController {
 
+	static navigation = [
+		[group:'tabs',
+		order:3,
+		title:'Soy Vendedor',
+		action:'create'],
+	
+		[group:'admon',
+		order:4,
+		title:'Soy Vendedor',
+		action:'create'],
+	]
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

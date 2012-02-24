@@ -27,7 +27,7 @@
 		
 		<div id="grailsHeader" role="banner">
 			<div id="grailsLogo" role="banner">
-				<img src="${resource(dir: 'images', file: 'bq.gif')}" alt="Grails"/>
+				<img src="${resource(dir: 'images', file: '')}" alt="Grails"/><!-- bq.gif -->
 			</div>
 			<div  id="grailsMenu" role="banner">		
 				<sec:ifAllGranted roles="ROLE_ADMIN">
