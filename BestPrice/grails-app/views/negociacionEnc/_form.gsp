@@ -2,6 +2,14 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'comentarios', 'error')} required">
+	<label for="comentarios">
+		<g:message code="negociacionEnc.comentarios.label" default="Comentarios" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="comentarios" maxlength="200" required="" value="${negociacionEncInstance?.comentarios}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="negociacionEnc.estatus.label" default="Estatus" />

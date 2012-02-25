@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list negociacionEnc">
 			
+				<g:if test="${negociacionEncInstance?.comentarios}">
+				<li class="fieldcontain">
+					<span id="comentarios-label" class="property-label"><g:message code="negociacionEnc.comentarios.label" default="Comentarios" /></span>
+					
+						<span class="property-value" aria-labelledby="comentarios-label"><g:fieldValue bean="${negociacionEncInstance}" field="comentarios"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${negociacionEncInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="negociacionEnc.dateCreated.label" default="Date Created" /></span>
