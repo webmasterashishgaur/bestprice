@@ -9,8 +9,10 @@ class NegociacionEnc extends Comun{
 	String imagen3
 	String imagen4
 	String imagen5
+	String comentarios
 
     static constraints = {
+		comentarios(blank:false, size:4..200)
     }
 	
 	def beforeInsert = {
