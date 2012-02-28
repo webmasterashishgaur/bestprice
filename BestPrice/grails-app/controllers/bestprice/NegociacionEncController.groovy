@@ -4,14 +4,30 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class NegociacionEncController {
 
+	def springSecurityService
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	def beforeInterceptor = [
+		action:this.&auth,
+		except:['index','list', 'show']
+	]
+	
+	private auth(){
+		if(!springSecurityService.currentUser){
+			redirect(controller:'vendedor',action:'create')
+			return false;
+		}else if(! Vendedor.findByUsuario(springSecurityService.currentUser.username)){
+			redirect(controller:'vendedor',action:'create')
+			return false;
+		}
+	}
+	
     def index() {
         redirect(action: "list", params: params)
     }
 
     def list() {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		System.out.println(params.necesidadEnc)
         [negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
     }
@@ -22,6 +38,8 @@ class NegociacionEncController {
 
     def save() {
         def negociacionEncInstance = new NegociacionEnc(params)
+		negociacionEncInstance.vendedor = Vendedor.findByUsuario(springSecurityService.currentUser.username)
+		
         if (!negociacionEncInstance.save(flush: true)) {
             render(view: "create", model: [negociacionEncInstance: negociacionEncInstance])
             return

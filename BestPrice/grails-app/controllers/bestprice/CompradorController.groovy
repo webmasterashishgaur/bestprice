@@ -40,10 +40,10 @@ class CompradorController {
             render(view: "create", model: [compradorInstance: compradorInstance])
             return
         }else{
-			def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
+			//def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
 			def testUser = new User(username: compradorInstance.usuario, enabled: true, password: compradorInstance.password)
 			testUser.save(flush: true)
-			UserRole.create testUser, userRole, true
+			//UserRole.create testUser, userRole, true
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'comprador.label', default: 'Comprador'), compradorInstance.id])

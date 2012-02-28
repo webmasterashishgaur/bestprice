@@ -1,6 +1,7 @@
 package bestprice
 
 import org.springframework.dao.DataIntegrityViolationException
+import com.testapp.User
 
 class VendedorController {
 
@@ -36,6 +37,9 @@ class VendedorController {
         if (!vendedorInstance.save(flush: true)) {
             render(view: "create", model: [vendedorInstance: vendedorInstance])
             return
+        }else{
+			def testUser = new User(username: vendedorInstance.usuario, enabled: true, password: vendedorInstance.password)
+			testUser.save(flush: true)
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'vendedor.label', default: 'Vendedor'), vendedorInstance.id])
