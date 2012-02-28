@@ -16,7 +16,7 @@ class NegociacionEnc extends Comun{
     }
 	
 	def beforeInsert = {
-		estatus = 1
+		estatus.id = 1
 	}
 	
 }
