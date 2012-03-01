@@ -10,14 +10,14 @@ class NegociacionEncController {
 
 	def beforeInterceptor = [
 		action:this.&auth,
-		except:['index','list', 'show']
+		except:['index', 'show']
 	]
 	
 	private auth(){
 		if(!springSecurityService.currentUser){
 			redirect(controller:'vendedor',action:'create')
 			return false;
-		}else if(! Vendedor.findByUsuario(springSecurityService.currentUser.username)){
+		}else if(!Vendedor.findByUsuario(springSecurityService.currentUser.username)){
 			redirect(controller:'vendedor',action:'create')
 			return false;
 		}
@@ -28,8 +28,14 @@ class NegociacionEncController {
     }
 
     def list() {
-		System.out.println(params.necesidadEnc)
-        [negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
+		if(springSecurityService.currentUser){
+			def vendedor = Vendedor.findByUsuario(springSecurityService.currentUser.username)
+			if(vendedor){
+				[negociacionEncInstanceList: NegociacionEnc.findAllByVendedor(vendedor), negociacionEncInstanceTotal: NegociacionEnc.count()]
+			}else if(!vendedor){
+				[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
+			}
+		}
     }
 
     def create() {
