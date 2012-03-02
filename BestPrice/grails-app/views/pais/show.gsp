@@ -50,13 +50,22 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${paisInstance?.estados}">
+				<li class="fieldcontain">
+					<span id="estados-label" class="property-label"><g:message code="pais.estados.label" default="Estados" /></span>
+					
+						<g:each in="${paisInstance.estados}" var="e">
+						<span class="property-value" aria-labelledby="estados-label"><g:link controller="estado" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${paisInstance?.estatus}">
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="pais.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label">
-							<g:fieldValue bean="${paisInstance}" field="estatus.descripcion"/>						
-						</span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${paisInstance?.estatus?.id}">${paisInstance?.estatus?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

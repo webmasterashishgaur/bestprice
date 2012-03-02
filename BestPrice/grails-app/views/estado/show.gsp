@@ -54,9 +54,7 @@
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="estado.estatus.label" default="Estatus" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label">
-							<g:fieldValue bean="${estadoInstance}" field="estatus.descripcion"/>
-						</span>
+						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${estadoInstance?.estatus?.id}">${estadoInstance?.estatus?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -74,9 +72,18 @@
 				<li class="fieldcontain">
 					<span id="pais-label" class="property-label"><g:message code="estado.pais.label" default="Pais" /></span>
 					
-						<span class="property-value" aria-labelledby="pais-label">
-							<g:fieldValue bean="${estadoInstance}" field="pais.nombreCorto"/>
-						</span>
+						<span class="property-value" aria-labelledby="pais-label"><g:link controller="pais" action="show" id="${estadoInstance?.pais?.id}">${estadoInstance?.pais?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${estadoInstance?.poblaciones}">
+				<li class="fieldcontain">
+					<span id="poblaciones-label" class="property-label"><g:message code="estado.poblaciones.label" default="Poblaciones" /></span>
+					
+						<g:each in="${estadoInstance.poblaciones}" var="p">
+						<span class="property-value" aria-labelledby="poblaciones-label"><g:link controller="poblacion" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
