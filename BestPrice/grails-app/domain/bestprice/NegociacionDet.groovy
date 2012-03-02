@@ -4,7 +4,7 @@ import java.util.Date;
 
 class NegociacionDet {
 	
-	static belongsTo = NegociacionEnc
+	static belongsTo = [negociacionEnc:NegociacionEnc]
 	
 	String comentarioVendedor
 	String comentarioComprador

@@ -29,26 +29,8 @@ class NegociacionEncController {
 
     def list() {
 		if(springSecurityService.currentUser){
-			def vendedor = Vendedor.findByUsuario(springSecurityService.currentUser.username)
-			def comprador = Comprador.findByUsuario(springSecurityService.currentUser.username)
-			//def necesidadEnc = NecesidadEnc.get(params.necesidadEnc)
-			def necId = params.necesidadEnc
-			if(vendedor){
-				[negociacionEncInstanceList: NegociacionEnc.findAllByVendedor(vendedor), negociacionEncInstanceTotal: NegociacionEnc.count()]
-			}else{ 
-				[negociacionEncInstanceList: NegociacionEnc.where {(NegociacionEnc.necesidadEnc == 5 )}.list(), negociacionEncInstanceTotal: NegociacionEnc.count()]
-			
-				//def query = NegociacionEnc.where {(NegociacionEnc.necesidadEnc == 6 && NegociacionEnc.necesidadEnc.comprador == comprador)}
-				//def negociacionEncInstanceList = query.list()
-				//def negociacionEncInstanceTotal = 0
-				//negociacionEncInstanceList: results, negociacionEncInstanceTotal: NegociacionEnc.count()
-				/*
-				if(comprador == necesidadEnc.comprador){
-					[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
-				}else{
-					[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc.findAllByComprador(comprador), negociacionEncInstanceTotal: NegociacionEnc.count()]
-				}*/
-			}
+			params.max = Math.min(params.max ? params.int('max') : 10, 100)
+			[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
 		}
     }
 
@@ -58,7 +40,45 @@ class NegociacionEncController {
 
     def save() {
         def negociacionEncInstance = new NegociacionEnc(params)
-		negociacionEncInstance.vendedor = Vendedor.findByUsuario(springSecurityService.currentUser.username)
+		def user = springSecurityService.currentUser
+		negociacionEncInstance.vendedor = Vendedor.findByUsuario(user.username)
+		def ruta =  "/images/compras/"+user.username
+		
+		def uploadedFile2 = request.getFile('imagen2')
+		if(!uploadedFile2.empty){
+		  def webRootDir = servletContext.getRealPath("/")
+		  def userDir = new File(webRootDir, ruta)
+		  userDir.mkdirs()
+		  uploadedFile2.transferTo( new File( userDir, uploadedFile2.originalFilename))
+		  negociacionEncInstance.imagen2 = uploadedFile2.originalFilename;
+		}
+		
+		def uploadedFile3 = request.getFile('imagen3')
+		if(!uploadedFile3.empty){
+		  def webRootDir = servletContext.getRealPath("/")
+		  def userDir = new File(webRootDir, ruta)
+		  userDir.mkdirs()
+		  uploadedFile3.transferTo( new File( userDir, uploadedFile3.originalFilename))
+		  negociacionEncInstance.imagen3 = uploadedFile3.originalFilename;
+		}
+		
+		def uploadedFile4 = request.getFile('imagen4')
+		if(!uploadedFile4.empty){
+		  def webRootDir = servletContext.getRealPath("/")
+		  def userDir = new File(webRootDir, ruta)
+		  userDir.mkdirs()
+		  uploadedFile4.transferTo( new File( userDir, uploadedFile4.originalFilename))
+		  negociacionEncInstance.imagen4 = uploadedFile4.originalFilename;
+		}
+		
+		def uploadedFile5 = request.getFile('imagen5')
+		if(!uploadedFile5.empty){
+		  def webRootDir = servletContext.getRealPath("/")
+		  def userDir = new File(webRootDir, ruta)
+		  userDir.mkdirs()
+		  uploadedFile5.transferTo( new File( userDir, uploadedFile5.originalFilename))
+		  negociacionEncInstance.imagen5 = uploadedFile5.originalFilename;
+		}
 		
         if (!negociacionEncInstance.save(flush: true)) {
             render(view: "create", model: [negociacionEncInstance: negociacionEncInstance])
@@ -132,7 +152,8 @@ class NegociacionEncController {
         try {
             negociacionEncInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), params.id])
-            redirect(action: "list")
+            //redirect(action: "list")
+			redirect(controller:"necesidadEnc", action: "show", id: negociacionEncInstance.necesidadEnc.id)
         }
         catch (DataIntegrityViolationException e) {
 			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), params.id])

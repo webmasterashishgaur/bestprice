@@ -23,7 +23,7 @@
 		<g:message code="negociacionEnc.imagen2.label" default="Imagen2" />
 		
 	</label>
-	<g:textField name="imagen2" value="${negociacionEncInstance?.imagen2}"/>
+	<input type="file" id="imagen2" name="imagen2" value="${negociacionEncInstance?.imagen2}"/>	
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen3', 'error')} ">
@@ -31,7 +31,7 @@
 		<g:message code="negociacionEnc.imagen3.label" default="Imagen3" />
 		
 	</label>
-	<g:textField name="imagen3" value="${negociacionEncInstance?.imagen3}"/>
+	<input type="file" id="imagen3" name="imagen3" value="${negociacionEncInstance?.imagen3}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen4', 'error')} ">
@@ -39,7 +39,7 @@
 		<g:message code="negociacionEnc.imagen4.label" default="Imagen4" />
 		
 	</label>
-	<g:textField name="imagen4" value="${negociacionEncInstance?.imagen4}"/>
+	<input type="file" id="imagen4" name="imagen4" value="${negociacionEncInstance?.imagen4}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen5', 'error')} ">
@@ -47,7 +47,7 @@
 		<g:message code="negociacionEnc.imagen5.label" default="Imagen5" />
 		
 	</label>
-	<g:textField name="imagen5" value="${negociacionEncInstance?.imagen5}"/>
+	<input type="file" id="imagen5" name="imagen5" value="${negociacionEncInstance?.imagen5}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'necesidadEnc', 'error')} required">

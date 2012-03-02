@@ -2,6 +2,7 @@ package bestprice
 
 class NegociacionEnc extends Comun{
 
+	static hasMany = [negociacionDets:NegociacionDet]
 	static belongsTo = [necesidadEnc: NecesidadEnc]
 	Vendedor vendedor
 	Double precio

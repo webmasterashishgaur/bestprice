@@ -43,64 +43,49 @@
 			
 				<g:if test="${negociacionEncInstance?.estatus}">
 				<li class="fieldcontain">
-					<span id="estatus-label" class="property-label"><g:message code="negociacionEnc.estatus.label" default="Estatus" /></span>
-					
-						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${negociacionEncInstance?.estatus?.id}">${negociacionEncInstance?.estatus?.encodeAsHTML()}</g:link></span>
-					
+					<span id="estatus-label" class="property-label">
+						<g:message code="negociacionEnc.estatus.label" default="Estatus" />
+					</span>
+					<span class="property-value" aria-labelledby="estatus-label">
+					<g:fieldValue bean="${negociacionEncInstance}" field="estatus.descripcion"/>					
+					</span>
 				</li>
 				</g:if>
 			
 				<g:if test="${negociacionEncInstance?.imagen2}">
 				<li class="fieldcontain">
-					<span id="imagen2-label" class="property-label"><g:message code="negociacionEnc.imagen2.label" default="Imagen2" /></span>
-					
-						<span class="property-value" aria-labelledby="imagen2-label"><g:fieldValue bean="${negociacionEncInstance}" field="imagen2"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${negociacionEncInstance?.imagen3}">
-				<li class="fieldcontain">
-					<span id="imagen3-label" class="property-label"><g:message code="negociacionEnc.imagen3.label" default="Imagen3" /></span>
-					
-						<span class="property-value" aria-labelledby="imagen3-label"><g:fieldValue bean="${negociacionEncInstance}" field="imagen3"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${negociacionEncInstance?.imagen4}">
-				<li class="fieldcontain">
-					<span id="imagen4-label" class="property-label"><g:message code="negociacionEnc.imagen4.label" default="Imagen4" /></span>
-					
-						<span class="property-value" aria-labelledby="imagen4-label"><g:fieldValue bean="${negociacionEncInstance}" field="imagen4"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${negociacionEncInstance?.imagen5}">
-				<li class="fieldcontain">
-					<span id="imagen5-label" class="property-label"><g:message code="negociacionEnc.imagen5.label" default="Imagen5" /></span>
-					
-						<span class="property-value" aria-labelledby="imagen5-label"><g:fieldValue bean="${negociacionEncInstance}" field="imagen5"/></span>
+					<span id="imagen2-label" class="property-label">
+						<g:message code="negociacionEnc.imagen2.label" default="Imagenes" />
+					</span>
+					<span class="property-value" aria-labelledby="imagen5-label">					
+						<g:if test="${negociacionEncInstance?.imagen2}">					
+							<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen2)}"
+	          						alt="${negociacionEncInstance?.imagen2}" title="${negociacionEncInstance?.imagen2}" width="40" height="40"/>
+						</g:if>
+						<g:if test="${negociacionEncInstance?.imagen3}">					
+								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen3)}"
+	           						alt="${negociacionEncInstance?.imagen3}" title="${negociacionEncInstance?.imagen3}" width="40" height="40"/>
+						</g:if>
+						<g:if test="${negociacionEncInstance?.imagen4}">					
+								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen4)}"
+	           						alt="${negociacionEncInstance?.imagen4}" title="${negociacionEncInstance?.imagen4}" width="40" height="40"/>
+						</g:if>					
+						<g:if test="${negociacionEncInstance?.imagen5}">					
+	
+								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen5)}"
+	           						alt="${negociacionEncInstance?.imagen5}" title="${negociacionEncInstance?.imagen5}" width="40" height="40"/>
+						
+						</g:if>
+					</span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${negociacionEncInstance?.lastUpdated}">
 				<li class="fieldcontain">
-					<span id="lastUpdated-label" class="property-label"><g:message code="negociacionEnc.lastUpdated.label" default="Last Updated" /></span>
-					
+					<span id="lastUpdated-label" class="property-label">
+						<g:message code="negociacionEnc.lastUpdated.label" default="Last Updated" /></span>
 						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${negociacionEncInstance?.lastUpdated}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${negociacionEncInstance?.necesidadEnc}">
-				<li class="fieldcontain">
-					<span id="necesidadEnc-label" class="property-label"><g:message code="negociacionEnc.necesidadEnc.label" default="Necesidad Enc" /></span>
-					
-						<span class="property-value" aria-labelledby="necesidadEnc-label"><g:link controller="necesidadEnc" action="show" id="${negociacionEncInstance?.necesidadEnc?.id}">${negociacionEncInstance?.necesidadEnc?.encodeAsHTML()}</g:link></span>
-					
 				</li>
 				</g:if>
 			
@@ -113,15 +98,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${negociacionEncInstance?.vendedor}">
-				<li class="fieldcontain">
-					<span id="vendedor-label" class="property-label"><g:message code="negociacionEnc.vendedor.label" default="Vendedor" /></span>
-					
-						<span class="property-value" aria-labelledby="vendedor-label"><g:link controller="vendedor" action="show" id="${negociacionEncInstance?.vendedor?.id}">${negociacionEncInstance?.vendedor?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
@@ -130,6 +106,11 @@
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
+
+			<sec:ifLoggedIn>			
+				<g:include controller="negociacionDet" action="list" params="[negociacionEnc:negociacionEncInstance]"/>				
+			</sec:ifLoggedIn>			
+			
 		</div>
 	</body>
 </html>
