@@ -81,34 +81,24 @@
 					</span>
 					
 					<g:if test="${necesidadEncInstance?.imagen1}">					
-						<span class="property-value" aria-labelledby="imagen1-label">
 							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen1)}"
            						alt="${necesidadEncInstance?.imagen1}" title="${necesidadEncInstance?.imagen1}" width="40" height="40"/>							
-						</span>
 					</g:if>					
 					<g:if test="${necesidadEncInstance?.imagen2}">					
-						<span class="property-value" aria-labelledby="imagen2-label">
 							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen2)}"
            						alt="${necesidadEncInstance?.imagen2}" title="${necesidadEncInstance?.imagen2}" width="40" height="40"/>
-						</span>
 					</g:if>
 					<g:if test="${necesidadEncInstance?.imagen3}">					
-						<span class="property-value" aria-labelledby="imagen3-label">
 							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen3)}"
            						alt="${necesidadEncInstance?.imagen3}" title="${necesidadEncInstance?.imagen3}" width="40" height="40"/>
-						</span>
 					</g:if>
 					<g:if test="${necesidadEncInstance?.imagen4}">					
-						<span class="property-value" aria-labelledby="imagen4-label">
 							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen4)}"
            						alt="${necesidadEncInstance?.imagen4}" title="${necesidadEncInstance?.imagen4}" width="40" height="40"/>
-						</span>
 					</g:if>					
 					<g:if test="${necesidadEncInstance?.imagen5}">					
-						<span class="property-value" aria-labelledby="imagen5-label">
 							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen5)}"
            						alt="${necesidadEncInstance?.imagen5}" title="${necesidadEncInstance?.imagen5}" width="40" height="40"/>
-						</span>
 					</g:if>					
 				</li>
 			
