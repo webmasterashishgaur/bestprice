@@ -24,11 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="comentarioComprador" title="${message(code: 'negociacionDet.comentarioComprador.label', default: 'Comentario Comprador')}" />
-					
-						<g:sortableColumn property="comentarioVendedor" title="${message(code: 'negociacionDet.comentarioVendedor.label', default: 'Comentario Vendedor')}" />
+						<g:sortableColumn property="comentarios" title="${message(code: 'negociacionDet.comentarios.label', default: 'Comentarios')}" />
 					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'negociacionDet.dateCreated.label', default: 'Date Created')}" />
+					
+						<th><g:message code="negociacionDet.negociacionEnc.label" default="Negociacion Enc" /></th>
 					
 					</tr>
 				</thead>
@@ -36,11 +36,11 @@
 				<g:each in="${negociacionDetInstanceList}" status="i" var="negociacionDetInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${negociacionDetInstance.id}">${fieldValue(bean: negociacionDetInstance, field: "comentarioComprador")}</g:link></td>
-					
-						<td>${fieldValue(bean: negociacionDetInstance, field: "comentarioVendedor")}</td>
+						<td><g:link action="show" id="${negociacionDetInstance.id}">${fieldValue(bean: negociacionDetInstance, field: "comentarios")}</g:link></td>
 					
 						<td><g:formatDate date="${negociacionDetInstance.dateCreated}" /></td>
+					
+						<td>${fieldValue(bean: negociacionDetInstance, field: "negociacionEnc")}</td>
 					
 					</tr>
 				</g:each>

@@ -18,12 +18,20 @@
 	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${negociacionEncInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen1', 'error')} ">
+	<label for="imagen1">
+		<g:message code="negociacionEnc.imagen1.label" default="Imagen1" />
+		
+	</label>
+	<input type="file" id="imagen1" name="imagen1" value="${negociacionEncInstance?.imagen1}"/>		
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen2', 'error')} ">
 	<label for="imagen2">
 		<g:message code="negociacionEnc.imagen2.label" default="Imagen2" />
 		
 	</label>
-	<input type="file" id="imagen2" name="imagen2" value="${negociacionEncInstance?.imagen2}"/>	
+	<input type="file" id="imagen2" name="imagen2" value="${negociacionEncInstance?.imagen2}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen3', 'error')} ">
@@ -42,20 +50,29 @@
 	<input type="file" id="imagen4" name="imagen4" value="${negociacionEncInstance?.imagen4}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen5', 'error')} ">
-	<label for="imagen5">
-		<g:message code="negociacionEnc.imagen5.label" default="Imagen5" />
-		
-	</label>
-	<input type="file" id="imagen5" name="imagen5" value="${negociacionEncInstance?.imagen5}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'necesidadEnc', 'error')} required">
 	<label for="necesidadEnc">
 		<g:message code="negociacionEnc.necesidadEnc.label" default="Necesidad Enc" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="necesidadEnc" name="necesidadEnc.id" from="${bestprice.NecesidadEnc.list()}" optionKey="id" required="" value="${negociacionEncInstance?.necesidadEnc?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'negociacionDets', 'error')} ">
+	<label for="negociacionDets">
+		<g:message code="negociacionEnc.negociacionDets.label" default="Negociacion Dets" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${negociacionEncInstance?.negociacionDets?}" var="n">
+    <li><g:link controller="negociacionDet" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="negociacionDet" action="create" params="['negociacionEnc.id': negociacionEncInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'negociacionDet.label', default: 'NegociacionDet')])}</g:link>
+</li>
+</ul>
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'precio', 'error')} required">

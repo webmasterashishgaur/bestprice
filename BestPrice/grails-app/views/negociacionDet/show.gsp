@@ -23,20 +23,11 @@
 			</g:if>
 			<ol class="property-list negociacionDet">
 			
-				<g:if test="${negociacionDetInstance?.comentarioComprador}">
+				<g:if test="${negociacionDetInstance?.comentarios}">
 				<li class="fieldcontain">
-					<span id="comentarioComprador-label" class="property-label"><g:message code="negociacionDet.comentarioComprador.label" default="Comentario Comprador" /></span>
+					<span id="comentarios-label" class="property-label"><g:message code="negociacionDet.comentarios.label" default="Comentarios" /></span>
 					
-						<span class="property-value" aria-labelledby="comentarioComprador-label"><g:fieldValue bean="${negociacionDetInstance}" field="comentarioComprador"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${negociacionDetInstance?.comentarioVendedor}">
-				<li class="fieldcontain">
-					<span id="comentarioVendedor-label" class="property-label"><g:message code="negociacionDet.comentarioVendedor.label" default="Comentario Vendedor" /></span>
-					
-						<span class="property-value" aria-labelledby="comentarioVendedor-label"><g:fieldValue bean="${negociacionDetInstance}" field="comentarioVendedor"/></span>
+						<span class="property-value" aria-labelledby="comentarios-label"><g:fieldValue bean="${negociacionDetInstance}" field="comentarios"/></span>
 					
 				</li>
 				</g:if>
@@ -46,6 +37,15 @@
 					<span id="dateCreated-label" class="property-label"><g:message code="negociacionDet.dateCreated.label" default="Date Created" /></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${negociacionDetInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${negociacionDetInstance?.negociacionEnc}">
+				<li class="fieldcontain">
+					<span id="negociacionEnc-label" class="property-label"><g:message code="negociacionDet.negociacionEnc.label" default="Negociacion Enc" /></span>
+					
+						<span class="property-value" aria-labelledby="negociacionEnc-label"><g:link controller="negociacionEnc" action="show" id="${negociacionDetInstance?.negociacionEnc?.id}">${negociacionDetInstance?.negociacionEnc?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
