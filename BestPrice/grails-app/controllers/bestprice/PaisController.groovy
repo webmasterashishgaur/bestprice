@@ -1,15 +1,16 @@
 package bestprice
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.*
 
 class PaisController {
-	
-	static navigation =[ 
-		[group:'admon', order:1, title:'Paises', action:'list']
-	]
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	static navigation =[
+		[group:'admon', order:1, title:'Pais', action:'list']
+	]
+	
     def index() {
         redirect(action: "list", params: params)
     }
@@ -104,4 +105,9 @@ class PaisController {
             redirect(action: "show", id: params.id)
         }
     }
+	
+	def ajaxGetEstados = {
+		def pais = Pais.get(params.id)
+		render pais?.estados as JSON
+	}
 }

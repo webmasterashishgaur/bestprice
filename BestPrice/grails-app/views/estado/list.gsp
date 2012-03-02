@@ -48,11 +48,11 @@
 					
 						<td><g:formatDate date="${estadoInstance.dateCreated}" /></td>
 					
-						<td>${fieldValue(bean: estadoInstance, field: "estatus.descripcion")}</td>
+						<td>${fieldValue(bean: estadoInstance, field: "estatus")}</td>
 					
 						<td><g:formatDate date="${estadoInstance.lastUpdated}" /></td>
 					
-						<td>${fieldValue(bean: estadoInstance, field: "pais.nombreCorto")}</td>
+						<td>${fieldValue(bean: estadoInstance, field: "pais")}</td>
 					
 					</tr>
 				</g:each>

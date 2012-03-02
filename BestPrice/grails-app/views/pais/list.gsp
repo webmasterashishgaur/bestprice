@@ -46,7 +46,7 @@
 					
 						<td><g:formatDate date="${paisInstance.dateCreated}" /></td>
 					
-						<td>${fieldValue(bean: paisInstance, field: "estatus.descripcion")}</td>
+						<td>${fieldValue(bean: paisInstance, field: "estatus")}</td>
 					
 						<td><g:formatDate date="${paisInstance.lastUpdated}" /></td>
 					

@@ -3,7 +3,9 @@ package bestprice
 import java.util.Date;
 
 class Estado extends Comun{
-	Pais pais
+	static belongsTo = [pais:Pais]
+	static hasMany = [poblaciones:Poblacion]
+	
 	String nombre
 	String nombreCorto
 	

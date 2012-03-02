@@ -90,14 +90,6 @@
 	<g:checkBox name="admiteDevolucion" value="${vendedorInstance?.admiteDevolucion}" />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'estado', 'error')} required">
-	<label for="estado">
-		<g:message code="vendedor.estado.label" default="Estado" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="estado" name="estado.id" from="${bestprice.Estado.list()}" optionKey="id" required="" value="${vendedorInstance?.estado?.id}" class="many-to-one" optionValue="nombreCorto"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'estatus', 'error')} required">
 	<label for="estatus">
 		<g:message code="vendedor.estatus.label" default="Estatus" />
@@ -119,7 +111,18 @@
 		<g:message code="vendedor.pais.label" default="Pais" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="pais" name="pais.id" from="${bestprice.Pais.list()}" optionKey="id" required="" value="${vendedorInstance?.pais?.id}" class="many-to-one" optionValue="nombreCorto"/>
+	<g:select
+        optionKey="id" optionValue="nombreCorto" name="pais.id" id="pais" from="${bestprice.Pais.list()}" required="" value="${vendedorInstance?.pais?.id}" class="many-to-one" 
+        onchange="${remoteFunction(controller:'pais',action:'ajaxGetEstados',params:'\'id=\' + escape(this.value)',onComplete:'updateCity(e)')}"/>	
+</div>
+<div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'estado', 'error')} required">
+	<label for="estado">
+		<g:message code="vendedor.estado.label" default="Estado" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select 
+	optionKey="id" optionValue="nombreCorto" name="estado.id" id="estado" from="${bestprice.Estado.list()}" required="" value="${vendedorInstance?.estado?.id}" class="many-to-one"
+	onchange="${remoteFunction(controller:'estado',action:'ajaxGetPoblaciones',params:'\'id=\' + escape(this.value)',onComplete:'updatePoblacion(e)')}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'poblacion', 'error')} required">
@@ -136,5 +139,5 @@
 		
 	</label>
 	<g:textField name="url" value="${vendedorInstance?.url}"/>
-</div>
+</div>    
 

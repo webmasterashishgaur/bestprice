@@ -122,9 +122,9 @@
 				</g:if>
 			
 			</ol>
-			
-			<g:include controller="negociacionEnc" action="list" params="[necesidadEnc:necesidadEncInstance]"/>				
-		
+			<sec:ifLoggedIn>			
+				<g:include controller="negociacionEnc" action="list" params="[necesidadEnc:necesidadEncInstance]"/>				
+			</sec:ifLoggedIn>					
 		</div>
 	</body>
 </html>

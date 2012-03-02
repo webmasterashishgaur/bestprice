@@ -10,7 +10,7 @@ class NegociacionEncController {
 
 	def beforeInterceptor = [
 		action:this.&auth,
-		except:['index', 'show']
+		except:['index', 'list', 'show']
 	]
 	
 	private auth(){
@@ -30,10 +30,24 @@ class NegociacionEncController {
     def list() {
 		if(springSecurityService.currentUser){
 			def vendedor = Vendedor.findByUsuario(springSecurityService.currentUser.username)
+			def comprador = Comprador.findByUsuario(springSecurityService.currentUser.username)
+			//def necesidadEnc = NecesidadEnc.get(params.necesidadEnc)
+			def necId = params.necesidadEnc
 			if(vendedor){
 				[negociacionEncInstanceList: NegociacionEnc.findAllByVendedor(vendedor), negociacionEncInstanceTotal: NegociacionEnc.count()]
-			}else if(!vendedor){
-				[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
+			}else{ 
+				[negociacionEncInstanceList: NegociacionEnc.where {(NegociacionEnc.necesidadEnc == 5 )}.list(), negociacionEncInstanceTotal: NegociacionEnc.count()]
+			
+				//def query = NegociacionEnc.where {(NegociacionEnc.necesidadEnc == 6 && NegociacionEnc.necesidadEnc.comprador == comprador)}
+				//def negociacionEncInstanceList = query.list()
+				//def negociacionEncInstanceTotal = 0
+				//negociacionEncInstanceList: results, negociacionEncInstanceTotal: NegociacionEnc.count()
+				/*
+				if(comprador == necesidadEnc.comprador){
+					[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
+				}else{
+					[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc.findAllByComprador(comprador), negociacionEncInstanceTotal: NegociacionEnc.count()]
+				}*/
 			}
 		}
     }

@@ -4,12 +4,12 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class PoblacionController {
 
-	static navigation =[
-		[group:'admon', order:3, title:'Poblaciones', action:'list']
-	]
-	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	static navigation =[
+		[group:'admon', order:3, title:'Poblacion', action:'list']
+	]
+	
     def index() {
         redirect(action: "list", params: params)
     }
