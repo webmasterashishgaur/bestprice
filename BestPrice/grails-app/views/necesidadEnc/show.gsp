@@ -105,7 +105,6 @@
 				<g:if test="${necesidadEncInstance?.lastUpdated}">
 				<li class="fieldcontain">
 					<span id="lastUpdated-label" class="property-label"><g:message code="necesidadEnc.lastUpdated.label" default="Last Updated" /></span>
-					
 						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${necesidadEncInstance?.lastUpdated}" /></span>
 					
 				</li>

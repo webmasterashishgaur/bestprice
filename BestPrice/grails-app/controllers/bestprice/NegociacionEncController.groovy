@@ -4,7 +4,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class NegociacionEncController {
 
-	def springSecurityService
+def springSecurityService
 	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -44,7 +44,7 @@ class NegociacionEncController {
 		negociacionEncInstance.vendedor = Vendedor.findByUsuario(user.username)
 		def ruta =  "/images/compras/"+user.username
 		
-		def uploadedFile2 = request.getFile('imagen2')
+		def uploadedFile2 = request.getFile('imagen1')
 		if(!uploadedFile2.empty){
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
@@ -53,7 +53,7 @@ class NegociacionEncController {
 		  negociacionEncInstance.imagen2 = uploadedFile2.originalFilename;
 		}
 		
-		def uploadedFile3 = request.getFile('imagen3')
+		def uploadedFile3 = request.getFile('imagen2')
 		if(!uploadedFile3.empty){
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
@@ -62,7 +62,7 @@ class NegociacionEncController {
 		  negociacionEncInstance.imagen3 = uploadedFile3.originalFilename;
 		}
 		
-		def uploadedFile4 = request.getFile('imagen4')
+		def uploadedFile4 = request.getFile('imagen3')
 		if(!uploadedFile4.empty){
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
@@ -71,7 +71,7 @@ class NegociacionEncController {
 		  negociacionEncInstance.imagen4 = uploadedFile4.originalFilename;
 		}
 		
-		def uploadedFile5 = request.getFile('imagen5')
+		def uploadedFile5 = request.getFile('imagen4')
 		if(!uploadedFile5.empty){
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
@@ -152,8 +152,7 @@ class NegociacionEncController {
         try {
             negociacionEncInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), params.id])
-            //redirect(action: "list")
-			redirect(controller:"necesidadEnc", action: "show", id: negociacionEncInstance.necesidadEnc.id)
+            redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
 			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), params.id])

@@ -6,8 +6,7 @@ class NegociacionDet {
 	
 	static belongsTo = [negociacionEnc:NegociacionEnc]
 	
-	String comentarioVendedor
-	String comentarioComprador
+	String comentarios
 	Date dateCreated
 	
     static constraints = {
