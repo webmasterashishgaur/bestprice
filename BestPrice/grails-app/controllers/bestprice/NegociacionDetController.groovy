@@ -31,7 +31,7 @@ class NegociacionDetController {
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionDet.label', default: 'NegociacionDet'), negociacionDetInstance.id])
-        redirect(action: "show", id: negociacionDetInstance.id)
+        redirect(controller:"negociacionEnc", action: "show", id: negociacionDetInstance.negociacionEnc.id)
     }
 
     def show() {

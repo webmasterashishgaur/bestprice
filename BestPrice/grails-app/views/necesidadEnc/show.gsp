@@ -19,7 +19,6 @@
 			</ul>
 		</div>
 		<div id="show-necesidadEnc" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -79,27 +78,28 @@
 					<span id="imagen1-label" class="property-label">
 						<g:message code="necesidadEnc.imagen1.label" default="Imagenes"/>
 					</span>
-					
-					<g:if test="${necesidadEncInstance?.imagen1}">					
-							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen1)}"
-           						alt="${necesidadEncInstance?.imagen1}" title="${necesidadEncInstance?.imagen1}" width="40" height="40"/>							
-					</g:if>					
-					<g:if test="${necesidadEncInstance?.imagen2}">					
-							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen2)}"
-           						alt="${necesidadEncInstance?.imagen2}" title="${necesidadEncInstance?.imagen2}" width="40" height="40"/>
-					</g:if>
-					<g:if test="${necesidadEncInstance?.imagen3}">					
-							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen3)}"
-           						alt="${necesidadEncInstance?.imagen3}" title="${necesidadEncInstance?.imagen3}" width="40" height="40"/>
-					</g:if>
-					<g:if test="${necesidadEncInstance?.imagen4}">					
-							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen4)}"
-           						alt="${necesidadEncInstance?.imagen4}" title="${necesidadEncInstance?.imagen4}" width="40" height="40"/>
-					</g:if>					
-					<g:if test="${necesidadEncInstance?.imagen5}">					
-							<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen5)}"
-           						alt="${necesidadEncInstance?.imagen5}" title="${necesidadEncInstance?.imagen5}" width="40" height="40"/>
-					</g:if>					
+					<span class="property-value" aria-labelledby="estatus-label">
+						<g:if test="${necesidadEncInstance?.imagen1}">					
+								<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen1)}"
+	           						alt="${necesidadEncInstance?.imagen1}" title="${necesidadEncInstance?.imagen1}" width="40" height="40"/>							
+						</g:if>					
+						<g:if test="${necesidadEncInstance?.imagen2}">					
+								<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen2)}"
+	           						alt="${necesidadEncInstance?.imagen2}" title="${necesidadEncInstance?.imagen2}" width="40" height="40"/>
+						</g:if>
+						<g:if test="${necesidadEncInstance?.imagen3}">					
+								<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen3)}"
+	           						alt="${necesidadEncInstance?.imagen3}" title="${necesidadEncInstance?.imagen3}" width="40" height="40"/>
+						</g:if>
+						<g:if test="${necesidadEncInstance?.imagen4}">					
+								<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen4)}"
+	           						alt="${necesidadEncInstance?.imagen4}" title="${necesidadEncInstance?.imagen4}" width="40" height="40"/>
+						</g:if>					
+						<g:if test="${necesidadEncInstance?.imagen5}">					
+								<img src="${createLinkTo(dir:'images/compras/'+necesidadEncInstance.comprador.usuario, file:''+necesidadEncInstance?.imagen5)}"
+	           						alt="${necesidadEncInstance?.imagen5}" title="${necesidadEncInstance?.imagen5}" width="40" height="40"/>
+						</g:if>
+					</span>
 				</li>
 			
 				<g:if test="${necesidadEncInstance?.lastUpdated}">

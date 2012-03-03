@@ -13,11 +13,6 @@ class NegociacionEnc extends Comun{
 	String comentarios
 
     static constraints = {
-		comentarios(blank:false, size:4..200)
+		comentarios(blank:false, size:4..1000)
     }
-	
-	def beforeInsert = {
-		estatus.id = 1
-	}
-	
 }
