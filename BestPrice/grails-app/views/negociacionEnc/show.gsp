@@ -25,7 +25,7 @@
 			
 				<g:if test="${negociacionEncInstance?.comentarios}">
 				<li class="fieldcontain">
-					<span id="comentarios-label" class="property-label"><g:message code="negociacionEnc.comentarios.label" default="Comentarios" /></span>
+					<span id="comentarios-label" class="property-label"><g:message code="negociacionEnc.comentarios.label" default="Comentarios Vendedor" /></span>
 					
 						<span class="property-value" aria-labelledby="comentarios-label"><g:fieldValue bean="${negociacionEncInstance}" field="comentarios"/></span>
 					
@@ -105,16 +105,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${negociacionEncInstance?.negociacionDets}">
-				<li class="fieldcontain">
-					<span id="negociacionDets-label" class="property-label"><g:message code="negociacionEnc.negociacionDets.label" default="Negociacion Dets" /></span>
-					
-						<g:each in="${negociacionEncInstance.negociacionDets}" var="n">
-						<span class="property-value" aria-labelledby="negociacionDets-label"><g:link controller="negociacionDet" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
 			
 				<g:if test="${negociacionEncInstance?.precio}">
 				<li class="fieldcontain">
@@ -129,19 +119,14 @@
 				<li class="fieldcontain">
 					<span id="vendedor-label" class="property-label"><g:message code="negociacionEnc.vendedor.label" default="Vendedor" /></span>
 					
-						<span class="property-value" aria-labelledby="vendedor-label"><g:link controller="vendedor" action="show" id="${negociacionEncInstance?.vendedor?.id}">${negociacionEncInstance?.vendedor?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="vendedor-label">
+							<g:fieldValue bean="${negociacionEncInstance}" field="vendedor.usuario"/>							
+						</span>
 					
 				</li>
 				</g:if>
 			
 			</ol>
-			<g:form>
-				<fieldset class="buttons">
-					<g:hiddenField name="id" value="${negociacionEncInstance?.id}" />
-					<g:link class="edit" action="edit" id="${negociacionEncInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
 		</div>
 			<sec:ifLoggedIn>			
 				<g:include controller="negociacionDet" action="list" params="[negociacionEnc:negociacionEncInstance]"/>				

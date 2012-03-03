@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${negociacionDetInstance?.usuario}">
+				<li class="fieldcontain">
+					<span id="usuario-label" class="property-label"><g:message code="negociacionDet.usuario.label" default="Usuario" /></span>
+					
+						<span class="property-value" aria-labelledby="usuario-label"><g:fieldValue bean="${negociacionDetInstance}" field="usuario"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${negociacionDetInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="negociacionDet.dateCreated.label" default="Date Created" /></span>

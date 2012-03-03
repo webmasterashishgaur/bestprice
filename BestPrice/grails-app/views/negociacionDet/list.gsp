@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="comentarios" title="${message(code: 'negociacionDet.comentarios.label', default: 'Comentarios')}" />
 					
+						<g:sortableColumn property="usuario" title="${message(code: 'negociacionDet.usuario.label', default: 'Usuario')}" />
+					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'negociacionDet.dateCreated.label', default: 'Date Created')}" />
 					
 						<th><g:message code="negociacionDet.negociacionEnc.label" default="Negociacion Enc" /></th>
@@ -37,6 +39,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${negociacionDetInstance.id}">${fieldValue(bean: negociacionDetInstance, field: "comentarios")}</g:link></td>
+					
+						<td>${fieldValue(bean: negociacionDetInstance, field: "usuario")}</td>
 					
 						<td><g:formatDate date="${negociacionDetInstance.dateCreated}" /></td>
 					
