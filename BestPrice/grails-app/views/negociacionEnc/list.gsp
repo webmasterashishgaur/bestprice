@@ -5,13 +5,13 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'negociacionEnc.label', default: 'NegociacionEnc')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		<title></title>
 	</head>
 	<body>
 		<a href="#list-negociacionEnc" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><g:link class="create" action="create">Ofertar</g:link></li>
+				<li><g:link class="create" action="create" params="[necesidadEnc:necesidadEncInstance]">Ofertar</g:link></li>
 			</ul>
 		</div>
 		<div id="list-negociacionEnc" class="content scaffold-list" role="main">
@@ -44,6 +44,8 @@
 				</g:each>
 				</tbody>
 			</table>
+			<g:hiddenField name="necesidadEncInstance" value="${necesidadEncInstance.id}"/>
+			
 			<div class="pagination">
 				<g:paginate total="${negociacionEncInstanceTotal}" />
 			</div>

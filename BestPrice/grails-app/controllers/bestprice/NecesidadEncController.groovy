@@ -1,5 +1,7 @@
 package bestprice
 
+import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUser;
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils;
 import org.springframework.dao.DataIntegrityViolationException
 
 class NecesidadEncController {
@@ -24,6 +26,11 @@ class NecesidadEncController {
 		if(!springSecurityService.currentUser){
 			redirect(controller:'comprador',action:'create')
 			return false;
+		}else{
+			if(!SpringSecurityUtils.ifAllGranted("ROLE_ADMIN") & !Comprador.findByUsuario(springSecurityService.currentUser.username)){
+				redirect(controller:'comprador',action:'create')
+				return false;
+			}
 		}
 	}
 

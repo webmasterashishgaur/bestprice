@@ -103,6 +103,13 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
+			
+			<sec:ifNotLoggedIn>
+				<div id="lytColLoguin">
+					<g:include controller="login" action="auth" />						
+				</div>
+			</sec:ifNotLoggedIn>			
+			
 			<g:form action="save" >
 				<fieldset class="form">
 					<g:render template="form"/>

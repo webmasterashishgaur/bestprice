@@ -1,3 +1,4 @@
+<%@page import="bestprice.NecesidadEnc"%>
 <%@ page import="bestprice.NegociacionEnc" %>
 
 
@@ -8,14 +9,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="comentarios" maxlength="200" required="" value="${negociacionEncInstance?.comentarios}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'estatus', 'error')} required">
-	<label for="estatus">
-		<g:message code="negociacionEnc.estatus.label" default="Estatus" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${negociacionEncInstance?.estatus?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen1', 'error')} ">
@@ -83,11 +76,29 @@
 	<g:field type="number" name="precio" required="" value="${fieldValue(bean: negociacionEncInstance, field: 'precio')}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'vendedor', 'error')} required">
-	<label for="vendedor">
-		<g:message code="negociacionEnc.vendedor.label" default="Vendedor" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="vendedor" name="vendedor.id" from="${bestprice.Vendedor.list()}" optionKey="id" required="" value="${negociacionEncInstance?.vendedor?.id}" class="many-to-one"/>
-</div>
+<sec:ifAllGranted roles="ROLE_ADMIN">
+	<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'vendedor', 'error')} required">
+		<label for="vendedor">
+			<g:message code="negociacionEnc.vendedor.label" default="Vendedor" />
+			<span class="required-indicator">*</span>
+		</label>	
+		<g:select id="vendedor" name="vendedor.id" from="${bestprice.Vendedor.list()}" optionKey="id" required="" value="${negociacionEncInstance?.vendedor?.id}" class="many-to-one" optionValue="usuario"/>
+	</div>		
+</sec:ifAllGranted>
+
+<sec:ifAllGranted roles="ROLE_ADMIN">
+	<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'estatus', 'error')} required">
+		<label for="estatus">
+			<g:message code="negociacionEnc.estatus.label" default="Estatus" />
+			<span class="required-indicator">*</span>
+		</label>	
+		<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${negociacionEncInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
+	</div>		
+</sec:ifAllGranted>
+<sec:ifNotGranted roles="ROLE_ADMIN">
+	<g:hiddenField name="estatus.id" value="ACTIVO"/>	
+</sec:ifNotGranted>	
+
+
+
 

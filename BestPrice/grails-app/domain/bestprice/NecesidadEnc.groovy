@@ -23,4 +23,8 @@ class NecesidadEnc extends Comun{
 		estatus.id = 1
 	}
 	
+	static mapping = {
+		sort dateCreated: "desc"
+	}
+	
 }
