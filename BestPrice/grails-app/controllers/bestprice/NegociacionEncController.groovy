@@ -30,11 +30,12 @@ def springSecurityService
     def list() {
 		if(springSecurityService.currentUser){
 			params.max = Math.min(params.max ? params.int('max') : 10, 100)
-			[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count()]
+			[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count(), necesidadEncInstance: params.necesidadEnc]
 		}
     }
 
     def create() {
+		System.out.println(params.necesidadEnc);
         [negociacionEncInstance: new NegociacionEnc(), necesidadEnc : params.necesidadEnc]
     }
 
