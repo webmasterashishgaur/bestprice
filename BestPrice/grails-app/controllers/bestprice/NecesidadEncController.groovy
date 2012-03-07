@@ -116,8 +116,13 @@ class NecesidadEncController {
             redirect(action: "list")
             return
         }
+		
+		def puedeEditar = false 
+		if(SpringSecurityUtils.ifAllGranted("ROLE_ADMIN") || (necesidadEncInstance.comprador.usuario ==  springSecurityService.currentUser.username)){
+			puedeEditar = true
+		}
 
-        [necesidadEncInstance: necesidadEncInstance]
+        [necesidadEncInstance: necesidadEncInstance, puedeEditar:puedeEditar]
     }
 
     def edit() {

@@ -44,8 +44,6 @@
 				</g:each>
 				</tbody>
 			</table>
-			<g:hiddenField name="necesidadEncInstance" value="${necesidadEncInstance.id}"/>
-			
 			<div class="pagination">
 				<g:paginate total="${negociacionEncInstanceTotal}" />
 			</div>

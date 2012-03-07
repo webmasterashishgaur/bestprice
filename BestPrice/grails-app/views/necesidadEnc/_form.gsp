@@ -64,4 +64,3 @@
 	</label>
 	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${necesidadEncInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
 </div>
-

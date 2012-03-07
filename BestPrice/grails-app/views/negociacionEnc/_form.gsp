@@ -43,14 +43,6 @@
 	<input type="file" id="imagen4" name="imagen4" value="${negociacionEncInstance?.imagen4}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'necesidadEnc', 'error')} required">
-	<label for="necesidadEnc">
-		<g:message code="negociacionEnc.necesidadEnc.label" default="Necesidad Enc" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="necesidadEnc" name="necesidadEnc.id" from="${bestprice.NecesidadEnc.list()}" optionKey="id" required="" value="${negociacionEncInstance?.necesidadEnc?.id}" class="many-to-one"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'negociacionDets', 'error')} ">
 	<label for="negociacionDets">
 		<g:message code="negociacionEnc.negociacionDets.label" default="Negociacion Dets" />
@@ -96,9 +88,6 @@
 	</div>		
 </sec:ifAllGranted>
 <sec:ifNotGranted roles="ROLE_ADMIN">
-	<g:hiddenField name="estatus.id" value="ACTIVO"/>	
-</sec:ifNotGranted>	
-
-
-
-
+	<g:hiddenField name="estatus.id" value="1"/>	
+</sec:ifNotGranted>
+<g:hiddenField name="necesidadEnc.id" value="${necesidadEnc}"/>
