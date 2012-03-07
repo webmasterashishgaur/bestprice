@@ -55,7 +55,7 @@
 			
 				<g:if test="${necesidadEncInstance?.dateCreated}">
 				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="necesidadEnc.dateCreated.label" default="Date Created" /></span>
+					<span id="dateCreated-label" class="property-label"><g:message code="necesidadEnc.dateCreated.label" default="Fecha de publicación" /></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${necesidadEncInstance?.dateCreated}" /></span>
 					
@@ -102,26 +102,23 @@
 					</span>
 				</li>
 			
-				<g:if test="${necesidadEncInstance?.lastUpdated}">
-				<li class="fieldcontain">
-					<span id="lastUpdated-label" class="property-label"><g:message code="necesidadEnc.lastUpdated.label" default="Last Updated" /></span>
-						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${necesidadEncInstance?.lastUpdated}" /></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
-			<g:form>
-				<fieldset class="buttons">
-					<g:hiddenField name="id" value="${necesidadEncInstance?.id}" />
-					<g:link class="edit" action="edit" id="${necesidadEncInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>			
-			
+			<g:if test="${puedeEditar}">
+				<g:form>
+					<fieldset class="buttons">
+						<g:hiddenField name="id" value="${necesidadEncInstance?.id}" />
+						<g:link class="edit" action="edit" id="${necesidadEncInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+						<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					</fieldset>
+				</g:form>			
+			</g:if>
 			<sec:ifLoggedIn>			
-				<g:include controller="negociacionEnc" action="list" params="[necesidadEnc:necesidadEncInstance]"/>				
-			</sec:ifLoggedIn>					
+				<g:include controller="negociacionEnc" action="list" params="[necesidadEnc:necesidadEncInstance]"/>
+			</sec:ifLoggedIn>
+							
+			<sec:ifNotLoggedIn>
+				<h1>Necesita iniciar sesion como Vendedor para ofertar</h1>
+			</sec:ifNotLoggedIn>					
 		</div>
 	</body>
 </html>

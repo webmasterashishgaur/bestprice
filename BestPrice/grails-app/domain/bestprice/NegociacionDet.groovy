@@ -14,10 +14,10 @@ class NegociacionDet {
 	
     static constraints = {
 		comentarios(blank:false, size:4..1000)
-		usuario(blank:true)
+		usuario(blank:false, nullable:true)
     }
 	
-	def beforeInsert = {
+	transient beforeInsert = {
 		if(springSecurityService.currentUser){
 			usuario = springSecurityService.currentUser.username 
 		}

@@ -15,12 +15,12 @@ class NegociacionDetController {
     def list() {
 		if(springSecurityService.currentUser){
 			params.max = Math.min(params.max ? params.int('max') : 10, 100)
-			[negociacionDetInstanceList: NegociacionDet.findAllByNegociacionEnc(params.negociacionEnc), negociacionDetInstanceTotal: NegociacionDet.count()]
+			[negociacionDetInstanceList: NegociacionDet.findAllByNegociacionEnc(params.negociacionEnc), negociacionDetInstanceTotal: NegociacionDet.count(), negociacionEncInstance: params.negociacionEnc.id]
 		}
     }
 
     def create() {
-        [negociacionDetInstance: new NegociacionDet(params)]
+        [negociacionDetInstance: new NegociacionDet(), negociacionEnc : params.negociacionEnc]
     }
 
     def save() {

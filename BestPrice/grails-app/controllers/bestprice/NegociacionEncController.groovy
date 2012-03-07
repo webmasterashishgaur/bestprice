@@ -1,6 +1,7 @@
 package bestprice
 
 import org.springframework.dao.DataIntegrityViolationException
+import org.springframework.stereotype.Controller;
 
 class NegociacionEncController {
 
@@ -30,12 +31,11 @@ def springSecurityService
     def list() {
 		if(springSecurityService.currentUser){
 			params.max = Math.min(params.max ? params.int('max') : 10, 100)
-			[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count(), necesidadEncInstance: params.necesidadEnc]
+			[negociacionEncInstanceList: NegociacionEnc.findAllByNecesidadEnc(params.necesidadEnc), negociacionEncInstanceTotal: NegociacionEnc.count(), necesidadEncInstance: params.necesidadEnc.id]
 		}
     }
 
     def create() {
-		System.out.println(params.necesidadEnc);
         [negociacionEncInstance: new NegociacionEnc(), necesidadEnc : params.necesidadEnc]
     }
 
@@ -87,7 +87,7 @@ def springSecurityService
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), negociacionEncInstance.id])
-        redirect(action: "show", id: negociacionEncInstance.id)
+        redirect(controller:'necesidadEnc', action: "show", id: negociacionEncInstance.necesidadEnc.id)
     }
 
     def show() {
