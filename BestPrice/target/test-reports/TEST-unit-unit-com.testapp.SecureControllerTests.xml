@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="IM-TIPROG22" name="com.testapp.SecureControllerTests" tests="1" time="0.04" timestamp="2012-03-07T20:21:36">
+  <properties />
+  <testcase classname="com.testapp.SecureControllerTests" name="testSomething" time="0.037">
+    <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at com.testapp.SecureControllerTests.testSomething(SecureControllerTests.groovy:10)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>

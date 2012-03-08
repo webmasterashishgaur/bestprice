@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="IM-TIPROG22" name="bestprice.BitacoraPrecioControllerTests" tests="8" time="1.747" timestamp="2012-03-07T20:21:30">
+  <properties />
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testIndex" time="1.013" />
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testList" time="0.291" />
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testCreate" time="0.061" />
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testSave" time="0.097">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/bitacoraPrecio/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@698b41da&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/bitacoraPrecio/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@698b41da
+
+	at bestprice.BitacoraPrecioControllerTests.testSave(BitacoraPrecioControllerTests.groovy:44)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testShow" time="0.109">
+    <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testShow(BitacoraPrecioControllerTests.groovy:59)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testEdit" time="0.043">
+    <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testEdit(BitacoraPrecioControllerTests.groovy:78)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testUpdate" time="0.039">
+    <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testUpdate(BitacoraPrecioControllerTests.groovy:99)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testDelete" time="0.04">
+    <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testDelete(BitacoraPrecioControllerTests.groovy:143)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

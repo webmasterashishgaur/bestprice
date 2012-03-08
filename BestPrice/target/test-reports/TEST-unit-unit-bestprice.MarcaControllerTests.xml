@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="IM-TIPROG22" name="bestprice.MarcaControllerTests" tests="8" time="0.328" timestamp="2012-03-07T20:21:34">
+  <properties />
+  <testcase classname="bestprice.MarcaControllerTests" name="testIndex" time="0.076" />
+  <testcase classname="bestprice.MarcaControllerTests" name="testList" time="0.029" />
+  <testcase classname="bestprice.MarcaControllerTests" name="testCreate" time="0.026" />
+  <testcase classname="bestprice.MarcaControllerTests" name="testSave" time="0.034">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/marca/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@17829ea2&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/marca/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@17829ea2
+
+	at bestprice.MarcaControllerTests.testSave(MarcaControllerTests.groovy:44)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.MarcaControllerTests" name="testShow" time="0.032">
+    <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testShow(MarcaControllerTests.groovy:59)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.MarcaControllerTests" name="testEdit" time="0.032">
+    <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testEdit(MarcaControllerTests.groovy:78)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.MarcaControllerTests" name="testUpdate" time="0.034">
+    <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testUpdate(MarcaControllerTests.groovy:99)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.MarcaControllerTests" name="testDelete" time="0.034">
+    <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testDelete(MarcaControllerTests.groovy:143)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

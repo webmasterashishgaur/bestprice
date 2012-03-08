@@ -26,12 +26,11 @@
 				</thead>
 				<tbody>
 				<g:each in="${negociacionDetInstanceList}" status="i" var="negociacionDetInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr>
 						<spacer width="70"></spacer>					
 						<td><b>${fieldValue(bean: negociacionDetInstance, field: "usuario")}</b> | <g:formatDate date="${negociacionDetInstance.dateCreated}" format="dd/MM/yyyy hh:mm:ss"/></td>						
 					</tr>
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						
+					<tr>
 						<td>
 						${fieldValue(bean: negociacionDetInstance, field: "comentarios")}
 						</td>

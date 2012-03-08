@@ -15,4 +15,8 @@ class NegociacionEnc extends Comun{
     static constraints = {
 		comentarios(blank:false, size:4..1000)
     }
+	
+	static mapping = {
+		sort dateCreated: "desc"
+	}
 }

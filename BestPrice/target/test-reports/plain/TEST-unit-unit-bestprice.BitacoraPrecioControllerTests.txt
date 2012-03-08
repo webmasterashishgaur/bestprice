@@ -1,0 +1,116 @@
+Testsuite: bestprice.BitacoraPrecioControllerTests
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.747 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 1.013 sec
+Testcase: testList took 0.291 sec
+Testcase: testCreate took 0.061 sec
+Testcase: testSave took 0.097 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/bitacoraPrecio/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@698b41da
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/bitacoraPrecio/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@698b41da
+
+	at bestprice.BitacoraPrecioControllerTests.testSave(BitacoraPrecioControllerTests.groovy:44)
+
+Testcase: testShow took 0.109 sec
+	FAILED
+Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testShow(BitacoraPrecioControllerTests.groovy:59)
+
+Testcase: testEdit took 0.042 sec
+	FAILED
+Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testEdit(BitacoraPrecioControllerTests.groovy:78)
+
+Testcase: testUpdate took 0.039 sec
+	FAILED
+Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testUpdate(BitacoraPrecioControllerTests.groovy:99)
+
+Testcase: testDelete took 0.04 sec
+	FAILED
+Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testDelete(BitacoraPrecioControllerTests.groovy:143)
+

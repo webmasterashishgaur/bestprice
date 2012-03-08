@@ -1,0 +1,24 @@
+Testsuite: bestprice.ComunTests
+Tests run: 1, Failures: 0, Errors: 2, Time elapsed: 0.05 sec
+------------- Standard Output ---------------
+--Output from testSomething--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testSomething--
+------------- ---------------- ---------------
+
+Testcase: testSomething took 0.02 sec
+	Caused an ERROR
+Error creating bean with name 'bestprice.Comun': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bestprice.Comun': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:165)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:120)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException
+Caused by: java.lang.InstantiationException
+
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at org.grails.datastore.mapping.core.DatastoreUtils.unbindSession(DatastoreUtils.java:362)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.shutdownDatastoreImplementation(DomainClassUnitTestMixin.groovy:109)
+

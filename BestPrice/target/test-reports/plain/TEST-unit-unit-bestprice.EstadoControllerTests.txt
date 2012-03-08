@@ -1,0 +1,116 @@
+Testsuite: bestprice.EstadoControllerTests
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.367 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 0.082 sec
+Testcase: testList took 0.034 sec
+Testcase: testCreate took 0.031 sec
+Testcase: testSave took 0.039 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/estado/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@291b5077
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/estado/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@291b5077
+
+	at bestprice.EstadoControllerTests.testSave(EstadoControllerTests.groovy:49)
+
+Testcase: testShow took 0.038 sec
+	FAILED
+Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testShow(EstadoControllerTests.groovy:64)
+
+Testcase: testEdit took 0.035 sec
+	FAILED
+Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testEdit(EstadoControllerTests.groovy:83)
+
+Testcase: testUpdate took 0.034 sec
+	FAILED
+Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testUpdate(EstadoControllerTests.groovy:104)
+
+Testcase: testDelete took 0.037 sec
+	FAILED
+Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testDelete(EstadoControllerTests.groovy:148)
+

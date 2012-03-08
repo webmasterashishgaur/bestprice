@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="5" hostname="IM-TIPROG22" name="bestprice.NegociacionDetControllerTests" tests="8" time="0.579" timestamp="2012-03-07T20:21:34">
+  <properties />
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testIndex" time="0.111" />
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testList" time="0.027">
+    <error message="Cannot get property &apos;currentUser&apos; on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property &apos;currentUser&apos; on null object
+	at bestprice.NegociacionDetController.list(NegociacionDetController.groovy:16)
+	at bestprice.NegociacionDetControllerTests.testList(NegociacionDetControllerTests.groovy:26)
+</error>
+  </testcase>
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testCreate" time="0.024" />
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testSave" time="0.031">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/negociacionDet/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3c22d5b5&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/negociacionDet/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3c22d5b5
+
+	at bestprice.NegociacionDetControllerTests.testSave(NegociacionDetControllerTests.groovy:49)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testShow" time="0.275">
+    <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testShow(NegociacionDetControllerTests.groovy:64)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testEdit" time="0.028">
+    <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testEdit(NegociacionDetControllerTests.groovy:83)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testUpdate" time="0.027">
+    <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testUpdate(NegociacionDetControllerTests.groovy:104)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.NegociacionDetControllerTests" name="testDelete" time="0.027">
+    <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testDelete(NegociacionDetControllerTests.groovy:148)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>
