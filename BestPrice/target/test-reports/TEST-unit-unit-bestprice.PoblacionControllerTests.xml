@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="IM-TIPROG22" name="bestprice.PoblacionControllerTests" tests="8" time="0.3" timestamp="2012-03-07T20:21:36">
+  <properties />
+  <testcase classname="bestprice.PoblacionControllerTests" name="testIndex" time="0.054" />
+  <testcase classname="bestprice.PoblacionControllerTests" name="testList" time="0.027" />
+  <testcase classname="bestprice.PoblacionControllerTests" name="testCreate" time="0.049" />
+  <testcase classname="bestprice.PoblacionControllerTests" name="testSave" time="0.03">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/poblacion/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@46380f83&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/poblacion/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@46380f83
+
+	at bestprice.PoblacionControllerTests.testSave(PoblacionControllerTests.groovy:49)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.PoblacionControllerTests" name="testShow" time="0.029">
+    <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testShow(PoblacionControllerTests.groovy:64)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.PoblacionControllerTests" name="testEdit" time="0.031">
+    <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testEdit(PoblacionControllerTests.groovy:83)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.PoblacionControllerTests" name="testUpdate" time="0.027">
+    <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testUpdate(PoblacionControllerTests.groovy:104)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.PoblacionControllerTests" name="testDelete" time="0.028">
+    <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testDelete(PoblacionControllerTests.groovy:148)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

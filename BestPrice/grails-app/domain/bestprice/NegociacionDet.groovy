@@ -23,4 +23,8 @@ class NegociacionDet {
 		}
 	}
 	
+	static mapping = {
+		sort dateCreated: "desc"
+	}
+	
 }

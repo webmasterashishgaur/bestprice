@@ -1,0 +1,122 @@
+Testsuite: bestprice.NegociacionDetControllerTests
+Tests run: 8, Failures: 5, Errors: 1, Time elapsed: 0.579 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 0.112 sec
+Testcase: testList took 0.027 sec
+	Caused an ERROR
+Cannot get property 'currentUser' on null object
+java.lang.NullPointerException: Cannot get property 'currentUser' on null object
+	at bestprice.NegociacionDetController.list(NegociacionDetController.groovy:16)
+	at bestprice.NegociacionDetControllerTests.testList(NegociacionDetControllerTests.groovy:26)
+
+Testcase: testCreate took 0.024 sec
+Testcase: testSave took 0.031 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/negociacionDet/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3c22d5b5
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/negociacionDet/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3c22d5b5
+
+	at bestprice.NegociacionDetControllerTests.testSave(NegociacionDetControllerTests.groovy:49)
+
+Testcase: testShow took 0.275 sec
+	FAILED
+Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testShow(NegociacionDetControllerTests.groovy:64)
+
+Testcase: testEdit took 0.028 sec
+	FAILED
+Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testEdit(NegociacionDetControllerTests.groovy:83)
+
+Testcase: testUpdate took 0.027 sec
+	FAILED
+Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testUpdate(NegociacionDetControllerTests.groovy:104)
+
+Testcase: testDelete took 0.027 sec
+	FAILED
+Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testDelete(NegociacionDetControllerTests.groovy:148)
+

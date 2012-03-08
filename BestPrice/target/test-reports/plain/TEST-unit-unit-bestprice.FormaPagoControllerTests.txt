@@ -1,0 +1,116 @@
+Testsuite: bestprice.FormaPagoControllerTests
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.339 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 0.077 sec
+Testcase: testList took 0.033 sec
+Testcase: testCreate took 0.027 sec
+Testcase: testSave took 0.034 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/formaPago/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@a5347c3
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/formaPago/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@a5347c3
+
+	at bestprice.FormaPagoControllerTests.testSave(FormaPagoControllerTests.groovy:44)
+
+Testcase: testShow took 0.031 sec
+	FAILED
+Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testShow(FormaPagoControllerTests.groovy:59)
+
+Testcase: testEdit took 0.029 sec
+	FAILED
+Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testEdit(FormaPagoControllerTests.groovy:78)
+
+Testcase: testUpdate took 0.049 sec
+	FAILED
+Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testUpdate(FormaPagoControllerTests.groovy:99)
+
+Testcase: testDelete took 0.029 sec
+	FAILED
+Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testDelete(FormaPagoControllerTests.groovy:143)
+

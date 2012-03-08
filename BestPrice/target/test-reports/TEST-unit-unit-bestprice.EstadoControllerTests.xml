@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="IM-TIPROG22" name="bestprice.EstadoControllerTests" tests="8" time="0.367" timestamp="2012-03-07T20:21:33">
+  <properties />
+  <testcase classname="bestprice.EstadoControllerTests" name="testIndex" time="0.082" />
+  <testcase classname="bestprice.EstadoControllerTests" name="testList" time="0.034" />
+  <testcase classname="bestprice.EstadoControllerTests" name="testCreate" time="0.031" />
+  <testcase classname="bestprice.EstadoControllerTests" name="testSave" time="0.039">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/estado/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@291b5077&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/estado/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@291b5077
+
+	at bestprice.EstadoControllerTests.testSave(EstadoControllerTests.groovy:49)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.EstadoControllerTests" name="testShow" time="0.038">
+    <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testShow(EstadoControllerTests.groovy:64)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.EstadoControllerTests" name="testEdit" time="0.035">
+    <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testEdit(EstadoControllerTests.groovy:83)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.EstadoControllerTests" name="testUpdate" time="0.034">
+    <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testUpdate(EstadoControllerTests.groovy:104)
+</failure>
+  </testcase>
+  <testcase classname="bestprice.EstadoControllerTests" name="testDelete" time="0.038">
+    <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testDelete(EstadoControllerTests.groovy:148)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

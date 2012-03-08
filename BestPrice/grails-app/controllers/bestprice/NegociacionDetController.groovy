@@ -1,5 +1,8 @@
 package bestprice
 
+import grails.plugin.mail.MailService;
+
+import org.apache.naming.factory.SendMailFactory;
 import org.springframework.dao.DataIntegrityViolationException
 
 class NegociacionDetController {
@@ -29,6 +32,14 @@ class NegociacionDetController {
             render(view: "create", model: [negociacionDetInstance: negociacionDetInstance])
             return
         }
+		
+		def negociacionEnc = NegociacionEnc.get(negociacionDetInstance.negociacionEnc.id) 
+		
+		sendMail {     
+			to ""+negociacionEnc.vendedor.email
+			subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username     
+			body 'Comentario: '+negociacionDetInstance.comentarios 
+		}
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionDet.label', default: 'NegociacionDet'), negociacionDetInstance.id])
         redirect(controller:"negociacionEnc", action: "show", id: negociacionDetInstance.negociacionEnc.id)

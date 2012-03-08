@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="0" name="BitacoraPrecioControllerTests" package="bestprice" tests="8" time="1.747" timestamp="2012-03-07T20:21:30">
+      <properties />
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testIndex" time="1.013" />
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testList" time="0.291" />
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testCreate" time="0.061" />
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testSave" time="0.097">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/bitacoraPrecio/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@698b41da&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/bitacoraPrecio/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@698b41da
+
+	at bestprice.BitacoraPrecioControllerTests.testSave(BitacoraPrecioControllerTests.groovy:44)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testShow" time="0.109">
+          <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testShow(BitacoraPrecioControllerTests.groovy:59)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testEdit" time="0.043">
+          <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testEdit(BitacoraPrecioControllerTests.groovy:78)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testUpdate" time="0.039">
+          <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testUpdate(BitacoraPrecioControllerTests.groovy:99)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.BitacoraPrecioControllerTests" name="testDelete" time="0.04">
+          <failure message="Assertion failed: &#xa;&#xa;assert bitacoraPrecio.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.BitacoraPrecio : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert bitacoraPrecio.save() != null
+       |              |      |
+       |              null   false
+       bestprice.BitacoraPrecio : null
+
+	at bestprice.BitacoraPrecioControllerTests.testDelete(BitacoraPrecioControllerTests.groovy:143)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="1" name="CompradorControllerTests" package="bestprice" tests="8" time="0.621" timestamp="2012-03-07T20:21:32">
+      <properties />
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testIndex" time="0.167" />
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testList" time="0.044" />
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testCreate" time="0.054" />
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testSave" time="0.062">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/comprador/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@376502fc&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/comprador/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@376502fc
+
+	at bestprice.CompradorControllerTests.testSave(CompradorControllerTests.groovy:44)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testShow" time="0.075">
+          <failure message="Assertion failed: &#xa;&#xa;assert comprador.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Comprador : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert comprador.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Comprador : null
+
+	at bestprice.CompradorControllerTests.testShow(CompradorControllerTests.groovy:59)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testEdit" time="0.059">
+          <failure message="Assertion failed: &#xa;&#xa;assert comprador.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Comprador : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert comprador.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Comprador : null
+
+	at bestprice.CompradorControllerTests.testEdit(CompradorControllerTests.groovy:78)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testUpdate" time="0.057">
+          <failure message="Assertion failed: &#xa;&#xa;assert comprador.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Comprador : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert comprador.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Comprador : null
+
+	at bestprice.CompradorControllerTests.testUpdate(CompradorControllerTests.groovy:99)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.CompradorControllerTests" name="testDelete" time="0.065">
+          <failure message="Assertion failed: &#xa;&#xa;assert comprador.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Comprador : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert comprador.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Comprador : null
+
+	at bestprice.CompradorControllerTests.testDelete(CompradorControllerTests.groovy:143)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="2" failures="0" hostname="IM-TIPROG22" id="2" name="ComunTests" package="bestprice" tests="1" time="0.05" timestamp="2012-03-07T20:21:32">
+      <properties />
+
+      <testcase classname="bestprice.ComunTests" name="testSomething" time="0.021">
+          <error message="Error creating bean with name &apos;bestprice.Comun&apos;: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException" type="org.springframework.beans.factory.BeanCreationException">org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;bestprice.Comun&apos;: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:165)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:120)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException
+Caused by: java.lang.InstantiationException
+</error>
+
+          <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at org.grails.datastore.mapping.core.DatastoreUtils.unbindSession(DatastoreUtils.java:362)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.shutdownDatastoreImplementation(DomainClassUnitTestMixin.groovy:109)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="3" name="EstadoControllerTests" package="bestprice" tests="8" time="0.367" timestamp="2012-03-07T20:21:33">
+      <properties />
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testIndex" time="0.082" />
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testList" time="0.034" />
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testCreate" time="0.031" />
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testSave" time="0.039">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/estado/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@291b5077&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/estado/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@291b5077
+
+	at bestprice.EstadoControllerTests.testSave(EstadoControllerTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testShow" time="0.038">
+          <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testShow(EstadoControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testEdit" time="0.035">
+          <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testEdit(EstadoControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testUpdate" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testUpdate(EstadoControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstadoControllerTests" name="testDelete" time="0.038">
+          <failure message="Assertion failed: &#xa;&#xa;assert estado.save() != null&#xa;       |      |      |&#xa;       |      null   false&#xa;       bestprice.Estado : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estado.save() != null
+       |      |      |
+       |      null   false
+       bestprice.Estado : null
+
+	at bestprice.EstadoControllerTests.testDelete(EstadoControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="4" name="EstatusControllerTests" package="bestprice" tests="8" time="0.308" timestamp="2012-03-07T20:21:33">
+      <properties />
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testIndex" time="0.053" />
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testList" time="0.03" />
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testCreate" time="0.027" />
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testSave" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/estatus/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3513126e&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/estatus/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3513126e
+
+	at bestprice.EstatusControllerTests.testSave(EstatusControllerTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testShow" time="0.032">
+          <failure message="Assertion failed: &#xa;&#xa;assert estatus.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       bestprice.Estatus : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estatus.save() != null
+       |       |      |
+       |       null   false
+       bestprice.Estatus : null
+
+	at bestprice.EstatusControllerTests.testShow(EstatusControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testEdit" time="0.031">
+          <failure message="Assertion failed: &#xa;&#xa;assert estatus.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       bestprice.Estatus : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estatus.save() != null
+       |       |      |
+       |       null   false
+       bestprice.Estatus : null
+
+	at bestprice.EstatusControllerTests.testEdit(EstatusControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testUpdate" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert estatus.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       bestprice.Estatus : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estatus.save() != null
+       |       |      |
+       |       null   false
+       bestprice.Estatus : null
+
+	at bestprice.EstatusControllerTests.testUpdate(EstatusControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.EstatusControllerTests" name="testDelete" time="0.039">
+          <failure message="Assertion failed: &#xa;&#xa;assert estatus.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       bestprice.Estatus : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert estatus.save() != null
+       |       |      |
+       |       null   false
+       bestprice.Estatus : null
+
+	at bestprice.EstatusControllerTests.testDelete(EstatusControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="IM-TIPROG22" id="5" name="EstatusTests" package="bestprice" tests="1" time="0.036" timestamp="2012-03-07T20:21:33">
+      <properties />
+
+      <testcase classname="bestprice.EstatusTests" name="testSomething" time="0.015">
+          <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at bestprice.EstatusTests.testSomething(EstatusTests.groovy:10)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="6" name="FormaPagoControllerTests" package="bestprice" tests="8" time="0.339" timestamp="2012-03-07T20:21:33">
+      <properties />
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testIndex" time="0.077" />
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testList" time="0.033" />
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testCreate" time="0.027" />
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testSave" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/formaPago/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@a5347c3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/formaPago/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@a5347c3
+
+	at bestprice.FormaPagoControllerTests.testSave(FormaPagoControllerTests.groovy:44)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testShow" time="0.031">
+          <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testShow(FormaPagoControllerTests.groovy:59)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testEdit" time="0.029">
+          <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testEdit(FormaPagoControllerTests.groovy:78)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testUpdate" time="0.049">
+          <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testUpdate(FormaPagoControllerTests.groovy:99)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.FormaPagoControllerTests" name="testDelete" time="0.029">
+          <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert formaPago.save() != null
+       |         |      |
+       |         null   false
+       bestprice.FormaPago : null
+
+	at bestprice.FormaPagoControllerTests.testDelete(FormaPagoControllerTests.groovy:143)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="7" name="MarcaControllerTests" package="bestprice" tests="8" time="0.328" timestamp="2012-03-07T20:21:34">
+      <properties />
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testIndex" time="0.076" />
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testList" time="0.029" />
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testCreate" time="0.026" />
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testSave" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/marca/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@17829ea2&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/marca/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@17829ea2
+
+	at bestprice.MarcaControllerTests.testSave(MarcaControllerTests.groovy:44)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testShow" time="0.032">
+          <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testShow(MarcaControllerTests.groovy:59)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testEdit" time="0.032">
+          <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testEdit(MarcaControllerTests.groovy:78)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testUpdate" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testUpdate(MarcaControllerTests.groovy:99)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.MarcaControllerTests" name="testDelete" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert marca.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       bestprice.Marca : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert marca.save() != null
+       |     |      |
+       |     null   false
+       bestprice.Marca : null
+
+	at bestprice.MarcaControllerTests.testDelete(MarcaControllerTests.groovy:143)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="4" hostname="IM-TIPROG22" id="8" name="NecesidadEncControllerTests" package="bestprice" tests="8" time="0.367" timestamp="2012-03-07T20:21:34">
+      <properties />
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testIndex" time="0.102" />
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testList" time="0.033" />
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testCreate" time="0.032" />
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testSave" time="0.031">
+          <error message="Cannot get property &apos;currentUser&apos; on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property &apos;currentUser&apos; on null object
+	at bestprice.NecesidadEncController.save(NecesidadEncController.groovy:53)
+	at bestprice.NecesidadEncControllerTests.testSave(NecesidadEncControllerTests.groovy:34)
+</error>
+
+      </testcase>
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testShow" time="0.038">
+          <failure message="Assertion failed: &#xa;&#xa;assert necesidadEnc.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert necesidadEnc.save() != null
+       |            |      |
+       |            null   false
+       bestprice.Comun : null
+
+	at bestprice.NecesidadEncControllerTests.testShow(NecesidadEncControllerTests.groovy:59)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testEdit" time="0.033">
+          <failure message="Assertion failed: &#xa;&#xa;assert necesidadEnc.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert necesidadEnc.save() != null
+       |            |      |
+       |            null   false
+       bestprice.Comun : null
+
+	at bestprice.NecesidadEncControllerTests.testEdit(NecesidadEncControllerTests.groovy:78)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testUpdate" time="0.035">
+          <failure message="Assertion failed: &#xa;&#xa;assert necesidadEnc.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert necesidadEnc.save() != null
+       |            |      |
+       |            null   false
+       bestprice.Comun : null
+
+	at bestprice.NecesidadEncControllerTests.testUpdate(NecesidadEncControllerTests.groovy:99)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NecesidadEncControllerTests" name="testDelete" time="0.035">
+          <failure message="Assertion failed: &#xa;&#xa;assert necesidadEnc.save() != null&#xa;       |            |      |&#xa;       |            null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert necesidadEnc.save() != null
+       |            |      |
+       |            null   false
+       bestprice.Comun : null
+
+	at bestprice.NecesidadEncControllerTests.testDelete(NecesidadEncControllerTests.groovy:143)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="5" hostname="IM-TIPROG22" id="9" name="NegociacionDetControllerTests" package="bestprice" tests="8" time="0.579" timestamp="2012-03-07T20:21:34">
+      <properties />
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testIndex" time="0.111" />
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testList" time="0.027">
+          <error message="Cannot get property &apos;currentUser&apos; on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property &apos;currentUser&apos; on null object
+	at bestprice.NegociacionDetController.list(NegociacionDetController.groovy:16)
+	at bestprice.NegociacionDetControllerTests.testList(NegociacionDetControllerTests.groovy:26)
+</error>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testCreate" time="0.024" />
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testSave" time="0.031">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/negociacionDet/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3c22d5b5&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/negociacionDet/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3c22d5b5
+
+	at bestprice.NegociacionDetControllerTests.testSave(NegociacionDetControllerTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testShow" time="0.275">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testShow(NegociacionDetControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testEdit" time="0.028">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testEdit(NegociacionDetControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testUpdate" time="0.027">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testUpdate(NegociacionDetControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionDetControllerTests" name="testDelete" time="0.027">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionDet.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.NegociacionDet : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionDet.save() != null
+       |              |      |
+       |              null   false
+       bestprice.NegociacionDet : null
+
+	at bestprice.NegociacionDetControllerTests.testDelete(NegociacionDetControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="2" failures="4" hostname="IM-TIPROG22" id="10" name="NegociacionEncControllerTests" package="bestprice" tests="8" time="0.326" timestamp="2012-03-07T20:21:35">
+      <properties />
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testIndex" time="0.06" />
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testList" time="0.026">
+          <error message="Cannot get property &apos;currentUser&apos; on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property &apos;currentUser&apos; on null object
+	at bestprice.NegociacionEncController.list(NegociacionEncController.groovy:32)
+	at bestprice.NegociacionEncControllerTests.testList(NegociacionEncControllerTests.groovy:26)
+</error>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testCreate" time="0.029" />
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testSave" time="0.028">
+          <error message="Cannot get property &apos;currentUser&apos; on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot get property &apos;currentUser&apos; on null object
+	at bestprice.NegociacionEncController.save(NegociacionEncController.groovy:44)
+	at bestprice.NegociacionEncControllerTests.testSave(NegociacionEncControllerTests.groovy:39)
+</error>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testShow" time="0.037">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionEnc.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionEnc.save() != null
+       |              |      |
+       |              null   false
+       bestprice.Comun : null
+
+	at bestprice.NegociacionEncControllerTests.testShow(NegociacionEncControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testEdit" time="0.049">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionEnc.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionEnc.save() != null
+       |              |      |
+       |              null   false
+       bestprice.Comun : null
+
+	at bestprice.NegociacionEncControllerTests.testEdit(NegociacionEncControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testUpdate" time="0.036">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionEnc.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionEnc.save() != null
+       |              |      |
+       |              null   false
+       bestprice.Comun : null
+
+	at bestprice.NegociacionEncControllerTests.testUpdate(NegociacionEncControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.NegociacionEncControllerTests" name="testDelete" time="0.032">
+          <failure message="Assertion failed: &#xa;&#xa;assert negociacionEnc.save() != null&#xa;       |              |      |&#xa;       |              null   false&#xa;       bestprice.Comun : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert negociacionEnc.save() != null
+       |              |      |
+       |              null   false
+       bestprice.Comun : null
+
+	at bestprice.NegociacionEncControllerTests.testDelete(NegociacionEncControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="11" name="PaisControllerTests" package="bestprice" tests="8" time="0.313" timestamp="2012-03-07T20:21:35">
+      <properties />
+
+      <testcase classname="bestprice.PaisControllerTests" name="testIndex" time="0.068" />
+
+      <testcase classname="bestprice.PaisControllerTests" name="testList" time="0.029" />
+
+      <testcase classname="bestprice.PaisControllerTests" name="testCreate" time="0.025" />
+
+      <testcase classname="bestprice.PaisControllerTests" name="testSave" time="0.033">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/pais/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3cca3147&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/pais/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@3cca3147
+
+	at bestprice.PaisControllerTests.testSave(PaisControllerTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PaisControllerTests" name="testShow" time="0.039">
+          <failure message="Assertion failed: &#xa;&#xa;assert pais.save() != null&#xa;       |    |      |&#xa;       |    null   false&#xa;       bestprice.Pais : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert pais.save() != null
+       |    |      |
+       |    null   false
+       bestprice.Pais : null
+
+	at bestprice.PaisControllerTests.testShow(PaisControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PaisControllerTests" name="testEdit" time="0.032">
+          <failure message="Assertion failed: &#xa;&#xa;assert pais.save() != null&#xa;       |    |      |&#xa;       |    null   false&#xa;       bestprice.Pais : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert pais.save() != null
+       |    |      |
+       |    null   false
+       bestprice.Pais : null
+
+	at bestprice.PaisControllerTests.testEdit(PaisControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PaisControllerTests" name="testUpdate" time="0.028">
+          <failure message="Assertion failed: &#xa;&#xa;assert pais.save() != null&#xa;       |    |      |&#xa;       |    null   false&#xa;       bestprice.Pais : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert pais.save() != null
+       |    |      |
+       |    null   false
+       bestprice.Pais : null
+
+	at bestprice.PaisControllerTests.testUpdate(PaisControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PaisControllerTests" name="testDelete" time="0.03">
+          <failure message="Assertion failed: &#xa;&#xa;assert pais.save() != null&#xa;       |    |      |&#xa;       |    null   false&#xa;       bestprice.Pais : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert pais.save() != null
+       |    |      |
+       |    null   false
+       bestprice.Pais : null
+
+	at bestprice.PaisControllerTests.testDelete(PaisControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="12" name="PoblacionControllerTests" package="bestprice" tests="8" time="0.3" timestamp="2012-03-07T20:21:36">
+      <properties />
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testIndex" time="0.054" />
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testList" time="0.027" />
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testCreate" time="0.049" />
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testSave" time="0.03">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/poblacion/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@46380f83&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/poblacion/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@46380f83
+
+	at bestprice.PoblacionControllerTests.testSave(PoblacionControllerTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testShow" time="0.029">
+          <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testShow(PoblacionControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testEdit" time="0.031">
+          <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testEdit(PoblacionControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testUpdate" time="0.027">
+          <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testUpdate(PoblacionControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.PoblacionControllerTests" name="testDelete" time="0.028">
+          <failure message="Assertion failed: &#xa;&#xa;assert poblacion.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.Poblacion : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert poblacion.save() != null
+       |         |      |
+       |         null   false
+       bestprice.Poblacion : null
+
+	at bestprice.PoblacionControllerTests.testDelete(PoblacionControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="IM-TIPROG22" id="13" name="VendedorControllerTests" package="bestprice" tests="8" time="0.308" timestamp="2012-03-07T20:21:36">
+      <properties />
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testIndex" time="0.059" />
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testList" time="0.03" />
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testCreate" time="0.028" />
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testSave" time="0.035">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/vendedor/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@469a7754&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/vendedor/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@469a7754
+
+	at bestprice.VendedorControllerTests.testSave(VendedorControllerTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testShow" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert vendedor.save() != null&#xa;       |        |      |&#xa;       |        null   false&#xa;       bestprice.Vendedor : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert vendedor.save() != null
+       |        |      |
+       |        null   false
+       bestprice.Vendedor : null
+
+	at bestprice.VendedorControllerTests.testShow(VendedorControllerTests.groovy:64)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testEdit" time="0.034">
+          <failure message="Assertion failed: &#xa;&#xa;assert vendedor.save() != null&#xa;       |        |      |&#xa;       |        null   false&#xa;       bestprice.Vendedor : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert vendedor.save() != null
+       |        |      |
+       |        null   false
+       bestprice.Vendedor : null
+
+	at bestprice.VendedorControllerTests.testEdit(VendedorControllerTests.groovy:83)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testUpdate" time="0.031">
+          <failure message="Assertion failed: &#xa;&#xa;assert vendedor.save() != null&#xa;       |        |      |&#xa;       |        null   false&#xa;       bestprice.Vendedor : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert vendedor.save() != null
+       |        |      |
+       |        null   false
+       bestprice.Vendedor : null
+
+	at bestprice.VendedorControllerTests.testUpdate(VendedorControllerTests.groovy:104)
+</failure>
+
+      </testcase>
+
+      <testcase classname="bestprice.VendedorControllerTests" name="testDelete" time="0.032">
+          <failure message="Assertion failed: &#xa;&#xa;assert vendedor.save() != null&#xa;       |        |      |&#xa;       |        null   false&#xa;       bestprice.Vendedor : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert vendedor.save() != null
+       |        |      |
+       |        null   false
+       bestprice.Vendedor : null
+
+	at bestprice.VendedorControllerTests.testDelete(VendedorControllerTests.groovy:148)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="IM-TIPROG22" id="14" name="SecureControllerTests" package="com.testapp" tests="1" time="0.04" timestamp="2012-03-07T20:21:36">
+      <properties />
+
+      <testcase classname="com.testapp.SecureControllerTests" name="testSomething" time="0.037">
+          <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at com.testapp.SecureControllerTests.testSomething(SecureControllerTests.groovy:10)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
