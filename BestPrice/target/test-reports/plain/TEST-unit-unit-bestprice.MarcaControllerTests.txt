@@ -1,5 +1,5 @@
 Testsuite: bestprice.MarcaControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.328 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.421 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -21,28 +21,28 @@ Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.328 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0.076 sec
-Testcase: testList took 0.029 sec
-Testcase: testCreate took 0.026 sec
-Testcase: testSave took 0.034 sec
+Testcase: testIndex took 0.086 sec
+Testcase: testList took 0.033 sec
+Testcase: testCreate took 0.033 sec
+Testcase: testSave took 0.043 sec
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/marca/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@17829ea2
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@470276f2
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/marca/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@17829ea2
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@470276f2
 
 	at bestprice.MarcaControllerTests.testSave(MarcaControllerTests.groovy:44)
 
-Testcase: testShow took 0.032 sec
+Testcase: testShow took 0.042 sec
 	FAILED
 Assertion failed: 
 
@@ -60,7 +60,7 @@ assert marca.save() != null
 
 	at bestprice.MarcaControllerTests.testShow(MarcaControllerTests.groovy:59)
 
-Testcase: testEdit took 0.032 sec
+Testcase: testEdit took 0.039 sec
 	FAILED
 Assertion failed: 
 
@@ -78,7 +78,7 @@ assert marca.save() != null
 
 	at bestprice.MarcaControllerTests.testEdit(MarcaControllerTests.groovy:78)
 
-Testcase: testUpdate took 0.034 sec
+Testcase: testUpdate took 0.041 sec
 	FAILED
 Assertion failed: 
 
@@ -96,7 +96,7 @@ assert marca.save() != null
 
 	at bestprice.MarcaControllerTests.testUpdate(MarcaControllerTests.groovy:99)
 
-Testcase: testDelete took 0.034 sec
+Testcase: testDelete took 0.069 sec
 	FAILED
 Assertion failed: 
 

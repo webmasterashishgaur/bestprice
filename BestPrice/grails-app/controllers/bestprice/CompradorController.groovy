@@ -1,25 +1,21 @@
 package bestprice
 
-import com.testapp.Role
-import com.testapp.User
-import com.testapp.UserRole
 import org.springframework.dao.DataIntegrityViolationException
+
 class CompradorController {
 
+    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+	
 	static navigation = [
 		[group:'tabs',
 		order:2,
 		title:'Soy Comprador',
 		action:'create'],
-	    [group:'admon',
+		[group:'admon',
 		order:10,
 		title:'Soy Comprador',
 		action:'create'],
 	]
-	
-	
-	
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
         redirect(action: "list", params: params)
@@ -37,13 +33,10 @@ class CompradorController {
     def save() {
         def compradorInstance = new Comprador(params)
         if (!compradorInstance.save(flush: true)) {
+			compradorInstance.password = ""
+			compradorInstance.password2 = ""
             render(view: "create", model: [compradorInstance: compradorInstance])
             return
-        }else{
-			//def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
-			def testUser = new User(username: compradorInstance.usuario, enabled: true, password: compradorInstance.password)
-			testUser.save(flush: true)
-			//UserRole.create testUser, userRole, true
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'comprador.label', default: 'Comprador'), compradorInstance.id])

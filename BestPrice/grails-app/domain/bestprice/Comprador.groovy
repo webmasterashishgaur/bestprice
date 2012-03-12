@@ -3,36 +3,45 @@ package bestprice
 import java.util.Date;
 
 class Comprador extends Comun{
-	Poblacion poblacion
-	Estado estado
-	Pais pais
-	
+
+	transient springSecurityService
 	String usuario
 	String password
-	String nombre
-	String appPaterno
-	String appMaterno
+	String nombre = ""
 	String email
-	String direccion
-	String cp
 	String telefono
-	String comentarios
+	Boolean recibirEmail = true
 	
 	static constraints = {
-		usuario(blank:false, size:6..15, unique:true)
-		password(blank:false, size:6..20, password:true)
-		nombre(blank:false, size:4..40)
-		appPaterno(size:4..30)
-		appMaterno(size:4..30)
-		email(blank:false, email:true)
-		direccion(size:4..100)
-		cp(size:4..10)
-		telefono(size:4..15)
-		comentarios(size:1..100)
+		usuario(blank:false, size:4..15, unique:true)
+		//password(blank:false, size:4..20, password:true)
+		nombre(blank:true, size:0..100)
+		email(blank:false, email:true, size:0..30)
+		telefono(blank:true, size:0..15)
+		estatus(nullable:true)
+		
+		password(blank: false, password:true, nullable: false, size:5..20, validator: {password, obj ->
+			def password2 = obj.properties['password2']
+			if(password2 == null) return true // skip matching password validation (only important when setting/resetting pass)
+			password2 == password ? true : ['invalid.matchingpasswords']
+		})
 	}
+	
+	transient password2
 	
 	def beforeInsert = {
 		estatus.id = 1 
+		//encodePassword()
 	}
+	/*
+	def beforeUpdate() {
+		if (isDirty('password')) {
+			encodePassword()
+		}
+	}
+
+	protected void encodePassword() {
+		password = springSecurityService.encodePassword(password)
+	}*/
 	
 }
