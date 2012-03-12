@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="5" hostname="IM-TIPROG22" name="bestprice.FormaPagoControllerTests" tests="8" time="0.339" timestamp="2012-03-07T20:21:33">
+<testsuite errors="0" failures="5" hostname="IM-TIPROG22" name="bestprice.FormaPagoControllerTests" tests="8" time="0.403" timestamp="2012-03-09T20:00:33">
   <properties />
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testIndex" time="0.077" />
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testList" time="0.033" />
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testCreate" time="0.027" />
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testSave" time="0.034">
-    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/formaPago/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@a5347c3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testIndex" time="0.085" />
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testList" time="0.035" />
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testCreate" time="0.034" />
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testSave" time="0.045">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/formaPago/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@32f60451&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &apos;/formaPago/show/1&apos;
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@a5347c3
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@32f60451
 
 	at bestprice.FormaPagoControllerTests.testSave(FormaPagoControllerTests.groovy:44)
 </failure>
   </testcase>
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testShow" time="0.031">
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testShow" time="0.041">
     <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert formaPago.save() != null
@@ -26,7 +26,7 @@ assert formaPago.save() != null
 	at bestprice.FormaPagoControllerTests.testShow(FormaPagoControllerTests.groovy:59)
 </failure>
   </testcase>
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testEdit" time="0.029">
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testEdit" time="0.041">
     <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert formaPago.save() != null
@@ -37,7 +37,7 @@ assert formaPago.save() != null
 	at bestprice.FormaPagoControllerTests.testEdit(FormaPagoControllerTests.groovy:78)
 </failure>
   </testcase>
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testUpdate" time="0.049">
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testUpdate" time="0.041">
     <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert formaPago.save() != null
@@ -48,7 +48,7 @@ assert formaPago.save() != null
 	at bestprice.FormaPagoControllerTests.testUpdate(FormaPagoControllerTests.groovy:99)
 </failure>
   </testcase>
-  <testcase classname="bestprice.FormaPagoControllerTests" name="testDelete" time="0.029">
+  <testcase classname="bestprice.FormaPagoControllerTests" name="testDelete" time="0.043">
     <failure message="Assertion failed: &#xa;&#xa;assert formaPago.save() != null&#xa;       |         |      |&#xa;       |         null   false&#xa;       bestprice.FormaPago : null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert formaPago.save() != null

@@ -1,5 +1,5 @@
 Testsuite: bestprice.ComunTests
-Tests run: 1, Failures: 0, Errors: 2, Time elapsed: 0.05 sec
+Tests run: 1, Failures: 0, Errors: 2, Time elapsed: 0.072 sec
 ------------- Standard Output ---------------
 --Output from testSomething--
 ------------- ---------------- ---------------
@@ -7,7 +7,7 @@ Tests run: 1, Failures: 0, Errors: 2, Time elapsed: 0.05 sec
 --Output from testSomething--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0.02 sec
+Testcase: testSomething took 0.031 sec
 	Caused an ERROR
 Error creating bean with name 'bestprice.Comun': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bestprice.Comun': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [bestprice.Comun]: Is it an abstract class?; nested exception is java.lang.InstantiationException

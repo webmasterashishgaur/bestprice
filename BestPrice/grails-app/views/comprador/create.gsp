@@ -13,7 +13,7 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<sec:ifAllGranted roles="ROLE_ADMIN">
 					<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				</sec:ifAllGranted>					
+				</sec:ifAllGranted>				
 			</ul>
 		</div>
 		<div id="create-comprador" class="content scaffold-create" role="main">
@@ -28,13 +28,6 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			
-			<sec:ifNotLoggedIn>
-				<div id="lytColLoguin">
-					<g:include controller="login" action="auth" />						
-				</div>
-			</sec:ifNotLoggedIn>			
-			
 			<g:form action="save" >
 				<fieldset class="form">
 					<g:render template="form"/>

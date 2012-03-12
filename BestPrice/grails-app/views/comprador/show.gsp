@@ -12,10 +12,10 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<sec:ifAllGranted roles="ROLE_ADMIN">
+				<sec:ifAllGranted roles="ROLE_ADMIN">				
 					<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+					<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 				</sec:ifAllGranted>					
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-comprador" class="content scaffold-show" role="main">
@@ -34,38 +34,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${compradorInstance?.password}">
-				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="comprador.password.label" default="Password" /></span>
-					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${compradorInstance}" field="password"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${compradorInstance?.nombre}">
 				<li class="fieldcontain">
 					<span id="nombre-label" class="property-label"><g:message code="comprador.nombre.label" default="Nombre" /></span>
 					
 						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${compradorInstance}" field="nombre"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.appPaterno}">
-				<li class="fieldcontain">
-					<span id="appPaterno-label" class="property-label"><g:message code="comprador.appPaterno.label" default="App Paterno" /></span>
-					
-						<span class="property-value" aria-labelledby="appPaterno-label"><g:fieldValue bean="${compradorInstance}" field="appPaterno"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.appMaterno}">
-				<li class="fieldcontain">
-					<span id="appMaterno-label" class="property-label"><g:message code="comprador.appMaterno.label" default="App Materno" /></span>
-					
-						<span class="property-value" aria-labelledby="appMaterno-label"><g:fieldValue bean="${compradorInstance}" field="appMaterno"/></span>
 					
 				</li>
 				</g:if>
@@ -79,24 +52,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${compradorInstance?.direccion}">
-				<li class="fieldcontain">
-					<span id="direccion-label" class="property-label"><g:message code="comprador.direccion.label" default="Direccion" /></span>
-					
-						<span class="property-value" aria-labelledby="direccion-label"><g:fieldValue bean="${compradorInstance}" field="direccion"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.cp}">
-				<li class="fieldcontain">
-					<span id="cp-label" class="property-label"><g:message code="comprador.cp.label" default="Cp" /></span>
-					
-						<span class="property-value" aria-labelledby="cp-label"><g:fieldValue bean="${compradorInstance}" field="cp"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${compradorInstance?.telefono}">
 				<li class="fieldcontain">
 					<span id="telefono-label" class="property-label"><g:message code="comprador.telefono.label" default="Telefono" /></span>
@@ -106,65 +61,45 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${compradorInstance?.comentarios}">
+				<g:if test="${compradorInstance?.password}">
 				<li class="fieldcontain">
-					<span id="comentarios-label" class="property-label"><g:message code="comprador.comentarios.label" default="Comentarios" /></span>
-					
-						<span class="property-value" aria-labelledby="comentarios-label"><g:fieldValue bean="${compradorInstance}" field="comentarios"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.dateCreated}">
-				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="comprador.dateCreated.label" default="Date Created" /></span>
-					
-						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${compradorInstance?.dateCreated}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.estado}">
-				<li class="fieldcontain">
-					<span id="estado-label" class="property-label"><g:message code="comprador.estado.label" default="Estado" /></span>
-					
-						<span class="property-value" aria-labelledby="estado-label"><g:link controller="estado" action="show" id="${compradorInstance?.estado?.id}">${compradorInstance?.estado?.encodeAsHTML()}</g:link></span>
-					
+					<span id="password-label" class="property-label"><g:message code="comprador.password.label" default="Password" /></span>
+						<span class="property-value" aria-labelledby="password-label">
+							<g:fieldValue bean="${compradorInstance}" field="password"/>
+						</span>
 				</li>
 				</g:if>
 			
 				<g:if test="${compradorInstance?.estatus}">
 				<li class="fieldcontain">
 					<span id="estatus-label" class="property-label"><g:message code="comprador.estatus.label" default="Estatus" /></span>
+						<span class="property-value" aria-labelledby="estatus-label">
+							<g:fieldValue bean="${compradorInstance}" field="estatus.descripcion"/>
+						</span>
+				</li>
+				</g:if>
+				
+				<li class="fieldcontain">
+					<span id="recibirEmail-label" class="property-label"><g:message code="comprador.recibirEmail.label" default="Recibir Email" /></span>
+						<span class="property-value" aria-labelledby="recibirEmail-label">
+							<g:formatBoolean boolean="${compradorInstance?.recibirEmail}" false="No" true="Si"/>
+					</span>
+				</li>
+
+				<g:if test="${compradorInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="comprador.dateCreated.label" default="Fecha creación" /></span>
 					
-						<span class="property-value" aria-labelledby="estatus-label"><g:link controller="estatus" action="show" id="${compradorInstance?.estatus?.id}">${compradorInstance?.estatus?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${compradorInstance?.dateCreated}" /></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${compradorInstance?.lastUpdated}">
 				<li class="fieldcontain">
-					<span id="lastUpdated-label" class="property-label"><g:message code="comprador.lastUpdated.label" default="Last Updated" /></span>
+					<span id="lastUpdated-label" class="property-label"><g:message code="comprador.lastUpdated.label" default="Último cambio" /></span>
 					
 						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${compradorInstance?.lastUpdated}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.pais}">
-				<li class="fieldcontain">
-					<span id="pais-label" class="property-label"><g:message code="comprador.pais.label" default="Pais" /></span>
-					
-						<span class="property-value" aria-labelledby="pais-label"><g:link controller="pais" action="show" id="${compradorInstance?.pais?.id}">${compradorInstance?.pais?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${compradorInstance?.poblacion}">
-				<li class="fieldcontain">
-					<span id="poblacion-label" class="property-label"><g:message code="comprador.poblacion.label" default="Poblacion" /></span>
-					
-						<span class="property-value" aria-labelledby="poblacion-label"><g:link controller="poblacion" action="show" id="${compradorInstance?.poblacion?.id}">${compradorInstance?.poblacion?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

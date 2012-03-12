@@ -1,5 +1,5 @@
 Testsuite: bestprice.CompradorControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.621 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.543 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -21,96 +21,96 @@ Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 0.621 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0.167 sec
+Testcase: testIndex took 0.104 sec
 Testcase: testList took 0.044 sec
 Testcase: testCreate took 0.054 sec
-Testcase: testSave took 0.062 sec
+Testcase: testSave took 0.059 sec
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/comprador/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@376502fc
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@79374ffd
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/comprador/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@376502fc
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@79374ffd
 
 	at bestprice.CompradorControllerTests.testSave(CompradorControllerTests.groovy:44)
 
-Testcase: testShow took 0.075 sec
+Testcase: testShow took 0.052 sec
 	FAILED
 Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 	at bestprice.CompradorControllerTests.testShow(CompradorControllerTests.groovy:59)
 
-Testcase: testEdit took 0.059 sec
+Testcase: testEdit took 0.052 sec
 	FAILED
 Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 	at bestprice.CompradorControllerTests.testEdit(CompradorControllerTests.groovy:78)
 
-Testcase: testUpdate took 0.057 sec
+Testcase: testUpdate took 0.056 sec
 	FAILED
 Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 	at bestprice.CompradorControllerTests.testUpdate(CompradorControllerTests.groovy:99)
 
-Testcase: testDelete took 0.065 sec
+Testcase: testDelete took 0.078 sec
 	FAILED
 Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert comprador.save() != null
        |         |      |
        |         null   false
-       bestprice.Comprador : null
+       bestprice.Comun : null
 
 	at bestprice.CompradorControllerTests.testDelete(CompradorControllerTests.groovy:143)
 

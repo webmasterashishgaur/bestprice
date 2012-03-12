@@ -106,7 +106,8 @@ class NecesidadEncController {
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'necesidadEnc.label', default: 'NecesidadEnc'), necesidadEncInstance.id])
-        redirect(action: "show", id: necesidadEncInstance.id)
+        //redirect(action: "show", id: necesidadEncInstance.id)
+		redirect(action: "list")
     }
 
     def show() {
