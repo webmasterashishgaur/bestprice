@@ -8,33 +8,27 @@
 		<title></title>
 	</head>
 	<body>
+	
 		<a href="#list-necesidadEnc" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create">
-						Publicar Necesidad
-					</g:link>
-				</li>
+				<li><g:link class="create" action="create">Publicar Compra</g:link></li>
 			</ul>
 		</div>
 		<div id="list-necesidadEnc" class="content scaffold-list" role="main">
-			<h1>Publicaciones recientes</h1>
+			<h1>Últimas publicaciones</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<table>
 				<thead>
 					<tr>
-					
-						<g:sortableColumn property="titulo" title="${message(code: 'necesidadEnc.titulo.label', default: 'Titulo')}" />
-					
-						<g:sortableColumn property="descripcion" title="${message(code: 'necesidadEnc.descripcion.label', default: 'Descripcion')}" />
-					
+						<g:sortableColumn property="titulo" title="${message(code: 'necesidadEnc.titulo.label', default: 'Título')}" />
+						<g:sortableColumn property="descripcion" title="${message(code: 'necesidadEnc.descripcion.label', default: 'Descripción')}" />
+						<th><g:message code="necesidadEnc.categoria.label" default="Categoría" /></th>
 						<th><g:message code="necesidadEnc.comprador.label" default="Comprador" /></th>
-					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'necesidadEnc.dateCreated.label', default: 'Fecha de publicación')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -45,9 +39,12 @@
 					
 						<td>${fieldValue(bean: necesidadEncInstance, field: "descripcion")}</td>
 					
+						<td>${fieldValue(bean: necesidadEncInstance, field: "categoria.nombreCorto")}</td>
+					
 						<td>${fieldValue(bean: necesidadEncInstance, field: "comprador.usuario")}</td>
 					
-						<td><g:formatDate date="${necesidadEncInstance.dateCreated}" format="dd/MM/yyyy" /></td>
+						<td><g:formatDate date="${necesidadEncInstance.dateCreated}" format="dd/MM/yyyy"/></td>
+					
 					
 					</tr>
 				</g:each>

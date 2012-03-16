@@ -5,18 +5,16 @@
 	<style type='text/css' media='screen'>
 
 	#login {
-		height: 110px;
-		width: 265px;
+		height: 160px;
 		float: left;
 		padding: 5px;
 		margin-left: 0px;
 		margin-bottom: 5px;
-		border-radius: 5px; 
+		border: .2em solid #fff;	
+		border-radius: 0.6em;
 		box-shadow: 1px 1px 6px #888888;
-		/*background-color: #ff7f50;*/
-		border: 1px solid #aab; 
 	}
-
+	/*
 	#login .inner {
 		height: 110px;	
 		-moz-box-shadow: 0px 0px 0px #eee;
@@ -77,7 +75,7 @@
 	#login .inner .chk {
 		height: 12px;
 	}
-	
+	*/
 	</style>
 </head>
 
@@ -89,21 +87,22 @@
 		</g:if>
 
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='true'>
+			<label for='username'>		
+				Ingresar:
+			</label>			
 			<p>
-				<label for='username'>
-					<g:message code="springSecurity.login.username.label"/>:
-				</label>
+				<g:message code="springSecurity.login.username.label"/>:
 				<input type='text' class='text_' name='j_username' id='username'/>
 			</p>
 
 			<p>
-				<label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
+				<g:message code="springSecurity.login.password.label"/>:
 				<input type='password' class='text_' name='j_password' id='password'/>
 			</p>
 
 			<p id="remember_me_holder">
 				<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-				<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
+				<g:message code="springSecurity.login.remember.me.label"/>
 			</p>
 
 			<p>

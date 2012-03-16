@@ -4,7 +4,7 @@ import java.util.Date;
 
 class NecesidadEnc extends Comun{
  
-	Comprador comprador
+	static belongsTo = [categoria:Categoria, comprador:Comprador]
 	
 	String titulo
 	String descripcion
@@ -26,5 +26,7 @@ class NecesidadEnc extends Comun{
 	static mapping = {
 		sort dateCreated: "desc"
 	}
+	
+	static searchable = true
 	
 }

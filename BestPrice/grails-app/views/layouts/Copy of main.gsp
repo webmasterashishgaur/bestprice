@@ -27,7 +27,7 @@
 		
 		<div id="grailsHeader" role="banner">
 			<div id="grailsLogo" role="banner">
-				<img src="${resource(dir: 'images', file: 'bq.gif')}" alt="Grails"/><!-- bq.gif -->
+				<img src="${resource(dir: 'images', file: '')}" alt="Grails"/><!-- bq.gif -->
 			</div>
 			<div  id="grailsMenu" role="banner">		
 				<sec:ifAllGranted roles="ROLE_ADMIN">
@@ -37,14 +37,13 @@
 				<sec:ifNotGranted roles="ROLE_ADMIN">
 					<nav:render group="tabs"/>
 				</sec:ifNotGranted>
-				
-				<div  id="grailsOptions" role="banner">		
-					<sec:ifLoggedIn>
-						<g:link controller="logout" id="linkLogout">(Salir)</g:link>					
-						<h3>Bienvenido: <sec:username/></h3></b>
-					</sec:ifLoggedIn>				
-				</div>				
 			</div>			
+			<div  id="grailsOptions" role="banner">		
+				<sec:ifLoggedIn>
+					<g:link controller="logout" id="linkLogout">(Salir)</g:link>
+					<h3>Bienvenido: <sec:username/></h3>						
+				</sec:ifLoggedIn>
+			</div>
 		</div>
 		
 		<div id="layoutBody" role="layoutBody">		
