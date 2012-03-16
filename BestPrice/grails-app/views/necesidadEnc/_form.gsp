@@ -18,6 +18,22 @@
 	<g:textArea name="descripcion" cols="40" rows="5" maxlength="300" required="" value="${necesidadEncInstance?.descripcion}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'categoria', 'error')} required">
+	<label for="categoria">
+		<g:message code="necesidadEnc.categoria.label" default="Categoria" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="categoria" name="categoria.id" from="${bestprice.Categoria.list()}" optionKey="id" required="" value="${necesidadEncInstance?.categoria?.id}" class="many-to-one" optionValue="nombreCorto"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'estatus', 'error')} required">
+	<label for="estatus">
+		<g:message code="necesidadEnc.estatus.label" default="Estatus" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${necesidadEncInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen1', 'error')} ">
 	<label for="imagen1">
 		<g:message code="necesidadEnc.imagen1.label" default="Imagen1" />
@@ -58,9 +74,3 @@
 	<input type="file" id="imagen5" name="imagen5" value="${necesidadEncInstance?.imagen5}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'estatus', 'error')} ">
-	<label for="estatus">
-		<g:message code="necesidadEnc.estatus.label" default="Estatus" />
-	</label>
-	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${necesidadEncInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
-</div>

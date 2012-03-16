@@ -110,3 +110,7 @@ grails {
 			   "mail.smtp.socketFactory.fallback":"false"]
 	}
  }
+
+grails.plugin.cloudfoundry.username = "lega82@gmail.com"
+grails.plugin.cloudfoundry.password = "vicaed22"
+grails.plugin.cloudfoundry.target = "http://api.aws.af.cm"

@@ -4,6 +4,7 @@ import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUser;
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils;
 import org.springframework.dao.DataIntegrityViolationException
 
+
 class NecesidadEncController {
 
 	def springSecurityService
@@ -19,7 +20,7 @@ class NecesidadEncController {
 	
 	def beforeInterceptor = [
 		action:this.&auth,
-		except:['index','list', 'show']
+		except:['index','list', 'search', 'searchCategorias', 'show']
 	]
 	
 	private auth(){
@@ -42,7 +43,7 @@ class NecesidadEncController {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [necesidadEncInstanceList: NecesidadEnc.list(params), necesidadEncInstanceTotal: NecesidadEnc.count()]
     }
-
+	
     def create() {
         [necesidadEncInstance: new NecesidadEnc(params)]
     }
@@ -119,8 +120,10 @@ class NecesidadEncController {
         }
 		
 		def puedeEditar = false 
-		if(SpringSecurityUtils.ifAllGranted("ROLE_ADMIN") || (necesidadEncInstance.comprador.usuario ==  springSecurityService.currentUser.username)){
-			puedeEditar = true
+		if(springSecurityService.currentUser){
+			if(SpringSecurityUtils.ifAllGranted("ROLE_ADMIN") || (necesidadEncInstance.comprador.usuario ==  springSecurityService.currentUser.username)){
+				puedeEditar = true
+			}
 		}
 
         [necesidadEncInstance: necesidadEncInstance, puedeEditar:puedeEditar]
@@ -185,4 +188,30 @@ class NecesidadEncController {
             redirect(action: "show", id: params.id)
         }
     }
+	
+	def searchableService //inject the service (make sure the name is correct)
+	
+    def search = {
+	   def query = params.query
+	   if(query.compareTo("") != 0){
+		   def srchResults = searchableService.search(query)
+		   render(view: "list",
+				  model: [necesidadEncInstanceList: srchResults.results,
+						necesidadEncInstanceTotal:srchResults.total])
+	   }else{
+	   	   //return true
+		   redirect(action: "list")
+	   }
+    }
+	
+	def searchCategorias = {
+		def query = params.query
+		if(query){
+			//def srchResults = searchableService.search(query)
+			render(view: "list", model: [necesidadEncInstanceList: NecesidadEnc.findAllByCategoria(Categoria.get(query)), necesidadEncInstanceTotal: NecesidadEnc.count()])
+		}/*else{
+			redirect(action: "list")
+		}*/
+	 }
+	
 }
