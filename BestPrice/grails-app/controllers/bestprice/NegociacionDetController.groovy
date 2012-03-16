@@ -34,13 +34,13 @@ class NegociacionDetController {
         }
 		
 		def negociacionEnc = NegociacionEnc.get(negociacionDetInstance.negociacionEnc.id) 
-		
+		/*
 		sendMail {     
 			to ""+negociacionEnc.vendedor.email
 			subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username     
 			body 'Comentario: '+negociacionDetInstance.comentarios 
 		}
-
+        */
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionDet.label', default: 'NegociacionDet'), negociacionDetInstance.id])
         redirect(controller:"negociacionEnc", action: "show", id: negociacionDetInstance.negociacionEnc.id)
     }

@@ -34,18 +34,11 @@
 				<tbody>
 				<g:each in="${necesidadEncInstanceList}" status="i" var="necesidadEncInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
 						<td><g:link action="show" id="${necesidadEncInstance.id}">${fieldValue(bean: necesidadEncInstance, field: "titulo")}</g:link></td>
-					
 						<td>${fieldValue(bean: necesidadEncInstance, field: "descripcion")}</td>
-					
 						<td>${fieldValue(bean: necesidadEncInstance, field: "categoria.nombreCorto")}</td>
-					
 						<td>${fieldValue(bean: necesidadEncInstance, field: "comprador.usuario")}</td>
-					
 						<td><g:formatDate date="${necesidadEncInstance.dateCreated}" format="dd/MM/yyyy"/></td>
-					
-					
 					</tr>
 				</g:each>
 				</tbody>

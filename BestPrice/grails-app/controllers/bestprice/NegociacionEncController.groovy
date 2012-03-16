@@ -51,7 +51,7 @@ def springSecurityService
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile2.transferTo( new File( userDir, uploadedFile2.originalFilename))
-		  negociacionEncInstance.imagen2 = uploadedFile2.originalFilename;
+		  negociacionEncInstance.imagen1 = uploadedFile2.originalFilename;
 		}
 		
 		def uploadedFile3 = request.getFile('imagen2')
@@ -60,7 +60,7 @@ def springSecurityService
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile3.transferTo( new File( userDir, uploadedFile3.originalFilename))
-		  negociacionEncInstance.imagen3 = uploadedFile3.originalFilename;
+		  negociacionEncInstance.imagen2 = uploadedFile3.originalFilename;
 		}
 		
 		def uploadedFile4 = request.getFile('imagen3')
@@ -69,7 +69,7 @@ def springSecurityService
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile4.transferTo( new File( userDir, uploadedFile4.originalFilename))
-		  negociacionEncInstance.imagen4 = uploadedFile4.originalFilename;
+		  negociacionEncInstance.imagen3 = uploadedFile4.originalFilename;
 		}
 		
 		def uploadedFile5 = request.getFile('imagen4')
@@ -78,7 +78,7 @@ def springSecurityService
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
 		  uploadedFile5.transferTo( new File( userDir, uploadedFile5.originalFilename))
-		  negociacionEncInstance.imagen5 = uploadedFile5.originalFilename;
+		  negociacionEncInstance.imagen4 = uploadedFile5.originalFilename;
 		}
 		
         if (!negociacionEncInstance.save(flush: true)) {
