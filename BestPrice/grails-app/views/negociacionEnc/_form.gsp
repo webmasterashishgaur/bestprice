@@ -11,6 +11,14 @@
 	<g:textField name="comentarios" maxlength="200" required="" value="${negociacionEncInstance?.comentarios}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'precio', 'error')} required">
+	<label for="precio">
+		<g:message code="negociacionEnc.precio.label" default="Precio" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="number" name="precio" required="" value="${fieldValue(bean: negociacionEncInstance, field: 'precio')}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'imagen1', 'error')} ">
 	<label for="imagen1">
 		<g:message code="negociacionEnc.imagen1.label" default="Imagen1" />
@@ -41,31 +49,6 @@
 		
 	</label>
 	<input type="file" id="imagen4" name="imagen4" value="${negociacionEncInstance?.imagen4}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'negociacionDets', 'error')} ">
-	<label for="negociacionDets">
-		<g:message code="negociacionEnc.negociacionDets.label" default="Negociacion Dets" />
-		
-	</label>
-	
-<ul class="one-to-many">
-<g:each in="${negociacionEncInstance?.negociacionDets?}" var="n">
-    <li><g:link controller="negociacionDet" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="negociacionDet" action="create" params="['negociacionEnc.id': negociacionEncInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'negociacionDet.label', default: 'NegociacionDet')])}</g:link>
-</li>
-</ul>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: negociacionEncInstance, field: 'precio', 'error')} required">
-	<label for="precio">
-		<g:message code="negociacionEnc.precio.label" default="Precio" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="number" name="precio" required="" value="${fieldValue(bean: negociacionEncInstance, field: 'precio')}"/>
 </div>
 
 <sec:ifAllGranted roles="ROLE_ADMIN">
