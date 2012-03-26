@@ -10,11 +10,9 @@ class NecesidadEncController {
 	def springSecurityService
 	
 	static navigation = [
-		group:'tabs',
-		order:1,
-		title:'Publicar Compra',
-		action:'create'
-	]
+							[group:'tabs',order:1,title:'Publicar Compra',action:'create'],
+							[group:'admon',order:4,title:'Publicar Compra',action:'list'],
+						]
 	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 	

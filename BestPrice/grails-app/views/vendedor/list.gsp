@@ -26,15 +26,15 @@
 					
 						<g:sortableColumn property="usuario" title="${message(code: 'vendedor.usuario.label', default: 'Usuario')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'vendedor.password.label', default: 'Password')}" />
-					
 						<g:sortableColumn property="nombre" title="${message(code: 'vendedor.nombre.label', default: 'Nombre')}" />
 					
-						<g:sortableColumn property="appPaterno" title="${message(code: 'vendedor.appPaterno.label', default: 'App Paterno')}" />
-					
-						<g:sortableColumn property="appMaterno" title="${message(code: 'vendedor.appMaterno.label', default: 'App Materno')}" />
-					
 						<g:sortableColumn property="email" title="${message(code: 'vendedor.email.label', default: 'Email')}" />
+					
+						<g:sortableColumn property="telefono" title="${message(code: 'vendedor.telefono.label', default: 'Telefono')}" />
+					
+						<th><g:message code="vendedor.estatus.label" default="Estatus" /></th>
+					
+						<g:sortableColumn property="password" title="${message(code: 'vendedor.password.label', default: 'Password')}" />
 					
 					</tr>
 				</thead>
@@ -44,15 +44,15 @@
 					
 						<td><g:link action="show" id="${vendedorInstance.id}">${fieldValue(bean: vendedorInstance, field: "usuario")}</g:link></td>
 					
-						<td>${fieldValue(bean: vendedorInstance, field: "password")}</td>
-					
 						<td>${fieldValue(bean: vendedorInstance, field: "nombre")}</td>
 					
-						<td>${fieldValue(bean: vendedorInstance, field: "appPaterno")}</td>
-					
-						<td>${fieldValue(bean: vendedorInstance, field: "appMaterno")}</td>
-					
 						<td>${fieldValue(bean: vendedorInstance, field: "email")}</td>
+					
+						<td>${fieldValue(bean: vendedorInstance, field: "telefono")}</td>
+					
+						<td>${fieldValue(bean: vendedorInstance, field: "estatus")}</td>
+					
+						<td>${fieldValue(bean: vendedorInstance, field: "password")}</td>
 					
 					</tr>
 				</g:each>

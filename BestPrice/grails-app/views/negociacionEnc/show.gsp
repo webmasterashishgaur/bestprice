@@ -11,6 +11,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link controller="necesidadEnc" action="show" params="[id:negociacionEncInstance.necesidadEnc.id]">Regresar</g:link></li>
 			</ul>
 		</div>
 		<div id="show-negociacionEnc" class="content scaffold-show" role="main">
@@ -80,25 +81,29 @@
 					<span class="property-value" aria-labelledby="estatus-label">
 						<g:if test="${negociacionEncInstance?.imagen1}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen1)}"
-	           						alt="${negociacionEncInstance?.imagen1}" title="${negociacionEncInstance?.imagen1}" width="160" height="160"/>
+	           						alt="${negociacionEncInstance?.imagen1}" title="${negociacionEncInstance?.imagen1}" style="width:400px; height:300px" class="showcase"/>
 	           						
-						</g:if>					
+						</g:if>
+					</span>											
+					<span class="property-value" aria-labelledby="estatus-label">						
 						<g:if test="${negociacionEncInstance?.imagen2}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen2)}"
-	           						alt="${negociacionEncInstance?.imagen2}" title="${negociacionEncInstance?.imagen2}" width="40" height="40"/>
+	           						alt="${negociacionEncInstance?.imagen2}" title="${negociacionEncInstance?.imagen2}" style="width:400px; height:300px" class="showcase"/>
 						</g:if>
+					</span>						
+					<span class="property-value" aria-labelledby="estatus-label">						
 						<g:if test="${negociacionEncInstance?.imagen3}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen3)}"
-	           						alt="${negociacionEncInstance?.imagen3}" title="${negociacionEncInstance?.imagen3}" width="40" height="40"/>
+	           						alt="${negociacionEncInstance?.imagen3}" title="${negociacionEncInstance?.imagen3}" style="width:400px; height:300px" class="showcase"/>
 						</g:if>
+					</span>						
+					<span class="property-value" aria-labelledby="estatus-label">						
 						<g:if test="${negociacionEncInstance?.imagen4}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen4)}"
-	           						alt="${negociacionEncInstance?.imagen4}" title="${negociacionEncInstance?.imagen4}" width="40" height="40"/>
+	           						alt="${negociacionEncInstance?.imagen4}" title="${negociacionEncInstance?.imagen4}" style="width:400px; height:300px" class="showcase"/>
 						</g:if>					
 					</span>
 				</li>
-				
-			
 			</ol>
 		</div>
 			<sec:ifLoggedIn>			
