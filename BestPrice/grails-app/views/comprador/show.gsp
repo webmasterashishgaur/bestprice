@@ -90,7 +90,7 @@
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="comprador.dateCreated.label" default="Fecha creación" /></span>
 					
-						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${compradorInstance?.dateCreated}" /></span>
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${compradorInstance?.dateCreated}"  format="dd/MM/yyyy"/></span>
 					
 				</li>
 				</g:if>
@@ -99,7 +99,7 @@
 				<li class="fieldcontain">
 					<span id="lastUpdated-label" class="property-label"><g:message code="comprador.lastUpdated.label" default="Último cambio" /></span>
 					
-						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${compradorInstance?.lastUpdated}" /></span>
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${compradorInstance?.lastUpdated}"  format="dd/MM/yyyy"/></span>
 					
 				</li>
 				</g:if>

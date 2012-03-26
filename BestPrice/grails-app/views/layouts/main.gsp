@@ -7,7 +7,22 @@
 	<head>
 	
 		<blueprint:resources/>	
-		<nav:resources/>	
+		<nav:resources/>
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="${resource(dir: 'js', file: 'ddpowerzoomer.js')}"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){ //fire on DOM ready
+ $('img.showcase').addpowerzoom({
+	//alert("2");	 
+	defaultpower: 2,
+ 	powerrange: [2,5],
+ 	largeimage: null,
+ 	magnifiersize: [150,150] //<--no comma following last option!
+ })
+})
+</script>		
+					
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

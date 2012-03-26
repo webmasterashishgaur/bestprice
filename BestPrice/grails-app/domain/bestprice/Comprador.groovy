@@ -14,7 +14,6 @@ class Comprador extends Comun{
 	
 	static constraints = {
 		usuario(blank:false, size:4..15, unique:true)
-		//password(blank:false, size:4..20, password:true)
 		nombre(blank:true, size:0..100)
 		email(blank:false, email:true, size:0..30)
 		telefono(blank:true, size:0..15)
@@ -30,18 +29,6 @@ class Comprador extends Comun{
 	transient password2
 	
 	def beforeInsert = {
-		estatus.id = 1 
-		//encodePassword()
+		estatus.id = 3 
 	}
-	/*
-	def beforeUpdate() {
-		if (isDirty('password')) {
-			encodePassword()
-		}
-	}
-
-	protected void encodePassword() {
-		password = springSecurityService.encodePassword(password)
-	}*/
-	
 }

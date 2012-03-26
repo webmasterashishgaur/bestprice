@@ -1,6 +1,7 @@
 package bestprice
 
 import org.springframework.dao.DataIntegrityViolationException
+import com.testapp.User
 
 class CompradorController {
 
@@ -37,11 +38,23 @@ class CompradorController {
 			compradorInstance.password2 = ""
             render(view: "create", model: [compradorInstance: compradorInstance])
             return
+        }else{
+			def testUser = new User(username: compradorInstance.usuario, enabled: false, password: compradorInstance.password)
+			testUser.save(flush: true)
         }
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'comprador.label', default: 'Comprador'), compradorInstance.id])
-        redirect(action: "show", id: compradorInstance.id)
+
+		checkEmail(compradorInstance)
+		//flash.message = message(code: 'default.created.message', args: [message(code: 'comprador.label', default: 'Comprador'), compradorInstance.id])
+        //redirect(action: "show", id: compradorInstance.id)
+        //redirect(uri: "../registrado.gsp")
+		//view:"/index"
+		redirect(action: 'registersuccess')
     }
+	
+	def registersuccess = {
+		render(view: 'registrado')
+	}
 
     def show() {
         def compradorInstance = Comprador.get(params.id)
@@ -113,4 +126,10 @@ class CompradorController {
             redirect(action: "show", id: params.id)
         }
     }
+	
+	def emailConfirmationService
+	def checkEmail(Comprador comprador){
+		// Only do this if not confirmed already!
+		emailConfirmationService.sendConfirmation(comprador.email, "Favor de Confirmar el usuario de BestPrice", [from:"lega82@gmail.com", compradorId:comprador.id], comprador.usuario.toString())
+	}
 }

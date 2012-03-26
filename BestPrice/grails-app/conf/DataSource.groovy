@@ -4,6 +4,15 @@ dataSource {
 	driverClassName = "com.mysql.jdbc.Driver"
 	username = "pruebas"
 	password = "pruebas"
+	properties {
+		maxActive = 100
+		maxIdle = 25
+		minIdle = 5
+		minEvictableIdleTimeMillis = 60000
+		timeBetweenEvictionRunsMillis = 60000
+		maxWait = 10000
+		initialSize = 3		
+	}
 }
 
 hibernate {
