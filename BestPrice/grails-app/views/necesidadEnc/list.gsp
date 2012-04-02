@@ -33,7 +33,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${necesidadEncInstanceList}" status="i" var="necesidadEncInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even1' : 'odd1'}">
 						<td><g:link action="show" id="${necesidadEncInstance.id}">${fieldValue(bean: necesidadEncInstance, field: "titulo")}</g:link></td>
 						<td>${fieldValue(bean: necesidadEncInstance, field: "descripcion")}</td>
 						<td>${fieldValue(bean: necesidadEncInstance, field: "categoria.nombreCorto")}</td>
