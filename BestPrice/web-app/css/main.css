@@ -608,11 +608,12 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 /* TABLES */
 
 table {
-	border-top: 1px solid #DFDFDF;
+	border-top: 1px solid orange;
 	border-collapse: collapse;
 	width: 100%;
 	margin-bottom: 1em;
 }
+
 
 tr {
 	border: 0;
@@ -634,10 +635,9 @@ td, th {
 }
 
 th {
-	/*background-color: #efefef;*/
 	background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
-	    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
 	color: #666666;
 	font-weight: bold;
@@ -676,17 +676,18 @@ th.desc a {
 	background-image: url(../images/skin/sorted_desc.gif);
 }
 
-.odd {
-	background: #f7f7f7;
-}
-
-.even {
-	background: #ffffff;
-}
-
 th:hover, tr:hover {
 	background: #E1F2B6;
 }
+
+.odd1 {
+	background: orange;
+}
+
+.even1 {
+	background: #f7f7f7;
+}
+
 
 /* PAGINATION */
 
