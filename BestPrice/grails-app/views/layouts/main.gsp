@@ -6,8 +6,8 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
 	
-		<blueprint:resources/>	
-		<nav:resources/>
+<blueprint:resources/>	
+<nav:resources/>
 		
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="${resource(dir: 'js', file: 'ddpowerzoomer.js')}"></script>
