@@ -5,19 +5,21 @@ dataSource {
 	username = "pruebas"
 	password = "pruebas"
 	properties {
-		maxActive = 100
-		maxIdle = 25
-		minIdle = 5
 		minEvictableIdleTimeMillis = 60000
 		timeBetweenEvictionRunsMillis = 60000
 		maxWait = 10000
-		initialSize = 3		
+		/*
+		initialSize = 1
+		maxActive = 1
+		maxIdle = 1
+		minIdle = 1
+		*/
 	}
 }
 
 hibernate {
-	cache.use_second_level_cache=true
-	cache.use_query_cache=true
+	cache.use_second_level_cache=false
+	cache.use_query_cache=false
 	cache.provider_class='org.hibernate.cache.EhCacheProvider'
 }
 
