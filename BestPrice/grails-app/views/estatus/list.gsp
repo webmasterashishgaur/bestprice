@@ -23,7 +23,8 @@
 			<table>
 				<thead>
 					<tr>
-					
+						<g:sortableColumn property="id" title="${message(code: 'estatus.id.label', default: 'Codigo')}" />
+											
 						<g:sortableColumn property="descripcion" title="${message(code: 'estatus.descripcion.label', default: 'Descripcion')}" />
 					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'estatus.dateCreated.label', default: 'Date Created')}" />
@@ -35,6 +36,7 @@
 				<tbody>
 				<g:each in="${estatusInstanceList}" status="i" var="estatusInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+						<td><g:link action="show" id="${estatusInstance.id}">${fieldValue(bean: estatusInstance, field: "id")}</g:link></td>
 					
 						<td><g:link action="show" id="${estatusInstance.id}">${fieldValue(bean: estatusInstance, field: "descripcion")}</g:link></td>
 					

@@ -1,7 +1,10 @@
 package bestprice
 
 import org.springframework.dao.DataIntegrityViolationException
+
+import com.testapp.Role;
 import com.testapp.User
+import com.testapp.UserRole;
 
 class VendedorController {
 	
@@ -13,8 +16,8 @@ class VendedorController {
 	
 		[group:'admon',
 		order:4,
-		title:'Soy Vendedor',
-		action:'create'],
+		title:'Vendedores',
+		action:'list'],
 	]
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -38,13 +41,24 @@ class VendedorController {
             render(view: "create", model: [vendedorInstance: vendedorInstance])
             return
         }else{
-			def testUser = new User(username: vendedorInstance.usuario, enabled: true, password: vendedorInstance.password)
+			def testUser = new User(username: vendedorInstance.usuario, enabled: false, password: vendedorInstance.password)
 			testUser.save(flush: true)
+			
+			def userRole = Role.get(2)
+			UserRole.create testUser, userRole, true
+			
         }
+		checkEmail(vendedorInstance)
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'vendedor.label', default: 'Vendedor'), vendedorInstance.id])
-        redirect(action: "show", id: vendedorInstance.id)
+
+		//flash.message = message(code: 'default.created.message', args: [message(code: 'vendedor.label', default: 'Vendedor'), vendedorInstance.id])
+        //redirect(action: "show", id: vendedorInstance.id)
+		redirect(action: 'registersuccess')
     }
+	
+	def registersuccess = {
+		render(view: 'registrado')
+	}
 
     def show() {
         def vendedorInstance = Vendedor.get(params.id)
@@ -107,7 +121,9 @@ class VendedorController {
         }
 
         try {
+			//def userRole = UserRole.get()
             vendedorInstance.delete(flush: true)
+			
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'vendedor.label', default: 'Vendedor'), params.id])
             redirect(action: "list")
         }
@@ -116,4 +132,10 @@ class VendedorController {
             redirect(action: "show", id: params.id)
         }
     }
+	
+	def emailConfirmationService
+	def checkEmail(Vendedor vendedor){
+		// Only do this if not confirmed already!
+		emailConfirmationService.sendConfirmation(vendedor.email, "Favor de Confirmar el usuario de BestPrice", [from:"bestprice@gmail.com", compradorId:vendedor.id], vendedor.usuario.toString())
+	}
 }
