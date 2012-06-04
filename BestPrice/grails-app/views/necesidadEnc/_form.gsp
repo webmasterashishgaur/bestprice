@@ -26,51 +26,62 @@
 	<g:select id="categoria" name="categoria.id" from="${bestprice.Categoria.list()}" optionKey="id" required="" value="${necesidadEncInstance?.categoria?.id}" class="many-to-one" optionValue="nombreCorto"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'estatus', 'error')} required">
-	<label for="estatus">
-		<g:message code="necesidadEnc.estatus.label" default="Estatus" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${necesidadEncInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen1', 'error')} ">
+<fieldset class="form1">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<label for="imagen1">
-		<g:message code="necesidadEnc.imagen1.label" default="Imagen1" />
-		
+		<g:message code="necesidadEnc.imagen1.label" default="Imagenes de Referencia" />
 	</label>
-	<input type="file" id="imagen1" name="imagen1" value="${necesidadEncInstance?.imagen1}"/>	
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen2', 'error')} ">
-	<label for="imagen2">
-		<g:message code="necesidadEnc.imagen2.label" default="Imagen2" />
-		
-	</label>
-	<input type="file" id="imagen2" name="imagen2" value="${necesidadEncInstance?.imagen2}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen3', 'error')} ">
-	<label for="imagen3">
-		<g:message code="necesidadEnc.imagen3.label" default="Imagen3" />
-		
-	</label>
-	<input type="file" id="imagen3" name="imagen3" value="${necesidadEncInstance?.imagen3}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen4', 'error')} ">
-	<label for="imagen4">
-		<g:message code="necesidadEnc.imagen4.label" default="Imagen4" />
-		
-	</label>
-	<input type="file" id="imagen4" name="imagen4" value="${necesidadEncInstance?.imagen4}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen5', 'error')} ">
-	<label for="imagen5">
-		<g:message code="necesidadEnc.imagen5.label" default="Imagen5" />
-		
-	</label>
-	<input type="file" id="imagen5" name="imagen5" value="${necesidadEncInstance?.imagen5}"/>
-</div>
-
+	
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen1', 'error')} ">
+		<label for="imagen1">
+			<g:message code="necesidadEnc.imagen1.label" default="" />
+		</label>
+		<input type="file" id="imagen1" name="imagen1" value="${necesidadEncInstance?.imagen1}"/>	
+	</div>
+	
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen2', 'error')} ">
+		<label for="imagen2">
+			<g:message code="necesidadEnc.imagen2.label" default="" />
+			
+		</label>
+		<input type="file" id="imagen2" name="imagen2" value="${necesidadEncInstance?.imagen2}"/>
+	</div>
+	
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen3', 'error')} ">
+		<label for="imagen3">
+			<g:message code="necesidadEnc.imagen3.label" default="" />
+			
+		</label>
+		<input type="file" id="imagen3" name="imagen3" value="${necesidadEncInstance?.imagen3}"/>
+	</div>
+	
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen4', 'error')} ">
+		<label for="imagen4">
+			<g:message code="necesidadEnc.imagen4.label" default="" />
+			
+		</label>
+		<input type="file" id="imagen4" name="imagen4" value="${necesidadEncInstance?.imagen4}"/>
+	</div>
+	
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen5', 'error')} ">
+		<label for="imagen5">
+			<g:message code="necesidadEnc.imagen5.label" default="" />
+			
+		</label>
+		<input type="file" id="imagen5" name="imagen5" value="${necesidadEncInstance?.imagen5}"/>
+	</div>
+	
+<sec:ifAllGranted roles="ROLE_ADMIN">
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'estatus', 'error')} required">
+		<label for="estatus">
+			<g:message code="necesidadEnc.estatus.label" default="Estatus" />
+			<span class="required-indicator">*</span>
+		</label>
+		<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${necesidadEncInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
+	</div>
+</sec:ifAllGranted>
+<sec:ifNotGranted roles="ROLE_ADMIN">
+	<g:hiddenField name="estatus.id" value="3"/>		
+</sec:ifNotGranted>	
+</fieldset>

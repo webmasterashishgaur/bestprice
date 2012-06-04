@@ -2,6 +2,9 @@ package bestprice
 
 import org.springframework.dao.DataIntegrityViolationException
 import com.testapp.User
+import com.testapp.UserRole;
+import com.testapp.Role
+
 
 class CompradorController {
 
@@ -13,9 +16,9 @@ class CompradorController {
 		title:'Soy Comprador',
 		action:'create'],
 		[group:'admon',
-		order:10,
-		title:'Soy Comprador',
-		action:'create'],
+		order:5,
+		title:'Compradores',
+		action:'list'],
 	]
 
     def index() {
@@ -41,14 +44,12 @@ class CompradorController {
         }else{
 			def testUser = new User(username: compradorInstance.usuario, enabled: false, password: compradorInstance.password)
 			testUser.save(flush: true)
+			
+			def userRole = Role.get(2)
+			UserRole.create testUser, userRole, true
         }
 
-
 		checkEmail(compradorInstance)
-		//flash.message = message(code: 'default.created.message', args: [message(code: 'comprador.label', default: 'Comprador'), compradorInstance.id])
-        //redirect(action: "show", id: compradorInstance.id)
-        //redirect(uri: "../registrado.gsp")
-		//view:"/index"
 		redirect(action: 'registersuccess')
     }
 	
@@ -130,6 +131,6 @@ class CompradorController {
 	def emailConfirmationService
 	def checkEmail(Comprador comprador){
 		// Only do this if not confirmed already!
-		emailConfirmationService.sendConfirmation(comprador.email, "Favor de Confirmar el usuario de BestPrice", [from:"lega82@gmail.com", compradorId:comprador.id], comprador.usuario.toString())
+		emailConfirmationService.sendConfirmation(comprador.email, "Favor de Confirmar el usuario de BestPrice", [from:"bestprice@gmail.com", compradorId:comprador.id], comprador.usuario.toString())
 	}
 }

@@ -8,6 +8,7 @@ import org.springframework.dao.DataIntegrityViolationException
 class NecesidadEncController {
 
 	def springSecurityService
+	def necesidadEncService
 	
 	static navigation = [
 							[group:'tabs',order:1,title:'Publicar Compra',action:'create'],
@@ -103,9 +104,10 @@ class NecesidadEncController {
             render(view: "create", model: [necesidadEncInstance: necesidadEncInstance])
             return
         }
-
+		
+		necesidadEncService.enviaCorreoPosiblesCompradores(necesidadEncInstance.titulo)
+		
 		flash.message = message(code: 'default.created.message', args: [message(code: 'necesidadEnc.label', default: 'NecesidadEnc'), necesidadEncInstance.id])
-        //redirect(action: "show", id: necesidadEncInstance.id)
 		redirect(action: "list")
     }
 

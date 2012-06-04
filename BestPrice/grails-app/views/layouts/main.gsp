@@ -5,25 +5,25 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
-	
-<blueprint:resources/>	
-<nav:resources/>
+
+		<blueprint:resources/>	
+		<nav:resources/>
+		<link rel="stylesheet" href="${resource(dir:'css',file:'twitter-auth.css')}" />
+			
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="${resource(dir: 'js', file: 'ddpowerzoomer.js')}"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function($){ //fire on DOM ready
+		 $('img.showcase').addpowerzoom({
+			//alert("2");	 
+			defaultpower: 2,
+		 	powerrange: [2,5],
+		 	largeimage: null,
+		 	magnifiersize: [150,150] //<--no comma following last option!
+		 })
+		})
+		</script>		
 		
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'ddpowerzoomer.js')}"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($){ //fire on DOM ready
- $('img.showcase').addpowerzoom({
-	//alert("2");	 
-	defaultpower: 2,
- 	powerrange: [2,5],
- 	largeimage: null,
- 	magnifiersize: [150,150] //<--no comma following last option!
- })
-})
-</script>		
-					
-	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>
@@ -37,14 +37,14 @@ jQuery(document).ready(function($){ //fire on DOM ready
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
         <r:layoutResources />
+        
 	</head>
 	<body>
-		
 		<div id="grailsHeader" role="banner">
 			<div id="grailsLogo" role="banner">
-				<img src="${resource(dir: 'images', file: '')}" alt="Grails"/><!-- bq.gif -->
+				<img src="${resource(dir: 'images', file: 'oracle.jpg')}" alt="Grails"/><!-- bq.gif -->
 			</div>
-			<div  id="grailsMenu" role="banner">		
+			<div  id="grailsMenu" role="banner">
 				<sec:ifAllGranted roles="ROLE_ADMIN">
 					<nav:render group="admon"/>
 				</sec:ifAllGranted>
@@ -62,7 +62,7 @@ jQuery(document).ready(function($){ //fire on DOM ready
 			</div>			
 		</div>
 		
-		<div id="layoutBody" role="layoutBody">		
+		<div id="layoutBody" role="layoutBody">
 			<g:layoutBody/>
 		</div>
 		

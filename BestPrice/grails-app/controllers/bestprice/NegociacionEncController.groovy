@@ -85,6 +85,14 @@ def springSecurityService
             render(view: "create", model: [negociacionEncInstance: negociacionEncInstance])
             return
         }
+		
+		def necesidadEnc = NecesidadEnc.get(negociacionEncInstance.necesidadEnc.id)
+		def comprador = Comprador.get(necesidadEnc.comprador.id)
+		sendMail {
+			to ""+comprador.email
+			subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username
+			body 'Comentario: '+negociacionEncInstance.comentarios + ". Precio: "+negociacionEncInstance.precio
+		}
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), negociacionEncInstance.id])
         redirect(controller:'necesidadEnc', action: "show", id: negociacionEncInstance.necesidadEnc.id)

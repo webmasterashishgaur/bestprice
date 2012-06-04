@@ -33,14 +33,24 @@ class NegociacionDetController {
             return
         }
 		
-		def negociacionEnc = NegociacionEnc.get(negociacionDetInstance.negociacionEnc.id) 
-		/*
-		sendMail {     
-			to ""+negociacionEnc.vendedor.email
-			subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username     
-			body 'Comentario: '+negociacionDetInstance.comentarios 
-		}
-        */
+		def comprador = Comprador.findByUsuario(springSecurityService.currentUser.username)
+		def negociacionEnc = NegociacionEnc.get(negociacionDetInstance.negociacionEnc.id)
+		if(comprador != null){
+			sendMail {     
+				to ""+negociacionEnc.vendedor.email
+				subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username     
+				body 'Comentario: '+negociacionDetInstance.comentarios 
+			}
+		}else{
+			def necesidadEnc = NecesidadEnc.get(negociacionEnc.necesidadEnc.id)
+			comprador = Comprador.get(necesidadEnc.comprador.id)
+			sendMail {
+				to ""+comprador.email
+				subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username
+				body 'Comentario: '+negociacionDetInstance.comentarios
+			}
+		}	
+
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionDet.label', default: 'NegociacionDet'), negociacionDetInstance.id])
         redirect(controller:"negociacionEnc", action: "show", id: negociacionDetInstance.negociacionEnc.id)
     }

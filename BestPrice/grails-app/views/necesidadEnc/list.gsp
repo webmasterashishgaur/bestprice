@@ -18,9 +18,6 @@
 		</div>
 		<div id="list-necesidadEnc" class="content scaffold-list" role="main">
 			<h1>Últimas publicaciones</h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
 			<table>
 				<thead>
 					<tr>

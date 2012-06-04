@@ -4,6 +4,7 @@
 	<title><g:message code="springSecurity.login.title"/></title>
 	<style type='text/css' media='screen'>
 
+
 	#login {
 		height: 160px;
 		float: left;
@@ -14,6 +15,12 @@
 		border-radius: 0.6em;
 		box-shadow: 1px 1px 6px #888888;
 	}
+	
+	#login .inner .cssform input[type='submit'] {
+		border-bottom-style: outset;
+		margin-left: 33px;
+	}
+	
 	/*
 	#login .inner {
 		height: 110px;	
@@ -43,10 +50,6 @@
 		margin-top: 5px;
 	}	
 	
-	#login .inner .cssform input[type='submit'] {
-		border-bottom-style: outset;
-	}	
-
 	#login .inner .cssform label {
 		font-weight: bold;
 	}
@@ -103,10 +106,7 @@
 			<p id="remember_me_holder">
 				<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
 				<g:message code="springSecurity.login.remember.me.label"/>
-			</p>
-
-			<p>
-				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>				
 			</p>
 		</form>
 	</div>
