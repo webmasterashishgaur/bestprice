@@ -2,7 +2,7 @@ package bestprice
 
 import java.util.Date;
 
-class Vendedor extends Comun{
+class Vendedor{
 	transient springSecurityService
 	transient password2
 
@@ -15,6 +15,9 @@ class Vendedor extends Comun{
 	String comentarios
 	Boolean admiteDevolucion = true
 	Boolean recibirEmail = true
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 	
 	static constraints = {
 		usuario(blank:false, size:4..15, unique:true)
