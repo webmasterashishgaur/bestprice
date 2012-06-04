@@ -113,4 +113,8 @@ grails {
 
 grails.plugin.cloudfoundry.username = "lega82@gmail.com"
 grails.plugin.cloudfoundry.password = "vicaed22"
-grails.plugin.cloudfoundry.target = "http://api.aws.af.cm"
+grails.plugin.cloudfoundry.target = "http://api.cloudfoundry.com"
+
+grails.plugins.springsecurity.twitter.app.key='12'
+grails.plugins.springsecurity.twitter.app.consumerKey='12'
+grails.plugins.springsecurity.twitter.app.consumerSecret='12'
