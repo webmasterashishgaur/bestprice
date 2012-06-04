@@ -1,6 +1,8 @@
 package bestprice
 
-class NegociacionEnc extends Comun{
+import java.util.Date;
+
+class NegociacionEnc{
 
 	static hasMany = [negociacionDets:NegociacionDet]
 	static belongsTo = [necesidadEnc: NecesidadEnc]
@@ -11,6 +13,9 @@ class NegociacionEnc extends Comun{
 	String imagen3
 	String imagen4
 	String comentarios
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 
     static constraints = {
 		comentarios(blank:false, size:4..1000)

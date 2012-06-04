@@ -2,7 +2,7 @@ package bestprice
 
 import java.util.Date;
 
-class NecesidadEnc extends Comun{
+class NecesidadEnc{
  
 	static belongsTo = [categoria:Categoria, comprador:Comprador]
 	
@@ -13,14 +13,18 @@ class NecesidadEnc extends Comun{
 	String imagen3
 	String imagen4
 	String imagen5
+	Estatus estatus
+	Date dateCreated
+	Date lastUpdated
 	
     static constraints = {
 		titulo(blank:false, size:10..100)
 		descripcion(blank:false, size:10..300)
+		estatus(nullable:true)
     }
 	
 	def beforeInsert = {
-		estatus.id = 1
+		estatus.id = 3
 	}
 	
 	static mapping = {
