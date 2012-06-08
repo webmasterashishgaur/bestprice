@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+      	<r:require modules="bootstrap"/>		
 		<g:set var="entityName" value="${message(code: 'vendedor.label', default: 'Vendedor')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
@@ -11,11 +12,14 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				
+				<sec:ifAllGranted roles="ROLE_ADMIN">
+					<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				</sec:ifAllGranted>
 			</ul>
 		</div>
 		<div id="create-vendedor" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -26,14 +30,24 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form action="save" >
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
-			</g:form>
+
+			<sec:ifNotLoggedIn>
+				<div id="lytColLoguin">
+					<g:include controller="login" action="auth" />						
+				</div>
+			</sec:ifNotLoggedIn>			
+
+			<div class="form">
+				<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+				<g:form action="save" >
+					<fieldset>
+						<g:render template="form"/>
+					</fieldset>
+					<fieldset class="buttons">
+						<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					</fieldset>
+				</g:form>
+			</div>			
 		</div>
 	</body>
 </html>

@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+      	<r:require modules="bootstrap"/>
 		<g:set var="entityName" value="${message(code: 'comprador.label', default: 'Comprador')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
@@ -17,7 +18,6 @@
 			</ul>
 		</div>
 		<div id="create-comprador" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -35,14 +35,17 @@
 				</div>
 			</sec:ifNotLoggedIn>			
 			
-			<g:form action="save" >
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
-			</g:form>
+			<div class="form">
+				<h1><g:message code="default.create.label" args="[entityName]" /></h1>			
+				<g:form action="save">
+					<fieldset>
+						<g:render template="form"/>
+					</fieldset>
+					<fieldset class="buttons">
+						<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					</fieldset>
+				</g:form>
+			</div>				
 		</div>
 	</body>
 </html>

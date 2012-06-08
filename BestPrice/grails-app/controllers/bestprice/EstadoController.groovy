@@ -8,7 +8,7 @@ class EstadoController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
 	static navigation =[
-		[group:'admon', order:2, title:'Estado', action:'list']
+		//[group:'admon', order:2, title:'Estado', action:'list']
 	]
 	
     def index() {

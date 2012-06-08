@@ -5,17 +5,14 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
-
-		<blueprint:resources/>	
 		<nav:resources/>
 		<link rel="stylesheet" href="${resource(dir:'css',file:'twitter-auth.css')}" />
-			
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'ddpowerzoomer.js')}"></script>
+
 		<script type="text/javascript">
 		jQuery(document).ready(function($){ //fire on DOM ready
 		 $('img.showcase').addpowerzoom({
-			//alert("2");	 
 			defaultpower: 2,
 		 	powerrange: [2,5],
 		 	largeimage: null,
@@ -40,26 +37,49 @@
         
 	</head>
 	<body>
+
 		<div id="grailsHeader" role="banner">
 			<div id="grailsLogo" role="banner">
 				<img src="${resource(dir: 'images', file: 'oracle.jpg')}" alt="Grails"/><!-- bq.gif -->
 			</div>
+
 			<div  id="grailsMenu" role="banner">
 				<sec:ifAllGranted roles="ROLE_ADMIN">
 					<nav:render group="admon"/>
 				</sec:ifAllGranted>
-	
+
 				<sec:ifNotGranted roles="ROLE_ADMIN">
 					<nav:render group="tabs"/>
 				</sec:ifNotGranted>
+			</div>
+
+			<div id="divBusqueda"  role="banner">
+				<g:form action="search" controller="necesidadEnc" method="post">
+	        		<input type="text" name="query" placeholder="Ingrese texto a buscar" class="texts">
+	        		<input value="Buscar" type="submit" class="btn-primary">
+	    		</g:form>
 				
-				<div  id="grailsOptions" role="banner">		
-					<sec:ifLoggedIn>
-						<g:link controller="logout" id="linkLogout">Cerrar sesión</g:link>					
-						<h3>Bienvenido: <sec:username/></h3></b>
-					</sec:ifLoggedIn>				
-				</div>				
-			</div>			
+				<!--<div class="divComprar">-->
+				<g:form controller="necesidadEnc" >
+  						<g:actionSubmit value="Publicar Compra" action="create" class="btn-primary" id="btnPublicar"/>
+				</g:form>
+						
+				<!--</div>-->
+			</div>
+			
+			<sec:ifLoggedIn>	    		
+				<div id="divSession">
+					<div class="btn-group">
+	  					<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+							<sec:username/>
+	    					<span class="caret"></span>
+	  					</a>
+	  					<ul class="dropdown-menu">
+							<g:link controller="logout" id="linkLogout">Cerrar sesión</g:link>
+	  					</ul>
+					</div>
+				</div>
+			</sec:ifLoggedIn>			
 		</div>
 		
 		<div id="layoutBody" role="layoutBody">

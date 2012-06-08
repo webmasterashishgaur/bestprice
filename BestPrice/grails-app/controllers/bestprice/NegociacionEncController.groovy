@@ -90,8 +90,8 @@ def springSecurityService
 		def comprador = Comprador.get(necesidadEnc.comprador.id)
 		sendMail {
 			to ""+comprador.email
-			subject "Nuevo Comentario de Usuario: "+ springSecurityService.currentUser.username
-			body 'Comentario: '+negociacionEncInstance.comentarios + ". Precio: "+negociacionEncInstance.precio
+			subject "Nueva Oferta para tu compra de "+necesidadEnc.titulo
+			body 'El Vendedor '+ springSecurityService.currentUser.username+ ' tiene esta oferta: '+negociacionEncInstance.comentarios + ", Precio: "+negociacionEncInstance.precio
 		}
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), negociacionEncInstance.id])
