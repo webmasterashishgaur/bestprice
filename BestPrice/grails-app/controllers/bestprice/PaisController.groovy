@@ -8,7 +8,7 @@ class PaisController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
 	static navigation =[
-		[group:'admon', order:1, title:'Pais', action:'list']
+		//[group:'admon', order:1, title:'Pais', action:'list']
 	]
 	
     def index() {

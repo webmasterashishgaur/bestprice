@@ -7,7 +7,7 @@ class PoblacionController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
 	static navigation =[
-		[group:'admon', order:3, title:'Poblacion', action:'list']
+		//[group:'admon', order:3, title:'Poblacion', action:'list']
 	]
 	
     def index() {
