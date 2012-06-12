@@ -72,6 +72,14 @@
 		<input type="file" id="imagen5" name="imagen5" value="${necesidadEncInstance?.imagen5}"/>
 	</div>
 	
+	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'imagen6', 'error')} ">
+		<label for="imagen6">
+			<g:message code="necesidadEnc.imagen6.label" default="" />
+			
+		</label>
+		<input type="file" id="imagen6" name="imagen6" value="${necesidadEncInstance?.imagen6}"/>
+	</div>	
+	
 <sec:ifAllGranted roles="ROLE_ADMIN">
 	<div class="fieldcontain ${hasErrors(bean: necesidadEncInstance, field: 'estatus', 'error')} required">
 		<label for="estatus">

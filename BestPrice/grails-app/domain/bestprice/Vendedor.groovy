@@ -4,11 +4,11 @@ import java.util.Date;
 
 class Vendedor{
 	transient springSecurityService
-	transient password2
 
 	FormaPago formaPago
 	String usuario
 	String password
+	//String password2
 	String nombre = ""
 	String email
 	String telefono
@@ -26,15 +26,22 @@ class Vendedor{
 		telefono(blank:true, size:0..15)
 		estatus(nullable:true)
 		
+		/*
 		password(blank: false, password:true, nullable: false, size:5..20, validator: {password, obj ->
 			def password2 = obj.properties['password2']
 			if(password2 == null) return true // skip matching password validation (only important when setting/resetting pass)
 			password2 == password ? true : ['invalid.matchingpasswords']
 		})
+		*/
+		
+		//password2(blank:false,password:true)
+		password(blank: false, password:true, nullable: false, size:5..20)
 	}
 	
+    //static transients = ['password2']
+	
 	def beforeInsert = {
-		estatus.id = 1 
+		//estatus.id = 1 
 	}
 	
 	

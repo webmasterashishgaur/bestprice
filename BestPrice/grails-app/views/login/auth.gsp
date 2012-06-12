@@ -6,7 +6,7 @@
 
 
 	#login {
-		height: 160px;
+		height: 190px;
 		/*
 		float: left;
 		padding: 5px;
@@ -19,6 +19,7 @@
 	}
 	
 	#login .inner .cssform input[type='submit'] {
+		top: 0px;	
 		border-bottom-style: outset;
 		margin-left: 33px;
 	}
@@ -69,14 +70,16 @@
 	}
 	*/
 	#login .inner .login_message {
+		top: 0px;	
 		color: #c33;
 	}
 	
 	#login #remember_me_holder {
-		padding-top: 5px;
+		top: 0px;
 	}
 	
 	#login .inner .text_ {
+		top: 0px;	
 		width: 190px;
 		height: 20px;
 	}
@@ -93,12 +96,12 @@
 			</label>			
 			<p>
 				<g:message code="springSecurity.login.username.label"/>:
-				<input type='text' class='text_' name='j_username' id='username'/>
+				<input type='text' class='text_' name='j_username' id='username' required="required"/>
 			</p>
 			
 			<p>
 				<g:message code="springSecurity.login.password.label"/>:
-				<input type='password' class='text_' name='j_password' id='password'/>
+				<input type='password' class='text_' name='j_password' id='password'  required="required"/>
 			</p>
 			<g:if test='${flash.message}'>
 				<div class='login_message'>${flash.message}</div>

@@ -60,8 +60,11 @@ class NecesidadEncController {
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile1.transferTo( new File( userDir, uploadedFile1.originalFilename))
-		  necesidadEncInstance.imagen1 = uploadedFile1.originalFilename;
+		  
+		  def nomb0 = uploadedFile1.originalFilename.trim()
+		  nomb0 = nomb0.replaceAll(" ", "")
+		  uploadedFile1.transferTo( new File( userDir, nomb0))
+		  necesidadEncInstance.imagen1 = nomb0;
 		}
 		
 		def uploadedFile2 = request.getFile('imagen2')
@@ -69,8 +72,11 @@ class NecesidadEncController {
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile2.transferTo( new File( userDir, uploadedFile2.originalFilename))
-		  necesidadEncInstance.imagen2 = uploadedFile2.originalFilename;
+		  
+		  def nomb1 = uploadedFile2.originalFilename.trim()
+		  nomb1 = nomb1.replaceAll(" ", "")
+		  uploadedFile2.transferTo( new File( userDir, nomb1))
+		  necesidadEncInstance.imagen2 = nomb1;
 		}
 		
 		def uploadedFile3 = request.getFile('imagen3')
@@ -78,8 +84,11 @@ class NecesidadEncController {
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile3.transferTo( new File( userDir, uploadedFile3.originalFilename))
-		  necesidadEncInstance.imagen3 = uploadedFile3.originalFilename;
+		  
+		  def nomb2 = uploadedFile3.originalFilename.trim()
+		  nomb2 = nomb2.replaceAll(" ", "")
+		  uploadedFile3.transferTo( new File( userDir, nomb2))
+		  necesidadEncInstance.imagen3 = nomb2;
 		}
 		
 		def uploadedFile4 = request.getFile('imagen4')
@@ -87,8 +96,11 @@ class NecesidadEncController {
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile4.transferTo( new File( userDir, uploadedFile4.originalFilename))
-		  necesidadEncInstance.imagen4 = uploadedFile4.originalFilename;
+		  
+		  def nomb3 = uploadedFile4.originalFilename.trim()
+		  nomb3 = nomb3.replaceAll(" ", "")
+		  uploadedFile4.transferTo( new File( userDir, nomb3))
+		  necesidadEncInstance.imagen4 = nomb3;
 		}
 		
 		def uploadedFile5 = request.getFile('imagen5')
@@ -96,8 +108,23 @@ class NecesidadEncController {
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile5.transferTo( new File( userDir, uploadedFile5.originalFilename))
-		  necesidadEncInstance.imagen5 = uploadedFile5.originalFilename;
+		  
+		  def nomb4 = uploadedFile5.originalFilename.trim()
+		  nomb4 = nomb3.replaceAll(" ", "")
+		  uploadedFile5.transferTo( new File( userDir, nomb4))
+		  necesidadEncInstance.imagen5 = nomb4;
+		}
+		
+		def uploadedFile6 = request.getFile('imagen6')
+		if(!uploadedFile6.empty){
+		  def webRootDir = servletContext.getRealPath("/")
+		  def userDir = new File(webRootDir, ruta)
+		  userDir.mkdirs()
+		  
+		  def nomb5 = uploadedFile6.originalFilename.trim()
+		  nomb5 = nomb5.replaceAll(" ", "")
+		  uploadedFile6.transferTo( new File( userDir, nomb5))
+		  necesidadEncInstance.imagen6 = nomb5;
 		}
 		
         if (!necesidadEncInstance.save(flush: true)) {

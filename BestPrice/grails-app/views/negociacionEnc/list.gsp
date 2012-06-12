@@ -4,16 +4,16 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+      	<r:require modules="bootstrap"/>		
 		<g:set var="entityName" value="${message(code: 'negociacionEnc.label', default: 'NegociacionEnc')}" />
 		<title></title>
 	</head>
 	<body>
 		<a href="#list-negociacionEnc" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><g:link class="create" action="create" params="[necesidadEnc:necesidadEncInstance]">Ofertar</g:link></li>
-			</ul>
-		</div>
+		<g:form controller="negociacionEnc" params="[necesidadEnc:necesidadEncInstance]">
+			<g:actionSubmit value="Ofertar" action="create" class="btn-primary" id="btnPublicar"/>
+		</g:form>		
+		
 		<div id="list-negociacionEnc" class="content scaffold-list" role="main">
 			<h1>Ofertas</h1>
 			<g:if test="${flash.message}">

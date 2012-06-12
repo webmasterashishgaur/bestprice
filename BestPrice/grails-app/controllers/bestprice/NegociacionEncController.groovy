@@ -50,8 +50,11 @@ def springSecurityService
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile2.transferTo( new File( userDir, uploadedFile2.originalFilename))
-		  negociacionEncInstance.imagen1 = uploadedFile2.originalFilename;
+		  
+		  def nomb1 = uploadedFile2.originalFilename.trim()
+		  nomb1 = nomb1.replaceAll(" ", "")
+		  uploadedFile2.transferTo( new File( userDir, nomb1))
+		  negociacionEncInstance.imagen1 = nomb1;
 		}
 		
 		def uploadedFile3 = request.getFile('imagen2')
@@ -59,8 +62,11 @@ def springSecurityService
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile3.transferTo( new File( userDir, uploadedFile3.originalFilename))
-		  negociacionEncInstance.imagen2 = uploadedFile3.originalFilename;
+		  
+		  def nomb2 = uploadedFile2.originalFilename.trim()
+		  nomb2 = nomb1.replaceAll(" ", "")
+		  uploadedFile3.transferTo( new File( userDir, nomb2))
+		  negociacionEncInstance.imagen2 = nomb2;
 		}
 		
 		def uploadedFile4 = request.getFile('imagen3')
@@ -68,8 +74,11 @@ def springSecurityService
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile4.transferTo( new File( userDir, uploadedFile4.originalFilename))
-		  negociacionEncInstance.imagen3 = uploadedFile4.originalFilename;
+		  
+		  def nomb3 = uploadedFile3.originalFilename.trim()
+		  nomb3 = nomb1.replaceAll(" ", "")
+		  uploadedFile4.transferTo( new File( userDir, nomb3))
+		  negociacionEncInstance.imagen3 = nomb3;
 		}
 		
 		def uploadedFile5 = request.getFile('imagen4')
@@ -77,8 +86,11 @@ def springSecurityService
 		  def webRootDir = servletContext.getRealPath("/")
 		  def userDir = new File(webRootDir, ruta)
 		  userDir.mkdirs()
-		  uploadedFile5.transferTo( new File( userDir, uploadedFile5.originalFilename))
-		  negociacionEncInstance.imagen4 = uploadedFile5.originalFilename;
+		  
+		  def nomb4 = uploadedFile4.originalFilename.trim()
+		  nomb4 = nomb1.replaceAll(" ", "")
+		  uploadedFile5.transferTo( new File( userDir, nomb4))
+		  negociacionEncInstance.imagen4 = nomb4;
 		}
 		
         if (!negociacionEncInstance.save(flush: true)) {

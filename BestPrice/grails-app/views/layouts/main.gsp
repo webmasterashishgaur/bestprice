@@ -86,10 +86,13 @@
 			<g:layoutBody/>
 		</div>
 		
+		<!-- 
 		<div class="footer" role="contentinfo">
 			Copyright &copy; by Edgar Villegas.<br/>
 			All Rights Reserved.<br/>
-		</div><!-- footer -->		
+		</div>
+		-->
+		<!-- footer -->		
 		
 		
 		<div id="spinner" class="spinner" style="display:none;">
