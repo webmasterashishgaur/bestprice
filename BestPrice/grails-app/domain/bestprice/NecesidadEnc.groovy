@@ -13,6 +13,7 @@ class NecesidadEnc{
 	String imagen3
 	String imagen4
 	String imagen5
+	String imagen6
 	Estatus estatus
 	Date dateCreated
 	Date lastUpdated

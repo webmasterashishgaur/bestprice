@@ -38,7 +38,7 @@ class CompradorController {
         def compradorInstance = new Comprador(params)
         if (!compradorInstance.save(flush: true)) {
 			compradorInstance.password = ""
-			compradorInstance.password2 = ""
+			//compradorInstance.password2 = ""
             render(view: "create", model: [compradorInstance: compradorInstance])
             return
         }else{

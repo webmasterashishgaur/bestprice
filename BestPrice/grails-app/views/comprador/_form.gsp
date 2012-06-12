@@ -18,15 +18,6 @@
 	<g:field type="password" name="password" maxlength="20" required="" value="${compradorInstance?.password}"/>
 </div>
 
-
-<div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'password', 'error')} required">
-	<label for="password">
-		<g:message code="comprador.password.label" default="Confirma" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="password" name="password2" maxlength="20" required="" value="${compradorInstance?.password}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: compradorInstance, field: 'email', 'error')} required">
 	<label for="email">
 		<g:message code="comprador.email.label" default="Email" />

@@ -38,6 +38,8 @@ class VendedorController {
     def save() {
         def vendedorInstance = new Vendedor(params)
         if (!vendedorInstance.save(flush: true)) {
+			//vendedorInstance.password = ""
+			//compradorInstance.password2 = ""
             render(view: "create", model: [vendedorInstance: vendedorInstance])
             return
         }else{

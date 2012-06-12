@@ -23,14 +23,7 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<g:hasErrors bean="${vendedorInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${vendedorInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
-
+			
 			<sec:ifNotLoggedIn>
 				<div id="lytColLoguin">
 					<g:include controller="login" action="auth" />						
@@ -43,6 +36,15 @@
 					<fieldset>
 						<g:render template="form"/>
 					</fieldset>
+					
+					<g:hasErrors bean="${vendedorInstance}">
+						<ul class="errors" role="alert">
+							<g:eachError bean="${vendedorInstance}" var="error">
+							<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+							</g:eachError>
+						</ul>
+					</g:hasErrors>					
+					
 					<fieldset class="buttons">
 						<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 					</fieldset>

@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+      	<r:require modules="bootstrap"/>		
 		<g:set var="entityName" value="${message(code: 'negociacionEnc.label', default: 'NegociacionEnc')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
@@ -81,26 +82,26 @@
 					<span class="property-value" aria-labelledby="estatus-label">
 						<g:if test="${negociacionEncInstance?.imagen1}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen1)}"
-	           						alt="${negociacionEncInstance?.imagen1}" title="${negociacionEncInstance?.imagen1}" style="width:400px; height:300px" class="showcase"/>
+	           						alt="${negociacionEncInstance?.imagen1}" title="${negociacionEncInstance?.imagen1}" class="showcase"/>
 	           						
 						</g:if>
 					</span>											
 					<span class="property-value" aria-labelledby="estatus-label">						
 						<g:if test="${negociacionEncInstance?.imagen2}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen2)}"
-	           						alt="${negociacionEncInstance?.imagen2}" title="${negociacionEncInstance?.imagen2}" style="width:400px; height:300px" class="showcase"/>
+	           						alt="${negociacionEncInstance?.imagen2}" title="${negociacionEncInstance?.imagen2}" class="showcase"/>
 						</g:if>
 					</span>						
 					<span class="property-value" aria-labelledby="estatus-label">						
 						<g:if test="${negociacionEncInstance?.imagen3}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen3)}"
-	           						alt="${negociacionEncInstance?.imagen3}" title="${negociacionEncInstance?.imagen3}" style="width:400px; height:300px" class="showcase"/>
+	           						alt="${negociacionEncInstance?.imagen3}" title="${negociacionEncInstance?.imagen3}" class="showcase"/>
 						</g:if>
 					</span>						
 					<span class="property-value" aria-labelledby="estatus-label">						
 						<g:if test="${negociacionEncInstance?.imagen4}">					
 								<img src="${createLinkTo(dir:'images/compras/'+negociacionEncInstance.vendedor.usuario, file:''+negociacionEncInstance?.imagen4)}"
-	           						alt="${negociacionEncInstance?.imagen4}" title="${negociacionEncInstance?.imagen4}" style="width:400px; height:300px" class="showcase"/>
+	           						alt="${negociacionEncInstance?.imagen4}" title="${negociacionEncInstance?.imagen4}" class="showcase"/>
 						</g:if>					
 					</span>
 				</li>
