@@ -100,10 +100,53 @@ body {
 #btnPublicar{
 	float: inherit;
 	position: absolute;
-	top: 2px;
+	top: 4px;
 	left: 700px;
 	right: 400px;
-}	
+}
+
+#btnPublicar:hover {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, rgb(134,193,253)),
+        color-stop(0.49, rgb(153,213,255)),
+        color-stop(0.5, rgb(130,194,253)),
+        color-stop(1, rgb(108,170,229))
+    );
+    background-image: -moz-linear-gradient(
+        center top,
+        rgb(134,193,253) 0%,
+        rgb(153,213,255) 49%,
+        rgb(130,194,253) 50%,
+        rgb(108,170,229) 100%
+    );
+}
+
+#btnPublicar:active {
+    top: 4px;
+    box-shadow:         inset 0px 4px 5px rgba(255,255,255,0.4),
+                        inset 0px -1px 5px rgba(255,255,255,0.2),
+                        /**/
+                        0px 2px 0px #1e4766,
+                        /**/
+                        0px 4px 5px rgba(0,0,0,0.5);
+ 
+    -moz-box-shadow:    inset 0px 4px 5px rgba(255,255,255,0.4),
+                        inset 0px -1px 5px rgba(255,255,255,0.2),
+                        /**/
+                        0px 2px 0px #1e4766,
+                        /**/
+                        0px 4px 5px rgba(0,0,0,0.5);
+ 
+    -webkit-box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+                        inset 0px -1px 5px rgba(255,255,255,0.2),
+                        /**/
+                        0px 2px 0px #1e4766,
+                        /**/
+                        0px 4px 5px rgba(0,0,0,0.5);
+}
 
 #divBusqueda .texts {
 	width: 450px;
@@ -136,7 +179,7 @@ body {
 	border: .2em solid #fff;
 	padding: 1em;
 	width: 16em;
-	height: 14em;
+	height: 15em;
 	-moz-box-shadow: 0px 0px 1.25em #ccc;
 	-webkit-box-shadow: 0px 0px 1.25em #ccc;
 	box-shadow: 0px 0px 1.25em #ccc;
@@ -209,6 +252,7 @@ h1 {
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
+	text-align: center;
 }
 
 ul {
@@ -236,18 +280,20 @@ img {
 }
 
 .form{
+	border: 2px dashed #D1C7AC;	
+	border-color:  #C9C9C9;	
 	position: absolute;	
-	top: 46px;
+	top: 60px;
 	left: 400px;	
-	width:465px;
-	border: .2em solid #fff;
-	border-color: green;
+	right: 450px;
+	width: auto;
+	box-shadow: 0px 0px 1.25em #ccc;
+	border-radius: 0.6em;			
 	-moz-box-shadow: 0px 0px 1.25em #ccc;
 	-webkit-box-shadow: 0px 0px 1.25em #ccc;
-	box-shadow: 0px 0px 1.25em #ccc;
 	-moz-border-radius: 0.6em;
 	-webkit-border-radius: 0.6em;
-	border-radius: 0.6em;
+
 }
 
 .form input, 
@@ -259,9 +305,14 @@ img {
 }
 
 .form input, 
-.form select, 
-.form textarea {
+.form select{
 	width:150px;
+	border: 1px solid #CEE1E8;
+	padding:2px;
+}
+
+.form textarea {
+	width:300px;
 	border: 1px solid #CEE1E8;
 	padding:2px;
 }
@@ -549,7 +600,7 @@ fieldset.embedded legend {
 
 .errors,
 .message {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	line-height: 2;
 	margin: 1em 2em;
 	padding: 0.5em;
@@ -559,18 +610,19 @@ fieldset.embedded legend {
 	background: #f3f3ff;
 	border: 1px solid #b2d1ff;
 	color: #006dba;
-	   -moz-box-shadow: 0 0 0.25em #b2d1ff;
+	-moz-box-shadow: 0 0 0.25em #b2d1ff;
 	-webkit-box-shadow: 0 0 0.25em #b2d1ff;
-	        box-shadow: 0 0 0.25em #b2d1ff;
+	box-shadow: 0 0 0.25em #b2d1ff;
 }
 
 .errors {
 	background: #fff3f3;
 	border: 1px solid #ffaaaa;
 	color: #cc0000;
-	   -moz-box-shadow: 0 0 0.25em #ff8888;
+	-moz-box-shadow: 0 0 0.25em #ff8888;
 	-webkit-box-shadow: 0 0 0.25em #ff8888;
-	        box-shadow: 0 0 0.25em #ff8888;
+	box-shadow: 0 0 0.25em #ff8888;
+	width: 500px;
 }
 
 .errors ul,
@@ -880,26 +932,39 @@ a.skip {
 }
 
 .footer {
+	 position: fixed;
+     width: 100%;
+     height: 40px;
+     top: auto;
+     right: 0;
+     bottom: 0;
+     left: 0;
+
 	border: .2em solid #fff;
 	border-color: orange;
-	position: absolute;
-	left: 250px;
-	right: 250px;
-	top:640px;
-	bottom: 0px;
-	
-	width: auto;
-	height: 50px;
 	box-shadow: 0px 0px 1.25em #ccc;
 	border-radius: 0.6em;	
 	-moz-box-shadow: 0px 0px 1.25em #ccc;
 	-webkit-box-shadow: 0px 0px 1.25em #ccc;
 	-moz-border-radius: 0.6em;
 	-webkit-border-radius: 0.6em;	
-	text-align: center;
+	text-align: center;	
+	
+/*
+	left: 250px;
+	right: 250px;
+	bottom: 0px;
+	width: auto;
+	height: 50px;
+*/	
 }
 
 .footer a {
 	color: #255b17;
 	text-align: center;
+}
+
+.showcase{
+	width:300px; 
+	height:300px
 }
