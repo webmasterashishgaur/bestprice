@@ -60,9 +60,7 @@
 					<g:if test="${necesidadEncInstance?.dateCreated}">
 					<li class="fieldcontain">
 						<span id="dateCreated-label" class="property-label"><g:message code="necesidadEnc.dateCreated.label" default="Fecha de publicación" /></span>
-						
-							<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${necesidadEncInstance?.dateCreated}" /></span>
-						
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${necesidadEncInstance?.dateCreated}" format="dd/MM/yyyy"/></span>
 					</li>
 					</g:if>
 				

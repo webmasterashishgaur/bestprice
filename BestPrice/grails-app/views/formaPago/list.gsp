@@ -1,9 +1,9 @@
-
 <%@ page import="bestprice.FormaPago" %>
 <!doctype html>
 <html>
 	<head>
 		<meta name="layout" content="main">
+      	<r:require modules="bootstrap"/>		
 		<g:set var="entityName" value="${message(code: 'formaPago.label', default: 'FormaPago')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
@@ -38,7 +38,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${formaPagoInstanceList}" status="i" var="formaPagoInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even1' : 'odd1'}">
 					
 						<td><g:link action="show" id="${formaPagoInstance.id}">${fieldValue(bean: formaPagoInstance, field: "nombre")}</g:link></td>
 					

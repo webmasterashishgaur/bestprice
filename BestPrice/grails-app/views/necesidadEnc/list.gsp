@@ -1,4 +1,3 @@
-
 <%@ page import="bestprice.NecesidadEnc" %>
 <!doctype html>
 <html>

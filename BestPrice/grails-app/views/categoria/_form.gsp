@@ -18,28 +18,21 @@
 	<g:textField name="nombreCorto" maxlength="20" required="" value="${categoriaInstance?.nombreCorto}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: categoriaInstance, field: 'estatus', 'error')} required">
-	<label for="estatus">
-		<g:message code="categoria.estatus.label" default="Estatus" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${categoriaInstance?.estatus?.id}" class="many-to-one"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: categoriaInstance, field: 'necesidadEncs', 'error')} ">
-	<label for="necesidadEncs">
-		<g:message code="categoria.necesidadEncs.label" default="Necesidad Encs" />
-		
-	</label>
+<sec:ifAllGranted roles="ROLE_ADMIN">
+		<g:if test="${categoriaInstance?.estatus?.id}">
+			<div class="fieldcontain ${hasErrors(bean: categoriaInstance, field: 'estatus', 'error')} required">		
+				<label for="estatus">
+					<g:message code="categoria.estatus.label" default="Estatus" />
+					<span class="required-indicator">*</span>
+				</label>		
+				<g:select id="estatus" name="estatus.id" from="${bestprice.Estatus.list()}" optionKey="id" required="" value="${categoriaInstance?.estatus?.id}" class="many-to-one" optionValue="descripcion"/>
+			</div>			
+		</g:if>			
+		<g:else>
+			<g:hiddenField name="estatus.id" value="3"/>		
+		</g:else>
 	
-<ul class="one-to-many">
-<g:each in="${categoriaInstance?.necesidadEncs?}" var="n">
-    <li><g:link controller="necesidadEnc" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="necesidadEnc" action="create" params="['categoria.id': categoriaInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'necesidadEnc.label', default: 'NecesidadEnc')])}</g:link>
-</li>
-</ul>
-
-</div>
-
+</sec:ifAllGranted>
+<sec:ifNotGranted roles="ROLE_ADMIN">
+	<g:hiddenField name="estatus.id" value="3"/>		
+</sec:ifNotGranted>
