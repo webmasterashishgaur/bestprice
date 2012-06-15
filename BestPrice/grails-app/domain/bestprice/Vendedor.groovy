@@ -44,5 +44,5 @@ class Vendedor{
 		//estatus.id = 1 
 	}
 	
-	
+	static searchable = true
 }
