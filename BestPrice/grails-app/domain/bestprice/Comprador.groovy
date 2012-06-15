@@ -38,4 +38,5 @@ class Comprador{
 	def beforeInsert = {
 		//estatus.de
 	}
+	
 }
