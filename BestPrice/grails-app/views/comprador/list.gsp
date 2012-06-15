@@ -40,7 +40,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${compradorInstanceList}" status="i" var="compradorInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even1' : 'odd1'}">
 					
 						<td><g:link action="show" id="${compradorInstance.id}">${fieldValue(bean: compradorInstance, field: "usuario")}</g:link></td>
 					

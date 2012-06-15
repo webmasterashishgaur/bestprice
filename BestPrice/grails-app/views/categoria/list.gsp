@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+      	<r:require modules="bootstrap"/>		
 		<g:set var="entityName" value="${message(code: 'categoria.label', default: 'Categoria')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
@@ -38,7 +39,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${categoriaInstanceList}" status="i" var="categoriaInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even1' : 'odd1'}">
 					
 						<td><g:link action="show" id="${categoriaInstance.id}">${fieldValue(bean: categoriaInstance, field: "nombre")}</g:link></td>
 					

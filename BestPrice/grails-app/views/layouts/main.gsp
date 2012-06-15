@@ -24,7 +24,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>
-			<g:layoutTitle default="HTML5"/>
+			<g:layoutTitle default="MejorCotización"/>
 		</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -40,7 +40,7 @@
 
 		<div id="grailsHeader" role="banner">
 			<div id="grailsLogo" role="banner">
-				<img src="${resource(dir: 'images', file: 'oracle.jpg')}" alt="Grails"/><!-- bq.gif -->
+				<img src="${resource(dir: 'images', file: 'cc.png')}" alt="Grails"/><!-- bq.gif -->
 			</div>
 
 			<div  id="grailsMenu" role="banner">

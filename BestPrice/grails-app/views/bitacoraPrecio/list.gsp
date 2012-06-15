@@ -36,7 +36,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${bitacoraPrecioInstanceList}" status="i" var="bitacoraPrecioInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even1' : 'odd1'}">
 					
 						<td><g:link action="show" id="${bitacoraPrecioInstance.id}">${fieldValue(bean: bitacoraPrecioInstance, field: "precio")}</g:link></td>
 					

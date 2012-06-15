@@ -32,7 +32,7 @@
 				</thead>
 				<tbody>
 				<g:each in="${negociacionEncInstanceList}" status="i" var="negociacionEncInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even1' : 'odd1'}">
 					
 						<td><g:link action="show" id="${negociacionEncInstance.id}">${fieldValue(bean: negociacionEncInstance, field: "comentarios")}</g:link></td>
 						<td>${fieldValue(bean: negociacionEncInstance, field: "vendedor.usuario")}</td>					
