@@ -217,16 +217,13 @@ class NecesidadEncController {
     }
 	
 	def searchableService //inject the service (make sure the name is correct)
-	
     def search = {
 	   def query = params.query
 	   if(query.compareTo("") != 0){
-		   def srchResults = searchableService.search(query)
-		   render(view: "list",
-				  model: [necesidadEncInstanceList: srchResults.results,
-						necesidadEncInstanceTotal:srchResults.total])
+		   def srchResults = NecesidadEnc.search(query)
+		   //System.out.println(srchResults.results)
+		   render(view: "list", model: [necesidadEncInstanceList: srchResults.results, necesidadEncInstanceTotal:srchResults.total])
 	   }else{
-	   	   //return true
 		   redirect(action: "list")
 	   }
     }
@@ -234,11 +231,8 @@ class NecesidadEncController {
 	def searchCategorias = {
 		def query = params.query
 		if(query){
-			//def srchResults = searchableService.search(query)
 			render(view: "list", model: [necesidadEncInstanceList: NecesidadEnc.findAllByCategoria(Categoria.get(query)), necesidadEncInstanceTotal: NecesidadEnc.count()])
-		}/*else{
-			redirect(action: "list")
-		}*/
+		}
 	 }
 	
 }
