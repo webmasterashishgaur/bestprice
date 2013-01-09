@@ -132,7 +132,7 @@ class NecesidadEncController {
             return
         }
 		
-		necesidadEncService.enviaCorreoPosiblesCompradores(necesidadEncInstance.titulo)
+		necesidadEncService.enviaCorreoPosiblesCompradores(necesidadEncInstance.titulo, necesidadEncInstance.descripcion)
 		
 		flash.message = message(code: 'default.created.message', args: [message(code: 'necesidadEnc.label', default: 'NecesidadEnc'), necesidadEncInstance.id])
 		redirect(action: "list")

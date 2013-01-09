@@ -103,7 +103,7 @@ def springSecurityService
 		sendMail {
 			to ""+comprador.email
 			subject "Nueva Oferta para tu compra de "+necesidadEnc.titulo
-			body 'El Vendedor '+ springSecurityService.currentUser.username+ ' tiene esta oferta: '+negociacionEncInstance.comentarios + ", Precio: "+negociacionEncInstance.precio
+			body 'El Vendedor '+ user.username+ ' tiene esta oferta: '+negociacionEncInstance.comentarios + ", Precio: "+negociacionEncInstance.precio
 		}
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'negociacionEnc.label', default: 'NegociacionEnc'), negociacionEncInstance.id])
