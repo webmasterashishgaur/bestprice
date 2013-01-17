@@ -111,6 +111,3 @@ grails {
 	}
  }
 
-grails.plugins.springsecurity.twitter.app.key='12'
-grails.plugins.springsecurity.twitter.app.consumerKey='12'
-grails.plugins.springsecurity.twitter.app.consumerSecret='12'
