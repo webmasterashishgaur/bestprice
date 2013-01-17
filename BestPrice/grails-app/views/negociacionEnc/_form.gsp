@@ -71,6 +71,6 @@
 	</div>		
 </sec:ifAllGranted>
 <sec:ifNotGranted roles="ROLE_ADMIN">
-	<g:hiddenField name="estatus.id" value="1"/>	
+	<g:hiddenField name="estatus.id" value="3"/>	
 </sec:ifNotGranted>
 <g:hiddenField name="necesidadEnc.id" value="${necesidadEnc}"/>
