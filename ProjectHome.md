@@ -1,0 +1,1 @@
+Portal donde los usuarios pueden registrar alguna necesidad de compra y donde los vendedores pueden acceder para ofrecer por esas necesidades de los usuarios.
